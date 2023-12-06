@@ -4,8 +4,10 @@
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import model.ProjectPlanningModel;
 
@@ -33,11 +35,141 @@ import model.ProjectPlanningModel;
       this.currentScene = new Scene(new Region());
     }
 
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage, String fxmlfile) {
       this.primaryStage = primaryStage;
-      openView();
+      openView(fxmlfile);
     }
+    public void openView(String id) {
+      Region root = null;
 
+      switch (id)
+      {
+        case "projects":
+        {
+          root = loadMainMenu("MainMenuViewController.fxml");
+          break;
+        }
+        case "projectsComplete":
+          root = loadProjectsListView("ProjectsListView.fxml");
+          break;
+        //                      _____ FOR RESIDENTIAL ______
+        //  loading scene graph with specified function for determined window use
+        case "addResidential":
+        {
+          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
+              null, Function.add);
+          break;
+        }
+        case "editResidential":
+        {
+          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
+              state, Function.edit);
+          break;
+        }
+        case "displayResidential":
+        {
+          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
+              state, Function.display);
+          break;
+        }
+        //                      _____ FOR COMMERCIAL ______
+        case "addCommercial":
+        {
+          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
+              null, Function.add);
+          break;
+        }
+        case "editCommercial":
+        {
+          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
+              state, Function.edit);
+          break;
+        }
+        case "displayCommercial":
+        {
+
+          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
+              state, Function.display);
+          break;
+        }
+
+        //                      _____ FOR INDUSTRIAL ______
+        //  loading scene graph with specified function for determined window use
+        case "addIndustrial":
+        {
+          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
+              null, Function.add);
+          break;
+        }
+        case "editIndustrial":
+        {
+          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
+              state, Function.edit);
+          break;
+        }
+        case "displayIndustrial":
+        {
+          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
+              state, Function.display);
+          break;
+        }
+
+        case "addRoadConstruction":
+        {
+          root = loadAddRoadConstructionProjectView(
+              "AddRoadConstructionProjectView.fxml", state, Function.add);
+          break;
+        }
+        case "editRoadConstruction":
+        {
+          root = loadAddRoadConstructionProjectView(
+              "AddRoadConstructionProjectView.fxml", state, Function.edit);
+          break;
+        }
+        case "displayRoadConstruction":
+        {
+          root = loadAddRoadConstructionProjectView(
+              "AddRoadConstructionProjectView.fxml", state, Function.display);
+          break;
+        }
+
+        case ("reports"):
+        {
+          root = loadReportsView("ReportsView.fxml");
+          break;
+        }
+        case ("update"):
+        {
+          root = loadUpdateView("UpdateProjectView.fxml", state);
+          break;
+        }
+      }
+      currentScene.setRoot(root);
+      String title = "";
+      if (root.getUserData() != null)
+
+      {
+        title += root.getUserData();
+      }
+
+      Screen screen = Screen.getPrimary();
+      Rectangle2D bounds = screen.getVisualBounds();
+
+      primaryStage.setTitle(title);
+      primaryStage.setScene(currentScene);
+      primaryStage.setWidth(root.getPrefWidth());
+      primaryStage.setHeight(root.getPrefHeight());
+      primaryStage.show();
+
+      /*
+      centering the window
+       */
+      double x = (bounds.getWidth() - primaryStage.getWidth()) / 2;
+      double y = (bounds.getHeight() - primaryStage.getHeight()) / 2;
+      primaryStage.setX(x);
+      primaryStage.setY(y);
+    }
+/*
     public void openView() {
       Region root = null;
       root = loadMainMenu("MainMenu.fxml");
@@ -53,7 +185,7 @@ import model.ProjectPlanningModel;
         primaryStage.setHeight(root.getPrefHeight());
         primaryStage.show();
       }
-
+*/
     private Region loadMainMenu(String fxmlFile){
       Region root = null;
       if (mainMenuController == null){
