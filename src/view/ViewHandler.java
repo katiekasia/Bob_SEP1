@@ -17,7 +17,7 @@ import model.ProjectPlanningModel;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
     private SelectProjectTypeViewController selectProjectController;
-    /*
+
       private ViewEditGeneralController editGeneralController;
       private EditCommercialController editCommercialController;
       private EditResidentialController editResidentialController;
@@ -27,7 +27,7 @@ import model.ProjectPlanningModel;
       private CreateResidentialController createResidentialController;
       private CreateIndustrialController createIndustrialController;
       private CreateRoadContructionController createRoadContructionController;
-    */
+
     private ProjectPlanningModel model;
 
     public ViewHandler(ProjectPlanningModel model) {
@@ -35,9 +35,9 @@ import model.ProjectPlanningModel;
       this.currentScene = new Scene(new Region());
     }
 
-    public void start(Stage primaryStage, String fxmlfile) {
+    public void start(Stage primaryStage) {
       this.primaryStage = primaryStage;
-      openView(fxmlfile);
+      openView("projects");
     }
     public void openView(String id) {
       Region root = null;
@@ -49,6 +49,7 @@ import model.ProjectPlanningModel;
           root = loadMainMenu("MainMenuViewController.fxml");
           break;
         }
+
         case "projectsComplete":
           root = loadProjectsListView("ProjectsListView.fxml");
           break;
@@ -144,6 +145,8 @@ import model.ProjectPlanningModel;
           break;
         }
       }
+
+ */
       currentScene.setRoot(root);
       String title = "";
       if (root.getUserData() != null)
