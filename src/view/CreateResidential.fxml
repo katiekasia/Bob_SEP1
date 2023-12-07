@@ -17,7 +17,9 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="titleTextField" />
+
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="titleTextField"/>
+
             </children></HBox>
         <HBox layoutX="7.0" layoutY="109.0" prefHeight="29.0" prefWidth="200.0">
             <children>
@@ -38,7 +40,10 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="idTextField"/>
+
+
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="idTextField" onAction="#validID"/>
+
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="15.0" layoutY="115.0" prefHeight="29.0" prefWidth="357.0" spacing="150.0">

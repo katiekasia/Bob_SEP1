@@ -57,7 +57,23 @@ public class createResidentialViewController {
   @FXML
   private Label errorLabel;
 
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+
+
+  @FXML
+  private void validID() {
+    if(idTextField.getText().isEmpty())
+    {
+      errorLabel.setText("ID cannot be empty");
+    }
+  }
+
+  @FXML
+  private void cancelButtonClicked() {
+    viewHandler.openView("projects");
+  }
+
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
+  {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
@@ -75,7 +91,6 @@ public class createResidentialViewController {
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
     isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
     timelineTextField.setText(String.valueOf(defaultTimeline));
-
 
 
   }
@@ -115,15 +130,6 @@ public class createResidentialViewController {
     // Return true if input is correct, false otherwise
     return true; // Placeholder - add validation checks
   }
-
-  @FXML
-  private void cancelButtonClicked() {
-    viewHandler.openView("projects");
-  }
-
-
-
-
 
 
   public void reset()
