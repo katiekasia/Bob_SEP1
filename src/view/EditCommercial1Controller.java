@@ -2,65 +2,67 @@ package view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
-import javafx.stage.Stage;
 import model.ProjectPlanningModel;
 
-import javax.swing.text.TableView;
-import javax.swing.text.View;
-
-public class ViewEditGeneralController
+public class EditCommercial1Controller
 {
   @FXML
-  private TextField IDField;
+  private TextField idField;
   @FXML
-  private TextField TitleField;
+  private TextField titleField;
+
+  @FXML
+  private TextField budgetField;
+
+  @FXML
+  private TextField sizeField;
+
   @FXML
   private TextField timelineField;
-  @FXML
-  private RadioButton AllButton;
-  @FXML
-  private ChoiceBox SizeChoice;
-  @FXML
-  private ChoiceBox BudgetChoice;
-  @FXML
-  private ChoiceBox timeLineChoice;
-  @FXML
-  private ChoiceBox TypeChoice;
-  @FXML
-  private TableView ProjectTable;
-  @FXML
-  private Button DetailsEdit;
-  @FXML
-  private Button deleteButton;
 
   @FXML
-  private Button backButton;
+  private TextField addressField;
 
+  @FXML
+  private TextField numberOfFloorsField;
+
+  @FXML
+  private TextField useOfBuildingField;
+
+  @FXML
+  private Button cancelButton;
+
+  @FXML
+  private Button saveButton;
+
+  @FXML
+  private Button editButton;
+
+  @FXML
+  private Label errorLabel;
+  private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
-  private ViewHandler viewHandler;
 
-  public Region getRoot() {
+  public Region getRoot()
+  {
     return root;
   }
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
-  {
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
   }
-
   @FXML
-  private void backButtonClicked() {
+  private void cancelButtonClicked() {
     viewHandler.openView("projects");
   }
 
   @FXML
-    private void detailsButtonClicked() {
+  private void saveButtonClicked() {
     // Implement saving to XML functionality here
 
     // If input is incorrect, display errorLabel
@@ -79,7 +81,10 @@ public class ViewEditGeneralController
     //      // Save details to XML
     // }
   }
-
+  @FXML
+  private void backButtonClicked() {
+    viewHandler.openView("selectType");
+  }
   private boolean validateInput()
   {
     // Implement input validation logic here
@@ -87,7 +92,8 @@ public class ViewEditGeneralController
     return true; // Placeholder - add validation checks
   }
 
-  public void reset() {
+  public void reset()
+  {
     // Reset logic
     init(viewHandler, model, root);
   }
