@@ -39,8 +39,8 @@
       </Button>
       <HBox alignment="CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="cancel" />
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="back" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="cancel" fx:id="cancel" onAction="#handleCancelButton"/>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="back" fx:id="back" onAction="#handleBackButton"/>
          </children>
          <VBox.margin>
             <Insets />
