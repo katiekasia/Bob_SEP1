@@ -16,14 +16,16 @@ import model.ProjectPlanningModel;
     private Scene currentScene;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
+    private createCommercialViewController commercialViewController;
     private SelectProjectTypeViewController selectProjectController;
+    private createCommercialViewController createCommercialController;
 /*
       private ViewEditGeneralController editGeneralController;
       private EditCommercialController editCommercialController;
       private EditResidentialController editResidentialController;
       private EditIndustrialController editIndustrialController;
       private EditRoadContructionController editRoadContructionController;
-      private CreateCommercialController createCommercialController;
+
       private CreateResidentialController createResidentialController;
       private CreateIndustrialController createIndustrialController;
       private CreateRoadContructionController createRoadContructionController;
@@ -39,7 +41,74 @@ import model.ProjectPlanningModel;
       this.primaryStage = primaryStage;
       openView();
     }
-/*
+
+
+    public void openView() {
+      Region root = null;
+      root = loadCreateViewController("createCommercial.fxml");
+      currentScene.setRoot(root);
+        String title = "Main Menu";
+        if (root.getUserData() != null) {
+          title += root.getUserData();
+        }
+
+        primaryStage.setTitle(title);
+        primaryStage.setScene(currentScene);
+        primaryStage.setWidth(root.getPrefWidth());
+        primaryStage.setHeight(root.getPrefHeight());
+        primaryStage.show();
+      }
+
+    private Region loadMainMenu(String fxmlFile){
+      Region root = null;
+      if (mainMenuController == null){
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          mainMenuController = loader.getController();
+          mainMenuController.init(this, model, root);
+        }
+        catch (Exception e){
+          e.printStackTrace();
+        }
+      }
+      else
+        mainMenuController.reset();
+      return mainMenuController.getRoot();
+    }
+
+    private Region loadCreateViewController(String fxmlFile){
+      Region root = null;
+      if (createCommercialController == null){
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          createCommercialController = loader.getController();
+          createCommercialController.init(this, model, root);
+        }
+        catch (Exception e){
+          e.printStackTrace();
+        }
+      }
+      else
+        createCommercialController.reset();
+      return createCommercialController.getRoot();
+    }
+
+
+    public void closeView() {
+      primaryStage.close();
+    }
+
+  }
+
+  /*
     public void openView(String id) {
       Region root = null;
 
@@ -173,48 +242,5 @@ import model.ProjectPlanningModel;
       primaryStage.setX(x);
       primaryStage.setY(y);
     }
+
     */
-
-    public void openView() {
-      Region root = null;
-      root = loadMainMenu("createCommercial.fxml");
-      currentScene.setRoot(root);
-        String title = "Main Menu";
-        if (root.getUserData() != null) {
-          title += root.getUserData();
-        }
-
-        primaryStage.setTitle(title);
-        primaryStage.setScene(currentScene);
-        primaryStage.setWidth(root.getPrefWidth());
-        primaryStage.setHeight(root.getPrefHeight());
-        primaryStage.show();
-      }
-
-    private Region loadMainMenu(String fxmlFile){
-      Region root = null;
-      if (mainMenuController == null){
-        try
-        {
-          FXMLLoader loader = new FXMLLoader();
-          loader.setLocation(getClass().getResource(fxmlFile));
-          root = loader.load();
-
-          mainMenuController = loader.getController();
-          mainMenuController.init(this, model, root);
-        }
-        catch (Exception e){
-          e.printStackTrace();
-        }
-      }
-      else
-        mainMenuController.reset();
-      return mainMenuController.getRoot();
-    }
-
-
-    public void closeView() {
-      primaryStage.close();
-    }
-
-  }
