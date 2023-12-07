@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class ProjectPlanningModelManager implements ProjectPlanningModel
 {
   public void ProjectPlanningModel()
@@ -12,7 +14,12 @@ public class ProjectPlanningModelManager implements ProjectPlanningModel
 
   }
 
- // @Override public projectList<Project> getAllProjects()
+  @Override public ArrayList<Project> getAllProjects()
+  {
+    return null;
+  }
+
+  // @Override public projectList<Project> getAllProjects()
   {
  //   return null;
   }
