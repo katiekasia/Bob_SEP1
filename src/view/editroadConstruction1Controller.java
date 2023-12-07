@@ -1,7 +1,5 @@
 package view;
 
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,32 +7,40 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class createIndustrialViewController
+public class editroadConstruction1Controller
 {
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
 
   @FXML
-  private TextField idField;
-  @FXML
-  private TextField titleField;
+  private TextField titleTextField;
 
   @FXML
-  private TextField budgetField;
+  private TextField idTextField;
 
   @FXML
-  private TextField sizeField;
+  private TextField budgetTextField;
 
   @FXML
-  private TextField timelineField;
+  private TextField widthTextField;
+  @FXML
+  private TextField lengthTextField;
 
   @FXML
-  private TextField addressField;
+  private TextField timelineTextField;
 
   @FXML
-  private TextField TypeOfFacilityField;
+  private TextField addressTextField;
 
+  @FXML
+  private TextField numberOfKitchensTextField;
+
+  @FXML
+  private TextField birdgesOrtunnelsTextField;
+
+  @FXML
+  private TextField challengesTextField;
   @FXML
   private Button backButton;
   @FXML
@@ -45,7 +51,6 @@ public class createIndustrialViewController
   @FXML
   private Label errorLabel;
 
-
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
@@ -55,38 +60,26 @@ public class createIndustrialViewController
   private void saveButtonClicked() {
     // Implement saving to XML functionality here
 
-    // If input is incorrect, display errorLabel
+    //    // If input is incorrect, display errorLabel
     //    if (!validateInput()) {
     //      errorLabel.setText("Incorrect input!");
     //      errorLabel.setVisible(true);
     //    } else {
-    //      // Example: Get data from text fields
-    //      String title = titleTextField.getText();
-    //      int id = Integer.parseInt(idTextField.getText());
-    //      double budget = Double.parseDouble(budgetTextField.getText());
-    //      // ...other fields
-    //
     //      errorLabel.setVisible(false);
     //      viewHandler.openView("viewProject");
     //      // Save details to XML
-    // }
+    //    }
   }
   @FXML
   private void backButtonClicked() {
     viewHandler.openView("selectType");
   }
-  private boolean validateInput()
-  {
-    // Implement input validation logic here
-    // Return true if input is correct, false otherwise
-    return true; // Placeholder - add validation checks
-  }
-
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
   }
+
   public void reset()
   {
     // Reset logic
@@ -98,8 +91,3 @@ public class createIndustrialViewController
     return root;
   }
 }
-
-
-
-
-

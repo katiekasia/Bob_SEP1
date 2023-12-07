@@ -1,7 +1,5 @@
 package view;
 
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,12 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class createIndustrialViewController
+public class EditCommercial1Controller
 {
-  private ViewHandler viewHandler;
-  private ProjectPlanningModel model;
-  private Region root;
-
   @FXML
   private TextField idField;
   @FXML
@@ -33,19 +27,35 @@ public class createIndustrialViewController
   private TextField addressField;
 
   @FXML
-  private TextField TypeOfFacilityField;
+  private TextField numberOfFloorsField;
 
   @FXML
-  private Button backButton;
-  @FXML
-  private Button saveButton;
+  private TextField useOfBuildingField;
+
   @FXML
   private Button cancelButton;
 
   @FXML
+  private Button saveButton;
+
+  @FXML
+  private Button editButton;
+
+  @FXML
   private Label errorLabel;
+  private ViewHandler viewHandler;
+  private ProjectPlanningModel model;
+  private Region root;
 
-
+  public Region getRoot()
+  {
+    return root;
+  }
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
+  }
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
@@ -82,24 +92,10 @@ public class createIndustrialViewController
     return true; // Placeholder - add validation checks
   }
 
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
-    this.viewHandler = viewHandler;
-    this.model = model;
-    this.root = root;
-  }
   public void reset()
   {
     // Reset logic
     init(viewHandler, model, root);
   }
 
-  public Region getRoot()
-  {
-    return root;
-  }
 }
-
-
-
-
-

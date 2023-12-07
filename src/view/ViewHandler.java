@@ -95,7 +95,7 @@ import model.ProjectPlanningModel;
       return selectProjectTypeViewController.getRoot();
     }
 
-    private Region loadViewEditController(String fxmlFile)
+    private Region loadViewEditGeneralController(String fxmlFile)
     {
       Region root = null;
       if (editGeneralController == null)
@@ -235,7 +235,7 @@ import model.ProjectPlanningModel;
 
         case "viewProject":
         {
-          root = loadViewEditController("ViewEdit.fxml");
+          root = loadViewEditGeneralController("ViewEdit.fxml");
           break;
         }
         case "residentialProject":

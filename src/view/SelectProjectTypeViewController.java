@@ -45,20 +45,8 @@ public class SelectProjectTypeViewController {
   }
 
   @FXML
-  private void handleResidentialButton() {
-    Residential residential1 = new Residential(
-        1,
-        "",
-        0,
-        0,
-        "",
-        ProjectType.RESIDENTIAL,
-        (Integer) Residential.defaultResidential.get(0), // numberOfKitchens
-        (Integer) Residential.defaultResidential.get(1), // numberOfBathrooms
-        (Integer) Residential.defaultResidential.get(2), // numberOfOtherRooms
-        (Boolean) Residential.defaultResidential.get(4), // isNewBuilding
-        (Integer) Residential.defaultResidential.get(3)  // timeline
-    );
+  private void handleResidentialButton()
+  {
     viewHandler.openView("residentialProject"); // Call the method to open create Residential project
   }
 

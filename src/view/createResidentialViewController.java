@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.Project;
 import model.ProjectPlanningModel;
+import model.Residential;
 
 public class createResidentialViewController {
 
@@ -44,7 +45,7 @@ public class createResidentialViewController {
   private TextField numberOfOtherRoomsTextField;
 
   @FXML
-  private TextField buildingUseTextField;
+  private TextField isNewBuildingTextField;
 
   @FXML
   private Button backButton;
@@ -54,6 +55,7 @@ public class createResidentialViewController {
   private Button cancelButton;
   @FXML
   private Label errorLabel;
+
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
@@ -90,12 +92,33 @@ public class createResidentialViewController {
     return true; // Placeholder - add validation checks
   }
 
-
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
+
+//    Trying to set up the defaults !
+
+    int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
+    int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
+    int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
+    int defaultTimeline = (int) Residential.defaultResidential[3];
+    boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
+
+    // Populate text fields with default values
+    numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
+    numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
+    numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
+    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
+    timelineTextField.setText(String.valueOf(defaultTimeline));
+
+    // Set other default values for text fields as needed
+
   }
+
+
+
+
   public void reset()
   {
     // Reset logic
