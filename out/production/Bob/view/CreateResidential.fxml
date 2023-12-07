@@ -127,6 +127,7 @@
         </HBox>
         <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">
             <children>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" />
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
@@ -136,6 +137,10 @@
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" fx:id="saveButton" onAction="#saveButtonClicked"/>
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" fx:id="backButton" onAction="#backButtonClicked"/>
 >>>>>>> 7018fc5d4b03aa0a18876c739b53a5e54c1d31db
+=======
+                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" />
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
+>>>>>>> Stashed changes
             </children>
         </HBox>
         <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">
