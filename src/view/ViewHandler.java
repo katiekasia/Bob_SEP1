@@ -213,10 +213,7 @@ import model.ProjectPlanningModel;
       return createResidentialController.getRoot();
     }
 
-    public void closeView()
-    {
-      primaryStage.close();
-    }
+
 
     public void openView(String id)
     {
@@ -288,6 +285,11 @@ import model.ProjectPlanningModel;
 
 
     }
+    public void closeView()
+    {
+      primaryStage.close();
+    }
+
   }
         /*
         case "editResidential":

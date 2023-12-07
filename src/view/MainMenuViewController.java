@@ -1,6 +1,5 @@
 package view;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,14 +7,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class MainMenuViewController
-{
+public class MainMenuViewController {
   private ViewHandler viewHandler;
 
   @FXML private Label title;
   @FXML private Button create;
   @FXML private Button view;
-  @FXML private Button cancel;
   @FXML private TextField nrOfProjects;
 
   private ProjectPlanningModel model;
@@ -32,7 +29,7 @@ public class MainMenuViewController
   }
 
   @FXML public void createProject() {
-      viewHandler.openView("selectType"); // Call the method to open SelectProjectType
+    viewHandler.openView("selectType"); // Call the method to open SelectProjectType
   }
 
   @FXML public void viewProject() {
@@ -43,10 +40,13 @@ public class MainMenuViewController
     }
   }
 
+<<<<<<< Updated upstream
+=======
   @FXML public void cancel() {
-    viewHandler.closeView();
+    viewHandler.closeView(); // Call the method to close the window
   }
 
+>>>>>>> Stashed changes
   public void reset() {
     // Reset logic
     init(viewHandler, model, root);

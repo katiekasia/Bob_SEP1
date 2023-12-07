@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 
 public class Residential extends Project
 {
@@ -9,17 +10,24 @@ public class Residential extends Project
   private boolean isNewBuilding;
 
 
-  private static final Object[] defaultResidential = {1,1,1,9,true};
+  public static final ArrayList<Object> defaultResidential = new ArrayList<>();
+  static {
+    defaultResidential.add(1);
+    defaultResidential.add(1);
+    defaultResidential.add(1);
+    defaultResidential.add(9);
+    defaultResidential.add(true);
+  }
 //  I made an object arraylist which will store the defaults ( as it was done in Steffen video with Car )
 
   public Residential(int ID, String title, double budget, double size, String address, ProjectType type, int numberOfKitchens, int numberOfBathrooms, int numberOfOtherRooms, boolean isNewBuilding, int timeline)
   {
-    super(ID,title,budget,size,address,type);
-    this.numberOfKitchens = (int) defaultResidential[0];
-    this.numberOfBathrooms = (int) defaultResidential[1];
-    this.numberOfOtherRooms = (int) defaultResidential[2];
-    this.timeline = (int) defaultResidential[3];
-    this.isNewBuilding = (boolean) defaultResidential[4];
+    super(ID, title, budget, size, address, type);
+    this.numberOfKitchens = (int) defaultResidential.get(0);
+    this.numberOfBathrooms = (int) defaultResidential.get(1);
+    this.numberOfOtherRooms = (int) defaultResidential.get(2);
+    this.timeline = (int) defaultResidential.get(3);
+    this.isNewBuilding = (boolean) defaultResidential.get(4);
   }
   public int getNumberOfKitchens()
   {

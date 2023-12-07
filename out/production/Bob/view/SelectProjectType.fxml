@@ -17,30 +17,29 @@
             <Insets />
          </VBox.margin>
       </Label>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential" fx:id="residentialProject" onAction="#handleResidentialButton">
+      <Button fx:id="residentialProject" alignment="CENTER" mnemonicParsing="false" onAction="#handleResidentialButton" prefHeight="36.0" prefWidth="147.0" text="Residential">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Commercial" fx:id="commercialProject" onAction="#handleCommercialButton">
+      <Button fx:id="commercialProject" mnemonicParsing="false" onAction="#handleCommercialButton" prefHeight="37.0" prefWidth="147.0" text="Commercial">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Industrial" fx:id="industrialProject" onAction="#handleIndustrialButton">
+      <Button fx:id="industrialProject" mnemonicParsing="false" onAction="#handleIndustrialButton" prefHeight="35.0" prefWidth="147.0" text="Industrial">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" text="Road-construction" fx:id="roadCnstructionProject" onAction="#handleRoadConstructionButton">
+      <Button fx:id="roadCnstructionProject" mnemonicParsing="false" onAction="#handleRoadConstructionButton" prefHeight="39.0" prefWidth="147.0" text="Road-construction">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
       <HBox alignment="CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="cancel" />
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="back" />
+            <Button fx:id="back" alignment="CENTER" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="31.0" prefWidth="97.0" text="back" />
          </children>
          <VBox.margin>
             <Insets />
