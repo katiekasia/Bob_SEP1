@@ -38,7 +38,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="15.0" layoutY="115.0" prefHeight="29.0" prefWidth="357.0" spacing="150.0">
@@ -72,7 +72,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="timelineTextField"/>
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="365.0" spacing="140.0">
@@ -92,7 +92,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0"  fx:id="numberOfKitchensTextField"/>
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="87.0">
@@ -102,7 +102,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="numberOfBathroomsTextField"/>
             </children>
         </HBox>
         <HBox layoutX="24.0" layoutY="354.0" prefHeight="29.0" prefWidth="415.0" spacing="76.0">
@@ -112,7 +112,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="numberOfOtherRoomsTextField"/>
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="391.0" prefHeight="38.0" prefWidth="365.0" spacing="12.0">
@@ -122,7 +122,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" fx:id="isNewBuildingTextField"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">

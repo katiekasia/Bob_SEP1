@@ -45,7 +45,7 @@ public class createResidentialViewController {
   private TextField numberOfOtherRoomsTextField;
 
   @FXML
-  private TextField buildingUseTextField;
+  private TextField isNewBuildingTextField;
 
   @FXML
   private Button backButton;
@@ -55,7 +55,7 @@ public class createResidentialViewController {
   private Button cancelButton;
   @FXML
   private Label errorLabel;
-<<<<<<< Updated upstream
+
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
@@ -92,9 +92,6 @@ public class createResidentialViewController {
     return true; // Placeholder - add validation checks
   }
 
-=======
->>>>>>> Stashed changes
-
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
@@ -105,29 +102,22 @@ public class createResidentialViewController {
     int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
     int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
     int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
+    int defaultTimeline = (int) Residential.defaultResidential[3];
+    boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
 
     // Populate text fields with default values
     numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
     numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
+    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
+    timelineTextField.setText(String.valueOf(defaultTimeline));
 
     // Set other default values for text fields as needed
 
   }
 
 
-  @FXML
-  private void handleSaveButton(ActionEvent event) {
 
-
-  }
-
-  @FXML
-  private void handleCancelButton(ActionEvent event) {
-
-    errorLabel.setText("");
-    titleTextField.getScene().getWindow().hide();
-  }
 
   public void reset()
   {
