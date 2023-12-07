@@ -51,62 +51,15 @@ public class SelectProjectTypeViewController {
   }
   @FXML
   private void handleIndustrialButton(ActionEvent event) {
-    openIndustrialView();
+    viewHandler.openView("industrialProject");
   }
   @FXML
-  private void handleRoadConstructionlButton(ActionEvent event) {
-    openRoadConstructionView();
+  private void handleRoadConstructionButton(ActionEvent event) {
+    viewHandler.openView("roadConstructionProject");
   }
 
-  private void openResidentialView() {
-    try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("createResidential.fxml"));
-      Region root = loader.load();
-      Scene scene = new Scene(root);
-      primaryStage.setTitle("Residential Project Details");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-  private void openIndustrialView() {
-    try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("createIndustrial.fxml"));
-      Region root = loader.load();
-      Scene scene = new Scene(root);
-      primaryStage.setTitle("Industrial Project Details");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-  private void openRoadConstructionView() {
-    try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("createRoadConstruction.fxml"));
-      Region root = loader.load();
-      Scene scene = new Scene(root);
-      primaryStage.setTitle("RoadConstruction Project Details");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+
   }
 
-  private void openCommercialView() {
-    try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("createCommercial.fxml"));
-      Region root = loader.load();
-      Scene scene = new Scene(root);
-      primaryStage.setTitle("Commercial Project Details");
-      primaryStage.setScene(scene);
-      primaryStage.show();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
 
 

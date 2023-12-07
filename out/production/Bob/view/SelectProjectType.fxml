@@ -27,12 +27,12 @@
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Industrial">
+      <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Industrial" fx:id="industrialProject" onAction="#handleIndustrialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" text="Road-construction">
+      <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" text="Road-construction" fx:id="roadCnstructionProject" onAction="#handleRoadConstructionButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>

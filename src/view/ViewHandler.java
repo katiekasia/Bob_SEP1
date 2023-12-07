@@ -20,20 +20,18 @@ import model.ProjectPlanningModel;
     private SelectProjectTypeViewController selectProjectTypeViewController;
     private createCommercialViewController commercialViewController;
     private SelectProjectTypeViewController selectProjectController;
-    private createCommercialViewController createCommercialController;
-    private createIndustrialViewController createIndustrialController;
     private ViewEditGeneralController editGeneralController;
     private createResidentialViewController createResidentialController;
+    private createCommercialViewController createCommercialController;
+    private createIndustrialViewController createIndustrialController;
+
+    private createRoadConstructionViewController createRoadContructionController;
     /*
 
           private EditCommercialController editCommercialController;
           private EditResidentialController editResidentialController;
           private EditIndustrialController editIndustrialController;
           private EditRoadContructionController editRoadContructionController;
-
-          private CreateResidentialController createResidentialController;
-
-          private CreateRoadContructionController createRoadContructionController;
     */
     private ProjectPlanningModel model;
 
@@ -145,6 +143,52 @@ import model.ProjectPlanningModel;
       return createCommercialController.getRoot();
     }
 
+    private Region loadCreateRoadConstructionViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (createRoadContructionController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          createRoadContructionController = loader.getController();
+          createRoadContructionController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        createRoadContructionController.reset();
+      return createRoadContructionController.getRoot();
+    }
+    private Region loadCreateIndustrialViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (createIndustrialController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          createIndustrialController = loader.getController();
+          createIndustrialController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        createIndustrialController.reset();
+      return createIndustrialController.getRoot();
+    }
     private Region loadCreateResidentialViewController(String fxmlFile)
     {
       Region root = null;
@@ -205,6 +249,16 @@ import model.ProjectPlanningModel;
         case "commercialProject":
         {
           root = loadCreateCommercialViewController("createCommercial.fxml");
+          break;
+        }
+        case "industrialProject":
+        {
+          root = loadCreateIndustrialViewController("createIndustrial.fxml");
+          break;
+        }
+        case "roadConstructionProject":
+        {
+          root = loadCreateRoadConstructionViewController("createRoadConstruction.fxml");
           break;
         }
       }
