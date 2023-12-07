@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.Project;
 import model.ProjectPlanningModel;
+import model.Residential;
 
 public class createResidentialViewController {
 
@@ -54,6 +55,7 @@ public class createResidentialViewController {
   private Button cancelButton;
   @FXML
   private Label errorLabel;
+<<<<<<< Updated upstream
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
@@ -90,12 +92,43 @@ public class createResidentialViewController {
     return true; // Placeholder - add validation checks
   }
 
+=======
+>>>>>>> Stashed changes
 
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
+
+//    Trying to set up the defaults !
+
+    int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
+    int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
+    int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
+
+    // Populate text fields with default values
+    numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
+    numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
+    numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
+
+    // Set other default values for text fields as needed
+
   }
+
+
+  @FXML
+  private void handleSaveButton(ActionEvent event) {
+
+
+  }
+
+  @FXML
+  private void handleCancelButton(ActionEvent event) {
+
+    errorLabel.setText("");
+    titleTextField.getScene().getWindow().hide();
+  }
+
   public void reset()
   {
     // Reset logic
