@@ -137,7 +137,7 @@
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" fx:id="backButton" onAction="#backButtonClicked"/>
             </children>
         </HBox>
-        <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">
+        <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED" fx:id="errorLabel">
             <font>
                 <Font size="14.0" />
             </font></Label>
