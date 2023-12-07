@@ -32,8 +32,9 @@ public class MainMenuViewController
   }
 
   @FXML public void createProject() {
-    try {
-      // Your create project logic
+    try
+    {
+
     } catch (IllegalArgumentException e) {
       // Handle exception
     }
