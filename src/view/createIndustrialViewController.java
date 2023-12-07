@@ -32,8 +32,6 @@ public class createIndustrialViewController
   @FXML
   private TextField addressField;
 
-
-
   @FXML
   private TextField TypeOfFacilityField;
 
@@ -46,7 +44,7 @@ public class createIndustrialViewController
 
   @FXML
   private Label errorLabel;
-  
+
 
   @FXML
   private void cancelButtonClicked() {
