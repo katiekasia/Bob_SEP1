@@ -1,19 +1,27 @@
 package view;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class MainMenuViewController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class MainMenuViewController implements Initializable
+{
   private ViewHandler viewHandler;
 
   @FXML private Label title;
   @FXML private Button create;
   @FXML private Button view;
   @FXML private TextField nrOfProjects;
+  @FXML private ImageView imageView;
 
   private ProjectPlanningModel model;
   private Region root;
@@ -28,6 +36,15 @@ public class MainMenuViewController {
     return root;
   }
 
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    // Load the image
+    String imagePath = "logo.png"; // Provide the correct path
+    Image image = new Image(getClass().getResourceAsStream(imagePath));
+
+    // Set the image to the ImageView
+    imageView.setImage(image);
+  }
   @FXML public void createProject() {
     viewHandler.openView("selectType"); // Call the method to open SelectProjectType
   }
@@ -38,10 +55,6 @@ public class MainMenuViewController {
     } catch (IllegalArgumentException e) {
 
     }
-  }
-
-  @FXML public void cancel() {
-    viewHandler.closeView(); // Call the method to close the window
   }
 
   public void reset() {
