@@ -16,6 +16,7 @@ import model.ProjectPlanningModel;
     private Scene currentScene;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
+    private createCommercialViewController commercialViewController;
     private SelectProjectTypeViewController selectProjectController;
 /*
       private ViewEditGeneralController editGeneralController;
@@ -177,7 +178,7 @@ import model.ProjectPlanningModel;
 
     public void openView() {
       Region root = null;
-      root = loadMainMenu("createCommercial.fxml");
+      root = loadMainMenu("view.createCommercial.fxml");
       currentScene.setRoot(root);
         String title = "Main Menu";
         if (root.getUserData() != null) {
@@ -211,6 +212,7 @@ import model.ProjectPlanningModel;
         mainMenuController.reset();
       return mainMenuController.getRoot();
     }
+
 
 
     public void closeView() {
