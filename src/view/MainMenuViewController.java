@@ -50,11 +50,7 @@ public class MainMenuViewController implements Initializable
   }
 
   @FXML public void viewProject() {
-    try {
       viewHandler.openView("viewProject"); // Call the method to open View Projects
-    } catch (IllegalArgumentException e) {
-
-    }
   }
 
   public void reset() {

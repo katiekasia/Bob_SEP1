@@ -36,6 +36,9 @@ public class ViewEditGeneralController
   @FXML
   private Button deleteButton;
 
+  @FXML
+  private Button backButton;
+
   private ProjectPlanningModel model;
   private Region root;
   private ViewHandler viewHandler;
@@ -43,15 +46,44 @@ public class ViewEditGeneralController
   public Region getRoot() {
     return root;
   }
-
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
+  {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
   }
+
   @FXML
-  private void deleteButtonClicked() {
-    deleteButton.getScene().getWindow().hide();
+  private void backButtonClicked() {
+    viewHandler.openView("projects");
+  }
+
+  @FXML
+    private void detailsButtonClicked() {
+    // Implement saving to XML functionality here
+
+    // If input is incorrect, display errorLabel
+    //    if (!validateInput()) {
+    //      errorLabel.setText("Incorrect input!");
+    //      errorLabel.setVisible(true);
+    //    } else {
+    //      // Example: Get data from text fields
+    //      String title = titleTextField.getText();
+    //      int id = Integer.parseInt(idTextField.getText());
+    //      double budget = Double.parseDouble(budgetTextField.getText());
+    //      // ...other fields
+    //
+    //      errorLabel.setVisible(false);
+    //      viewHandler.openView("viewProject");
+    //      // Save details to XML
+    // }
+  }
+
+  private boolean validateInput()
+  {
+    // Implement input validation logic here
+    // Return true if input is correct, false otherwise
+    return true; // Placeholder - add validation checks
   }
 
   public void reset() {
