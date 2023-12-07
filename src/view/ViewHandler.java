@@ -16,6 +16,7 @@ import model.ProjectPlanningModel;
     private Scene currentScene;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
+    private createCommercialViewController commercialViewController;
     private SelectProjectTypeViewController selectProjectController;
     private createCommercialViewController createCommercialController;
 /*
@@ -241,4 +242,5 @@ import model.ProjectPlanningModel;
       primaryStage.setX(x);
       primaryStage.setY(y);
     }
+
     */
