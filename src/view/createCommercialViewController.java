@@ -57,13 +57,12 @@ public class createCommercialViewController
     this.root = root;
   }
   @FXML
-  private void cancelButtonClicked(ActionEvent event) {
-    // Close the window
+  private void cancelButtonClicked() {
     cancelButton.getScene().getWindow().hide();
   }
 
   @FXML
-  private void saveButtonClicked(ActionEvent event) {
+  private void saveButtonClicked() {
     // Implement saving to XML functionality here
     // If input is incorrect, display errorLabel
     if (!validateInput()) {
@@ -74,7 +73,18 @@ public class createCommercialViewController
       // Save details to XML
     }
   }
-
+  @FXML
+  private void backButtonClicked() {
+    // Implement saving to XML functionality here
+    // If input is incorrect, display errorLabel
+    if (!validateInput()) {
+      errorLabel.setText("Incorrect input!");
+      errorLabel.setVisible(true);
+    } else {
+      errorLabel.setVisible(false);
+      // Save details to XML
+    }
+  }
   private boolean validateInput()
   {
     // Implement input validation logic here
