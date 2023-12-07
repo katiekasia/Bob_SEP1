@@ -18,6 +18,7 @@ public class createResidentialViewController {
   private ProjectPlanningModel model;
   private Region root;
 
+
   @FXML
   private TextField titleTextField;
 
