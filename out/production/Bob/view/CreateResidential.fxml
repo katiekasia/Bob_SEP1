@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane userData="createResidential" prefHeight="546.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createResidentialViewController">
+<AnchorPane prefHeight="546.0" prefWidth="461.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createResidentialViewController">
     <children>
         <HBox alignment="CENTER" layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="341.0" spacing="160.0">
             <children>
@@ -125,10 +125,11 @@
                 <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
-        <HBox alignment="CENTER" layoutX="106.0" layoutY="463.0" prefHeight="57.0" prefWidth="247.0" spacing="40.0">
+        <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">
             <children>
-                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" />
-                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
+                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" fx:id="cancelButton" onAction="#cancelButtonClicked"/>
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" fx:id="saveButton" onAction="#saveButtonClicked"/>
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" fx:id="backButton" onAction="#backButtonClicked"/>
             </children>
         </HBox>
         <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">

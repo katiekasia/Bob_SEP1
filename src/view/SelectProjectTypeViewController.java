@@ -75,10 +75,6 @@ public class SelectProjectTypeViewController {
     viewHandler.openView("roadConstructionProject");
   }
   @FXML
-  private void handleCancelButton() {
-    viewHandler.openView("projects");
-  }
-  @FXML
   private void handleBackButton() {
     viewHandler.openView("projects");
   }
