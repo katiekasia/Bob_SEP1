@@ -22,8 +22,10 @@ import model.ProjectPlanningModel;
     private SelectProjectTypeViewController selectProjectController;
     private createCommercialViewController createCommercialController;
     private createIndustrialViewController createIndustrialController;
+    private ViewEditGeneralController editGeneralController;
+    private createResidentialViewController createResidentialController;
     /*
-          private ViewEditGeneralController editGeneralController;
+
           private EditCommercialController editCommercialController;
           private EditResidentialController editResidentialController;
           private EditIndustrialController editIndustrialController;
@@ -46,26 +48,6 @@ import model.ProjectPlanningModel;
       this.primaryStage = primaryStage;
       openView("projects");
     }
-
-   /* public void openView()
-    {
-      Region root = null;
-      root = loadCreateIndustrialViewController("CreateIndustrial.fxml");
-      currentScene.setRoot(root);
-      String title = "Main Menu";
-      if (root.getUserData() != null)
-      {
-        title += root.getUserData();
-      }
-
-      primaryStage.setTitle(title);
-      primaryStage.setScene(currentScene);
-      primaryStage.setWidth(root.getPrefWidth());
-      primaryStage.setHeight(root.getPrefHeight());
-      primaryStage.show();
-    }
-
-    */
 
     private Region loadMainMenu(String fxmlFile)
     {
@@ -90,6 +72,7 @@ import model.ProjectPlanningModel;
         mainMenuController.reset();
       return mainMenuController.getRoot();
     }
+
     private Region loadSelectProjectTypeViewController(String fxmlFile)
     {
       Region root = null;
@@ -114,6 +97,29 @@ import model.ProjectPlanningModel;
       return selectProjectTypeViewController.getRoot();
     }
 
+    private Region loadViewEditController(String fxmlFile)
+    {
+      Region root = null;
+      if (editGeneralController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          editGeneralController = loader.getController();
+          editGeneralController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editGeneralController.reset();
+      return editGeneralController.getRoot();
+    }
 
     private Region loadCreateCommercialViewController(String fxmlFile)
     {
@@ -139,10 +145,10 @@ import model.ProjectPlanningModel;
       return createCommercialController.getRoot();
     }
 
-    private Region loadCreateIndustrialViewController(String fxmlFile)
+    private Region loadCreateResidentialViewController(String fxmlFile)
     {
       Region root = null;
-      if (createIndustrialController == null)
+      if (createResidentialController == null)
       {
         try
         {
@@ -150,8 +156,8 @@ import model.ProjectPlanningModel;
           loader.setLocation(getClass().getResource(fxmlFile));
           root = loader.load();
 
-          createIndustrialController = loader.getController();
-          createIndustrialController.init(this, model, root);
+          createResidentialController = loader.getController();
+          createResidentialController.init(this, model, root);
         }
         catch (Exception e)
         {
@@ -159,8 +165,8 @@ import model.ProjectPlanningModel;
         }
       }
       else
-        createIndustrialController.reset();
-      return createIndustrialController.getRoot();
+        createResidentialController.reset();
+      return createResidentialController.getRoot();
     }
 
     public void closeView()
@@ -180,21 +186,56 @@ import model.ProjectPlanningModel;
           break;
         }
 
-
         case "selectType":
-
+        {
           root = loadSelectProjectTypeViewController("SelectProjectType.fxml");
           break;
-          }
-          /*
-        //                      _____ FOR RESIDENTIAL ______
-        //  loading scene graph with specified function for determined window use
-        case "addResidential":
+        }
+
+        case "viewProject":
         {
-          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
-              null, Function.add);
+          root = loadViewEditController("ViewEdit.fxml");
           break;
         }
+        case "residentialProject":
+        {
+          root = loadCreateResidentialViewController("CreateResidential.fxml");
+          break;
+        }
+        case "commercialProject":
+        {
+          root = loadCreateResidentialViewController("createCommercial.fxml");
+          break;
+        }
+      }
+        currentScene.setRoot(root);
+        String title = "";
+        if (root.getUserData() != null)
+        {
+          title += root.getUserData();
+        }
+
+        Screen screen = Screen.getPrimary();
+        Rectangle2D bounds = screen.getVisualBounds();
+
+        primaryStage.setTitle(title);
+        primaryStage.setScene(currentScene);
+        primaryStage.setWidth(root.getPrefWidth());
+        primaryStage.setHeight(root.getPrefHeight());
+        primaryStage.show();
+
+        // centering the window
+
+        double x = (bounds.getWidth() - primaryStage.getWidth()) / 2;
+        double y = (bounds.getHeight() - primaryStage.getHeight()) / 2;
+        primaryStage.setX(x);
+        primaryStage.setY(y);
+
+
+
+    }
+  }
+        /*
         case "editResidential":
         {
           root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
@@ -281,29 +322,3 @@ import model.ProjectPlanningModel;
 
  */
 
-      currentScene.setRoot(root);
-      String title = "";
-      if (root.getUserData() != null)
-
-      {
-        title += root.getUserData();
-      }
-
-      Screen screen = Screen.getPrimary();
-      Rectangle2D bounds = screen.getVisualBounds();
-
-      primaryStage.setTitle(title);
-      primaryStage.setScene(currentScene);
-      primaryStage.setWidth(root.getPrefWidth());
-      primaryStage.setHeight(root.getPrefHeight());
-      primaryStage.show();
-
-      // centering the window
-
-      double x = (bounds.getWidth() - primaryStage.getWidth()) / 2;
-      double y = (bounds.getHeight() - primaryStage.getHeight()) / 2;
-      primaryStage.setX(x);
-      primaryStage.setY(y);
-    }
-
-  }

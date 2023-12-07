@@ -17,7 +17,7 @@
             <Insets />
          </VBox.margin>
       </Label>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential">
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential" fx:id="residentialProject" onAction="#handleResidentialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
@@ -37,9 +37,10 @@
             <Insets />
          </VBox.margin>
       </Button>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
          <children>
             <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="cancel" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="back" />
          </children>
          <VBox.margin>
             <Insets />

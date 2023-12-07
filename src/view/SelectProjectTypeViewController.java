@@ -42,12 +42,12 @@ public class SelectProjectTypeViewController {
 
   @FXML
   private void handleResidentialButton(ActionEvent event) {
-    openResidentialView();
+    viewHandler.openView("residentialProject"); // Call the method to open create Residential project
   }
 
   @FXML
   private void handleCommercialButton(ActionEvent event) {
-    openCommercialView();
+    viewHandler.openView("commercialProject"); // Call the method to open create Commercial Project
   }
   @FXML
   private void handleIndustrialButton(ActionEvent event) {

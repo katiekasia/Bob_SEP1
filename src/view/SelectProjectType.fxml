@@ -17,7 +17,7 @@
             <Insets />
          </VBox.margin>
       </Label>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential">
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential" fx:id="residentialProject" onAction="#handleResidentialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>

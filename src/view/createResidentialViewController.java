@@ -5,9 +5,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Region;
 import model.Project;
+import model.ProjectPlanningModel;
 
 public class createResidentialViewController {
+
+  private ViewHandler viewHandler;
+  private ProjectPlanningModel model;
+  private Region root;
 
   @FXML
   private TextField titleTextField;
@@ -51,8 +57,6 @@ public class createResidentialViewController {
     int id = Integer.parseInt(idTextField.getText());
     double budget = Double.parseDouble(budgetTextField.getText());
     // ...other fields
-
-
   }
 
   @FXML
@@ -62,6 +66,24 @@ public class createResidentialViewController {
     errorLabel.setText(""); // Clear any error messages
     titleTextField.getScene().getWindow().hide(); // Hide the window
   }
+
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
+  }
+  public void reset()
+  {
+    // Reset logic
+    init(viewHandler, model, root);
+  }
+
+  public Region getRoot()
+  {
+    return root;
+  }
 }
+
+
 
 
