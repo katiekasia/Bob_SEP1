@@ -204,7 +204,7 @@ import model.ProjectPlanningModel;
         }
         case "commercialProject":
         {
-          root = loadCreateResidentialViewController("createCommercial.fxml");
+          root = loadCreateCommercialViewController("createCommercial.fxml");
           break;
         }
       }
