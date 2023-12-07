@@ -1,7 +1,7 @@
 package model;
 
 //this is our project class being abstract , and the project type gets the type from the enum class
-public abstract class Project
+public class Project
 {
   private int ID;
   private String title;
@@ -20,6 +20,10 @@ public Project(int ID, String title,double budget, double size, String address, 
   this.address = address;
   this.type = type;
 }
+
+  public Project(int id, String title, double budget)
+  {
+  }
 
   public int getID()
   {
