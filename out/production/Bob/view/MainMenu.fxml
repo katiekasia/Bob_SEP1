@@ -11,7 +11,7 @@
    <children>
       <AnchorPane layoutY="200.0" prefHeight="400.0" prefWidth="606.0">
          <children>
-            <Button layoutX="235.0" layoutY="232.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="130.0" text="Create" />
+            <Button layoutX="235.0" layoutY="232.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="130.0" text="Create" fx:id="create" onAction="#createProject"/>
             <Button layoutX="51.0" layoutY="232.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="130.0" text="View" />
             <Label layoutX="235.0" layoutY="350.0" prefHeight="18.0" prefWidth="130.0" text="Number of projects: " />
             <Button layoutX="428.0" layoutY="232.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="130.0" text="Cancel" />

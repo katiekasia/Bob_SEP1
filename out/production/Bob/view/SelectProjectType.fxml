@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="324.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateWindow1">
+<VBox alignment="CENTER" prefHeight="324.0" prefWidth="389.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SelectProjectTypeViewController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="163.0" text="Select project Type" textAlignment="CENTER">
          <font>
@@ -17,29 +17,30 @@
             <Insets />
          </VBox.margin>
       </Label>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential">
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="36.0" prefWidth="147.0" text="Residential" fx:id="residentialProject" onAction="#handleResidentialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Commercial">
+      <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="147.0" text="Commercial" fx:id="commercialProject" onAction="#handleCommercialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Industrial">
+      <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" text="Industrial" fx:id="industrialProject" onAction="#handleIndustrialButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" text="Road-construction">
+      <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" text="Road-construction" fx:id="roadCnstructionProject" onAction="#handleRoadConstructionButton">
          <VBox.margin>
             <Insets />
          </VBox.margin>
       </Button>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="389.0" spacing="40.0">
          <children>
             <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="cancel" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="97.0" text="back" />
          </children>
          <VBox.margin>
             <Insets />
