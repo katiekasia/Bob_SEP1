@@ -1,5 +1,6 @@
 package view;
 
+import model.Residential.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,9 +8,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import model.ProjectPlanningModel;
+import model.ProjectType;
+import model.Residential;
 
 import javax.swing.text.View;
 import java.io.IOException;
+
 
 public class SelectProjectTypeViewController {
 
@@ -42,6 +46,19 @@ public class SelectProjectTypeViewController {
 
   @FXML
   private void handleResidentialButton() {
+    Residential residential1 = new Residential(
+        1,
+        "",
+        0,
+        0,
+        "",
+        ProjectType.RESIDENTIAL,
+        (Integer) Residential.defaultResidential.get(0), // numberOfKitchens
+        (Integer) Residential.defaultResidential.get(1), // numberOfBathrooms
+        (Integer) Residential.defaultResidential.get(2), // numberOfOtherRooms
+        (Boolean) Residential.defaultResidential.get(4), // isNewBuilding
+        (Integer) Residential.defaultResidential.get(3)  // timeline
+    );
     viewHandler.openView("residentialProject"); // Call the method to open create Residential project
   }
 
