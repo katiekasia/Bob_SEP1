@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="546.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateResidentialViewController">
+<AnchorPane userData="createResidential" prefHeight="546.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createResidentialViewController">
     <children>
         <HBox alignment="CENTER" layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="341.0" spacing="160.0">
             <children>
@@ -38,7 +38,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="15.0" layoutY="115.0" prefHeight="29.0" prefWidth="357.0" spacing="150.0">
@@ -48,7 +48,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="382.0">
@@ -60,7 +60,7 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                  <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                        <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
                     </children>
                 </HBox>
             </children>
@@ -72,7 +72,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="365.0" spacing="140.0">
@@ -82,7 +82,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="25.0" layoutY="275.0" prefHeight="29.0" prefWidth="415.0" spacing="102.0">
@@ -92,7 +92,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="87.0">
@@ -102,7 +102,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="24.0" layoutY="354.0" prefHeight="29.0" prefWidth="415.0" spacing="76.0">
@@ -112,7 +112,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="391.0" prefHeight="38.0" prefWidth="365.0" spacing="12.0">
@@ -122,7 +122,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="106.0" layoutY="463.0" prefHeight="57.0" prefWidth="247.0" spacing="40.0">
@@ -131,9 +131,9 @@
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
             </children>
         </HBox>
-      <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
+        <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
     </children>
 </AnchorPane>

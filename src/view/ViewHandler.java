@@ -19,6 +19,7 @@ import model.ProjectPlanningModel;
     private createCommercialViewController commercialViewController;
     private SelectProjectTypeViewController selectProjectController;
     private createCommercialViewController createCommercialController;
+    private createIndustrialViewController createIndustrialController;
 /*
       private ViewEditGeneralController editGeneralController;
       private EditCommercialController editCommercialController;
@@ -27,7 +28,7 @@ import model.ProjectPlanningModel;
       private EditRoadContructionController editRoadContructionController;
 
       private CreateResidentialController createResidentialController;
-      private CreateIndustrialController createIndustrialController;
+
       private CreateRoadContructionController createRoadContructionController;
 */
     private ProjectPlanningModel model;
@@ -45,7 +46,7 @@ import model.ProjectPlanningModel;
 
     public void openView() {
       Region root = null;
-      root = loadCreateViewController("createCommercial.fxml");
+      root = loadCreateIndustrialViewController("CreateIndustrial.fxml");
       currentScene.setRoot(root);
         String title = "Main Menu";
         if (root.getUserData() != null) {
@@ -80,7 +81,7 @@ import model.ProjectPlanningModel;
       return mainMenuController.getRoot();
     }
 
-    private Region loadCreateViewController(String fxmlFile){
+    private Region loadCreateCommercialViewController(String fxmlFile){
       Region root = null;
       if (createCommercialController == null){
         try
@@ -100,7 +101,26 @@ import model.ProjectPlanningModel;
         createCommercialController.reset();
       return createCommercialController.getRoot();
     }
+    private Region loadCreateIndustrialViewController(String fxmlFile){
+      Region root = null;
+      if (createIndustrialController == null){
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
 
+          createIndustrialController = loader.getController();
+          createIndustrialController.init(this, model, root);
+        }
+        catch (Exception e){
+          e.printStackTrace();
+        }
+      }
+      else
+        createIndustrialController.reset();
+      return createIndustrialController.getRoot();
+    }
 
     public void closeView() {
       primaryStage.close();
