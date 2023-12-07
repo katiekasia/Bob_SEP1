@@ -44,7 +44,7 @@ import model.ProjectPlanningModel;
     public void start(Stage primaryStage)
     {
       this.primaryStage = primaryStage;
-      openView("selectType");
+      openView("projects");
     }
 
    /* public void openView()
@@ -182,7 +182,7 @@ import model.ProjectPlanningModel;
 
 
         case "selectType":
-          {
+
           root = loadSelectProjectTypeViewController("SelectProjectType.fxml");
           break;
           }

@@ -32,9 +32,8 @@ public class MainMenuViewController
   }
 
   @FXML public void createProject() {
-    try
-    {
-
+    try {
+      viewHandler.openView("selectType"); // Call the method to open SelectProjectType
     } catch (IllegalArgumentException e) {
       // Handle exception
     }
