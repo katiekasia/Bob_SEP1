@@ -10,6 +10,7 @@ import javafx.scene.layout.Region;
 import model.Project;
 import model.ProjectPlanningModel;
 import model.Residential;
+import model.ProjectType;
 
 public class createResidentialViewController {
 
@@ -56,31 +57,54 @@ public class createResidentialViewController {
   @FXML
   private Label errorLabel;
 
-  @FXML
-  private void cancelButtonClicked() {
-    viewHandler.openView("projects");
-  }
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
 
+// initiate the default settings
+    int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
+    int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
+    int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
+    int defaultTimeline = (int) Residential.defaultResidential[3];
+    boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
+
+// Inject the textfields with initiated defaults settings
+    numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
+    numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
+    numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
+    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
+    timelineTextField.setText(String.valueOf(defaultTimeline));
+
+
+
+  }
   @FXML
   private void saveButtonClicked() {
-    // Implement saving to XML functionality here
+   {
+     // retrive the inserted data + the defaults
+      int id = Integer.parseInt(idTextField.getText());
+      String title = titleTextField.getText();
+      double budget = Double.parseDouble(budgetTextField.getText());
+      double size = Double.parseDouble(sizeTextField.getText());
+      String address = addressTextField.getText();
+      int numberOfKitchens = Integer.parseInt(numberOfKitchensTextField.getText());
+      int numberOfBathrooms = Integer.parseInt(numberOfBathroomsTextField.getText());
+      int numberOfOtherRooms = Integer.parseInt(numberOfOtherRoomsTextField.getText());
+      boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
+      int timeline = Integer.parseInt(timelineTextField.getText());
 
-    // If input is incorrect, display errorLabel
-    //    if (!validateInput()) {
-    //      errorLabel.setText("Incorrect input!");
-    //      errorLabel.setVisible(true);
-    //    } else {
-    //      // Example: Get data from text fields
-    //      String title = titleTextField.getText();
-    //      int id = Integer.parseInt(idTextField.getText());
-    //      double budget = Double.parseDouble(budgetTextField.getText());
-    //      // ...other fields
-    //
-    //      errorLabel.setVisible(false);
-    //      viewHandler.openView("viewProject");
-    //      // Save details to XML
-    // }
+     Residential newResidential = new Residential(
+         id, title, budget, size, address,
+         ProjectType.RESIDENTIAL,  // always residential , depending on the createTYPEviewController window
+         numberOfKitchens, numberOfBathrooms, numberOfOtherRooms,
+         isNewBuilding, timeline);
+
+     System.out.println(newResidential);
+
+    }
   }
+
   @FXML
   private void backButtonClicked() {
     viewHandler.openView("selectType");
@@ -92,36 +116,18 @@ public class createResidentialViewController {
     return true; // Placeholder - add validation checks
   }
 
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
-    this.viewHandler = viewHandler;
-    this.model = model;
-    this.root = root;
-
-//    Trying to set up the defaults !
-
-    int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
-    int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
-    int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
-    int defaultTimeline = (int) Residential.defaultResidential[3];
-    boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
-
-    // Populate text fields with default values
-    numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
-    numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
-    numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
-    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
-    timelineTextField.setText(String.valueOf(defaultTimeline));
-
-    // Set other default values for text fields as needed
-
+  @FXML
+  private void cancelButtonClicked() {
+    viewHandler.openView("projects");
   }
+
+
 
 
 
 
   public void reset()
   {
-    // Reset logic
     init(viewHandler, model, root);
   }
 
