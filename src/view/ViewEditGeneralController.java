@@ -6,6 +6,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import javafx.stage.Stage;
 import model.ProjectPlanningModel;
 
 import javax.swing.text.TableView;
