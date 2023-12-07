@@ -64,17 +64,23 @@
                   <TableColumn prefWidth="118.4000244140625" text="Type" />
               </columns>
             </TableView>
-            <Button layoutX="673.0" layoutY="309.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Details/Edit" fx:id="DetailsEdit" onAction="datailsButtonClicked">
+
+            <Button layoutX="673.0" layoutY="309.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Details/Edit" fx:id="DetailsEdit" onAction="#detailsButtonClicked">
+
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="673.0" layoutY="219.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Delete">
+
+            <Button layoutX="673.0" layoutY="219.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Delete" fx:id="deleteButton" onAction="#deleteButtonClicked">
+
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="673.0" layoutY="401.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Back">
+
+            <Button layoutX="673.0" layoutY="401.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Back" fx:id="backButton" onAction="#backButtonClicked">
+
                <font>
                   <Font size="14.0" />
                </font>
