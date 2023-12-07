@@ -127,9 +127,9 @@
         </HBox>
         <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">
             <children>
-                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" />
-                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" />
+                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" fx:id="cancelButton" onAction="#cancelButtonClicked"/>
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" fx:id="saveButton" onAction="#saveButtonClicked"/>
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" fx:id="backButton" onAction="#backButtonClicked"/>
             </children>
         </HBox>
         <Label layoutX="27.0" layoutY="429.0" text="Error" textFill="RED">

@@ -42,6 +42,9 @@ public class createCommercialViewController
   private Button saveButton;
 
   @FXML
+  private Button backButton;
+
+  @FXML
   private Label errorLabel;
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
@@ -58,32 +61,32 @@ public class createCommercialViewController
   }
   @FXML
   private void cancelButtonClicked() {
-    cancelButton.getScene().getWindow().hide();
+    viewHandler.openView("projects");
   }
 
   @FXML
   private void saveButtonClicked() {
     // Implement saving to XML functionality here
+
     // If input is incorrect, display errorLabel
-    if (!validateInput()) {
-      errorLabel.setText("Incorrect input!");
-      errorLabel.setVisible(true);
-    } else {
-      errorLabel.setVisible(false);
-      // Save details to XML
-    }
+//    if (!validateInput()) {
+//      errorLabel.setText("Incorrect input!");
+//      errorLabel.setVisible(true);
+//    } else {
+//      // Example: Get data from text fields
+//      String title = titleTextField.getText();
+//      int id = Integer.parseInt(idTextField.getText());
+//      double budget = Double.parseDouble(budgetTextField.getText());
+//      // ...other fields
+//
+//      errorLabel.setVisible(false);
+//      viewHandler.openView("viewProject");
+//      // Save details to XML
+   // }
   }
   @FXML
   private void backButtonClicked() {
-    // Implement saving to XML functionality here
-    // If input is incorrect, display errorLabel
-    if (!validateInput()) {
-      errorLabel.setText("Incorrect input!");
-      errorLabel.setVisible(true);
-    } else {
-      errorLabel.setVisible(false);
-      // Save details to XML
-    }
+    viewHandler.openView("selectType");
   }
   private boolean validateInput()
   {

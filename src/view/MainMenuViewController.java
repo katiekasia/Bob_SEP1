@@ -15,7 +15,6 @@ public class MainMenuViewController
   @FXML private Label title;
   @FXML private Button create;
   @FXML private Button view;
-  @FXML private Button cancel;
   @FXML private TextField nrOfProjects;
 
   private ProjectPlanningModel model;
@@ -41,10 +40,6 @@ public class MainMenuViewController
     } catch (IllegalArgumentException e) {
 
     }
-  }
-
-  @FXML public void cancel() {
-    viewHandler.closeView();
   }
 
   public void reset() {
