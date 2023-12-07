@@ -79,6 +79,26 @@ public class ViewEditGeneralController
     //      // Save details to XML
     // }
   }
+  @FXML
+  private void deleteButtonClicked() {
+    // Implement saving to XML functionality here
+
+    // If input is incorrect, display errorLabel
+    //    if (!validateInput()) {
+    //      errorLabel.setText("Incorrect input!");
+    //      errorLabel.setVisible(true);
+    //    } else {
+    //      // Example: Get data from text fields
+    //      String title = titleTextField.getText();
+    //      int id = Integer.parseInt(idTextField.getText());
+    //      double budget = Double.parseDouble(budgetTextField.getText());
+    //      // ...other fields
+    //
+    //      errorLabel.setVisible(false);
+    //      viewHandler.openView("viewProject");
+    //      // Save details to XML
+    // }
+  }
 
   private boolean validateInput()
   {
