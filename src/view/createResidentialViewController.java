@@ -55,17 +55,27 @@ public class createResidentialViewController {
   @FXML
   private Button cancelButton;
   @FXML
-  private Label errorLabel;
-
-
-
+  private Label errorLabelTitle;
   @FXML
-  private void validID() {
-    if(idTextField.getText().isEmpty())
-    {
-      errorLabel.setText("ID cannot be empty");
-    }
-  }
+  private Label errorLabelId;
+  @FXML
+  private Label errorLabelTimeline;
+  @FXML
+  private Label errorLabelSize;
+  @FXML
+  private Label errorLabelAddress;
+  @FXML
+  private Label errorLabelBudget;
+  @FXML
+  private Label errorLabelNrOfKitchens;
+  @FXML
+  private Label errorLabelNrOfBathrooms;
+  @FXML
+  private Label errorLabelNrOfRooms;
+  @FXML
+  private Label errorLabelIsNewBuilding;
+
+
 
   @FXML
   private void cancelButtonClicked() {
@@ -111,10 +121,19 @@ public class createResidentialViewController {
       int timeline = Integer.parseInt(timelineTextField.getText());
 
       // Perform additional input validation checks
-      if ((id <= 0 || String.valueOf(id).length() != 6) || title.isEmpty() || budget <= 0 || size <= 0 || address.isEmpty() ||
-          numberOfKitchens < 0 || numberOfBathrooms < 0 || numberOfOtherRooms < 0 ||
-          timeline <= 0) {
-        errorLabel.setText("Invalid input. Check fields.");
+      if (id <= 0 || String.valueOf(id).length() != 6)
+      {
+        errorLabelId.setText("Invalid ID");
+        return;
+      }
+      if(title.isEmpty())
+      {
+        errorLabelTitle.setText("Empty title");
+        return;
+      }
+      if(budget <= 0)
+      {
+        errorLabelTitle.setText("Invalid budget");
         return;
       }
 
@@ -127,8 +146,9 @@ public class createResidentialViewController {
 
       System.out.println(newResidential);
 
-    } catch (NumberFormatException e) {
-      errorLabel.setText("Invalid numeric format.");
+    }
+    catch (NumberFormatException e) {
+      errorLabelId.setText("Invalid numeric format.");
     }
   }
 
