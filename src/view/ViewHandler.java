@@ -17,7 +17,7 @@ import model.ProjectPlanningModel;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
     private SelectProjectTypeViewController selectProjectController;
-
+/*
       private ViewEditGeneralController editGeneralController;
       private EditCommercialController editCommercialController;
       private EditResidentialController editResidentialController;
@@ -27,7 +27,7 @@ import model.ProjectPlanningModel;
       private CreateResidentialController createResidentialController;
       private CreateIndustrialController createIndustrialController;
       private CreateRoadContructionController createRoadContructionController;
-
+*/
     private ProjectPlanningModel model;
 
     public ViewHandler(ProjectPlanningModel model) {
@@ -37,10 +37,12 @@ import model.ProjectPlanningModel;
 
     public void start(Stage primaryStage) {
       this.primaryStage = primaryStage;
-      openView("projects");
+      openView();
     }
+/*
     public void openView(String id) {
       Region root = null;
+
 
       switch (id)
       {
@@ -146,7 +148,6 @@ import model.ProjectPlanningModel;
         }
       }
 
- */
       currentScene.setRoot(root);
       String title = "";
       if (root.getUserData() != null)
@@ -164,18 +165,19 @@ import model.ProjectPlanningModel;
       primaryStage.setHeight(root.getPrefHeight());
       primaryStage.show();
 
-      /*
+
       centering the window
-       */
+
       double x = (bounds.getWidth() - primaryStage.getWidth()) / 2;
       double y = (bounds.getHeight() - primaryStage.getHeight()) / 2;
       primaryStage.setX(x);
       primaryStage.setY(y);
     }
-/*
+    */
+
     public void openView() {
       Region root = null;
-      root = loadMainMenu("MainMenu.fxml");
+      root = loadMainMenu("createCommercial.fxml");
       currentScene.setRoot(root);
         String title = "Main Menu";
         if (root.getUserData() != null) {
@@ -188,7 +190,7 @@ import model.ProjectPlanningModel;
         primaryStage.setHeight(root.getPrefHeight());
         primaryStage.show();
       }
-*/
+
     private Region loadMainMenu(String fxmlFile){
       Region root = null;
       if (mainMenuController == null){
@@ -209,6 +211,7 @@ import model.ProjectPlanningModel;
         mainMenuController.reset();
       return mainMenuController.getRoot();
     }
+
 
     public void closeView() {
       primaryStage.close();
