@@ -1,6 +1,5 @@
 package view;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,8 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class MainMenuViewController
-{
+public class MainMenuViewController {
   private ViewHandler viewHandler;
 
   @FXML private Label title;
@@ -31,7 +29,7 @@ public class MainMenuViewController
   }
 
   @FXML public void createProject() {
-      viewHandler.openView("selectType"); // Call the method to open SelectProjectType
+    viewHandler.openView("selectType"); // Call the method to open SelectProjectType
   }
 
   @FXML public void viewProject() {
@@ -40,6 +38,10 @@ public class MainMenuViewController
     } catch (IllegalArgumentException e) {
 
     }
+  }
+
+  @FXML public void cancel() {
+    viewHandler.closeView(); // Call the method to close the window
   }
 
   public void reset() {

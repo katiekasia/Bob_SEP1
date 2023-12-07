@@ -81,6 +81,7 @@ public class createRoadConstructionViewController
     this.model = model;
     this.root = root;
   }
+
   public void reset()
   {
     // Reset logic
