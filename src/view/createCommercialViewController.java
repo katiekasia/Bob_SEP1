@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Region;
+import model.ProjectPlanningModel;
 
 public class createCommercialViewController
 {
@@ -41,7 +43,15 @@ public class createCommercialViewController
 
   @FXML
   private Label errorLabel;
+  private ViewHandler viewHandler;
+  private ProjectPlanningModel model;
+  private Region root;
 
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
+  }
   @FXML
   private void cancelButtonClicked(ActionEvent event) {
     // Close the window
@@ -66,7 +76,19 @@ public class createCommercialViewController
     // Implement input validation logic here
     // Return true if input is correct, false otherwise
     return true; // Placeholder - add validation checks
-  }}
+  }
+
+  public void reset()
+  {
+    // Reset logic
+    init(viewHandler, model, root);
+  }
+
+  public Region getRoot()
+  {
+    return root;
+  }
+}
 
 
 
