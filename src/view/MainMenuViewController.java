@@ -40,13 +40,10 @@ public class MainMenuViewController {
     }
   }
 
-<<<<<<< Updated upstream
-=======
   @FXML public void cancel() {
     viewHandler.closeView(); // Call the method to close the window
   }
 
->>>>>>> Stashed changes
   public void reset() {
     // Reset logic
     init(viewHandler, model, root);
