@@ -94,10 +94,11 @@ public class createResidentialViewController {
 
 
   }
+
   @FXML
   private void saveButtonClicked() {
-   {
-     // retrive the inserted data + the defaults
+    try {
+      // Retrieve the inserted data
       int id = Integer.parseInt(idTextField.getText());
       String title = titleTextField.getText();
       double budget = Double.parseDouble(budgetTextField.getText());
@@ -109,14 +110,25 @@ public class createResidentialViewController {
       boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
       int timeline = Integer.parseInt(timelineTextField.getText());
 
-     Residential newResidential = new Residential(
-         id, title, budget, size, address,
-         ProjectType.RESIDENTIAL,  // always residential , depending on the createTYPEviewController window
-         numberOfKitchens, numberOfBathrooms, numberOfOtherRooms,
-         isNewBuilding, timeline);
+      // Perform additional input validation checks
+      if ((id <= 0 || String.valueOf(id).length() != 6) || title.isEmpty() || budget <= 0 || size <= 0 || address.isEmpty() ||
+          numberOfKitchens < 0 || numberOfBathrooms < 0 || numberOfOtherRooms < 0 ||
+          timeline <= 0) {
+        errorLabel.setText("Invalid input. Check fields.");
+        return;
+      }
 
-     System.out.println(newResidential);
+      // Create a Residential object if input is valid
+      Residential newResidential = new Residential(
+          id, title, budget, size, address,
+          ProjectType.RESIDENTIAL,
+          numberOfKitchens, numberOfBathrooms, numberOfOtherRooms,
+          isNewBuilding, timeline);
 
+      System.out.println(newResidential);
+
+    } catch (NumberFormatException e) {
+      errorLabel.setText("Invalid numeric format.");
     }
   }
 
