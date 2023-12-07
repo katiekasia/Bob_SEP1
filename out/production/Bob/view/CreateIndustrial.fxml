@@ -97,15 +97,9 @@
         </HBox>
         <HBox alignment="CENTER" layoutX="13.0" layoutY="365.0" prefHeight="57.0" prefWidth="440.0" spacing="40.0">
             <children>
-<<<<<<< HEAD
-                <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" />
-                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" />
-=======
                 <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="cancel" fx:id="cancelButton" onAction="#cancelButtonClicked"/>
                 <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="save" fx:id="saveButton" onAction="#saveButtonClicked"/>
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="back" fx:id="backButton" onAction="#backButtonClicked"/>
->>>>>>> 7018fc5d4b03aa0a18876c739b53a5e54c1d31db
             </children>
         </HBox>
         <Label layoutX="27.0" layoutY="326.0" text="error" textFill="RED">
