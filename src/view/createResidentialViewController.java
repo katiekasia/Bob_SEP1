@@ -110,8 +110,6 @@ projects = new ProjectList();
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
     isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
     timelineTextField.setText(String.valueOf(defaultTimeline));
-
-
   }
 
   @FXML
@@ -183,6 +181,14 @@ projects = new ProjectList();
       {
         errorLabelId.setText("Negative ID");
         return;
+      }
+      for(int i=0; i<ProjectStorage.getAllProjects().size();i++)
+      {
+        if(ProjectStorage.getAllProjects().get(i).getID()==id)
+        {
+          errorLabelId.setText("ID already exist");
+          return;
+        }
       }
 
       if (String.valueOf(id).length() == 0)
@@ -305,11 +311,6 @@ numberOfBathroomsTextField.clear();
 numberOfOtherRoomsTextField.clear();
 isNewBuildingTextField.clear();
 errorLabelGeneralError.setText("");
-
-
-
-
-
     viewHandler.openView("selectType");
   }
 

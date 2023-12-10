@@ -1,19 +1,22 @@
 package view;
 
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
-import model.Project;
-import model.ProjectPlanningModel;
+import model.*;
 
 public class createRoadConstructionViewController
 {
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
+
+  private ProjectList projects;  // Declare as a field
+
 
   @FXML
   private TextField titleTextField;
@@ -34,10 +37,6 @@ public class createRoadConstructionViewController
 
   @FXML
   private TextField addressTextField;
-
-  @FXML
-  private TextField numberOfKitchensTextField;
-
   @FXML
   private TextField birdgesOrtunnelsTextField;
 
@@ -51,8 +50,35 @@ public class createRoadConstructionViewController
   private Button cancelButton;
 
   @FXML
-  private Label errorLabel;
+  private Label errorLabelTitle;
+  @FXML
+  private Label errorLabelId;
+  @FXML
+  private Label errorLabelTimeline;
+  @FXML
+  private Label errorLabelSize;
+  @FXML
+  private Label errorLabelAddress;
+  @FXML
+  private Label errorLabelBudget;
+  @FXML
+  private Label errorLabelWidth;
+  @FXML
+  private Label errorLabelLength;
+  @FXML
+  private Label errorLabelBridgetOrTunnels;
+  @FXML
+  private Label errorLabelChallenges;
+  @FXML
+  private Label errorLabelGeneralError;
 
+  private void printProjects() {
+    System.out.println("Projects List:");
+    for (Project project : projects.getAllProjects()) {
+      System.out.println(project);
+    }
+    System.out.println("End of Projects List");
+  }
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects");
