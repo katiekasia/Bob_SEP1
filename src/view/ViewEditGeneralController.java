@@ -1,19 +1,22 @@
 package view;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
+import model.Project;
 import model.ProjectPlanningModel;
-
-import javax.swing.text.TableView;
-import javax.swing.text.View;
+import model.ProjectStorage;
+import model.ProjectType;
+import javafx.scene.control.TableView;
+import java.util.ArrayList;
 
 public class ViewEditGeneralController
 {
+
   @FXML
   private TextField IDField;
   @FXML
@@ -32,6 +35,16 @@ public class ViewEditGeneralController
   private ChoiceBox TypeChoice;
   @FXML
   private TableView ProjectTable;
+  @FXML
+  private TableColumn<Project, String> title;
+  @FXML
+  private TableColumn<Project, Integer> ID;
+  @FXML
+  private TableColumn<Project, Double> budget;
+  @FXML
+  private TableColumn<Project, String> timeline;
+  @FXML
+  private TableColumn<Project, ProjectType> type;
   @FXML
   private Button DetailsEdit;
   @FXML
@@ -53,7 +66,19 @@ public class ViewEditGeneralController
     this.model = model;
     this.root = root;
   }
+  public void initialize() {
+    // Associate TableColumn with the respective property in the Project class
+    title.setCellValueFactory(new PropertyValueFactory<>("title"));
+    ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
+    budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
+    timeline.setCellValueFactory(new PropertyValueFactory<>("timeline"));
+    type.setCellValueFactory(new PropertyValueFactory<>("type"));
 
+    // Populate TableView with project details from ProjectStorage
+    ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+    ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
+    ProjectTable.setItems(projectData);
+  }
   @FXML
   private void backButtonClicked() {
     viewHandler.openView("projects");

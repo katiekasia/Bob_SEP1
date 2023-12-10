@@ -69,13 +69,6 @@ public class createIndustrialViewController
     viewHandler.openView("projects");
   }
 
-  private void printProjects() {
-    System.out.println("Projects List:");
-    for (Project project : projects.getAllProjects()) {
-      System.out.println(project);
-    }
-    System.out.println("End of Projects List");
-  }
 
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
@@ -135,6 +128,14 @@ public class createIndustrialViewController
       {
         errorLabelId.setText("Negative ID");
         return;
+      }
+      for(int i=0; i<ProjectStorage.getAllProjects().size();i++)
+      {
+        if(ProjectStorage.getAllProjects().get(i).getID()==id)
+        {
+          errorLabelId.setText("ID already exist");
+          return;
+        }
       }
 
       if (String.valueOf(id).length() == 0)
@@ -209,11 +210,8 @@ public class createIndustrialViewController
           ProjectType.INDUSTRIAL,
           typeOfFacility, timeline);
 
-      projects.addProject(newIndustrial);
-
-      printProjects();
-
-
+      ProjectStorage.addProject(newIndustrial);
+      ProjectStorage.printProjects();
 
     }
     catch (NumberFormatException e) {

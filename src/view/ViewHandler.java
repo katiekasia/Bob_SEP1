@@ -10,6 +10,9 @@ import javafx.scene.layout.Region;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import model.ProjectPlanningModel;
+import javafx.collections.FXCollections;
+import javafx.scene.control.TableView.*;
+import javafx.collections.ObservableList;
 
   public class ViewHandler extends Application
   {
@@ -26,13 +29,12 @@ import model.ProjectPlanningModel;
     private createIndustrialViewController createIndustrialController;
 
     private createRoadConstructionViewController createRoadContructionController;
-    /*
 
-          private EditCommercialController editCommercialController;
-          private EditResidentialController editResidentialController;
-          private EditIndustrialController editIndustrialController;
-          private EditRoadContructionController editRoadContructionController;
-    */
+          private EditCommercial1Controller editCommercialController;
+          private EditResidential1Controller editResidentialController;
+          private EditIndustrial1Controller editIndustrialController;
+          private EditRoadConstructionController editRoadContructionController;
+
     private ProjectPlanningModel model;
 
     public ViewHandler(ProjectPlanningModel model)
@@ -291,90 +293,5 @@ import model.ProjectPlanningModel;
     }
 
   }
-        /*
-        case "editResidential":
-        {
-          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
-              state, Function.edit);
-          break;
-        }
-        case "displayResidential":
-        {
-          root = loadAddResidentialProjectView("AddResidentialProjectView.fxml",
-              state, Function.display);
-          break;
-        }
-        //                      _____ FOR COMMERCIAL ______
-        case "addCommercial":
-        {
-          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
-              null, Function.add);
-          break;
-        }
-        case "editCommercial":
-        {
-          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
-              state, Function.edit);
-          break;
-        }
-        case "displayCommercial":
-        {
 
-          root = loadAddCommercialProjectView("AddCommercialProjectView.fxml",
-              state, Function.display);
-          break;
-        }
-
-        //                      _____ FOR INDUSTRIAL ______
-        //  loading scene graph with specified function for determined window use
-        case "addIndustrial":
-        {
-          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
-              null, Function.add);
-          break;
-        }
-        case "editIndustrial":
-        {
-          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
-              state, Function.edit);
-          break;
-        }
-        case "displayIndustrial":
-        {
-          root = loadAddIndustrialProjectView("AddIndustrialProjectView.fxml",
-              state, Function.display);
-          break;
-        }
-
-        case "addRoadConstruction":
-        {
-          root = loadAddRoadConstructionProjectView(
-              "AddRoadConstructionProjectView.fxml", state, Function.add);
-          break;
-        }
-        case "editRoadConstruction":
-        {
-          root = loadAddRoadConstructionProjectView(
-              "AddRoadConstructionProjectView.fxml", state, Function.edit);
-          break;
-        }
-        case "displayRoadConstruction":
-        {
-          root = loadAddRoadConstructionProjectView(
-              "AddRoadConstructionProjectView.fxml", state, Function.display);
-          break;
-        }
-
-        case ("reports"):
-        {
-          root = loadReportsView("ReportsView.fxml");
-          break;
-        }
-        case ("update"):
-        {
-          root = loadUpdateView("UpdateProjectView.fxml", state);
-          break;
-        }
-
- */
 

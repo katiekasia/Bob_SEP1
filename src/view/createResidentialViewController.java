@@ -78,13 +78,6 @@ public class createResidentialViewController {
   private Label errorLabelGeneralError;
 
 
-  private void printProjects() {
-    System.out.println("Projects List:");
-    for (Project project : projects.getAllProjects()) {
-      System.out.println(project);
-    }
-    System.out.println("End of Projects List");
-  }
 
   @FXML
   private void cancelButtonClicked() {

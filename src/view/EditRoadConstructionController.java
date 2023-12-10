@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.ProjectPlanningModel;
 
-public class editroadConstruction1Controller
+public class EditRoadConstructionController
 {
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
