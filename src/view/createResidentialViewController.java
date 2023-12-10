@@ -110,8 +110,6 @@ projects = new ProjectList();
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
     isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
     timelineTextField.setText(String.valueOf(defaultTimeline));
-
-
   }
 
   @FXML
@@ -305,11 +303,6 @@ numberOfBathroomsTextField.clear();
 numberOfOtherRoomsTextField.clear();
 isNewBuildingTextField.clear();
 errorLabelGeneralError.setText("");
-
-
-
-
-
     viewHandler.openView("selectType");
   }
 
