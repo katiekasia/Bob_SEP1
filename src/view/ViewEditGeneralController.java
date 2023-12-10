@@ -48,6 +48,9 @@ public class ViewEditGeneralController
   private ChoiceBox<String> timelineChoiceBox;
 
   @FXML
+  private TableView tableView;
+
+  @FXML
   private TableView ProjectTable;
   @FXML
   private TableColumn<Project, String> title;
@@ -126,6 +129,8 @@ public class ViewEditGeneralController
   @FXML
   private void backButtonClicked() {
     viewHandler.openView("projects");
+
+
   }
 
   @FXML
