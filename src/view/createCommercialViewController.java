@@ -18,7 +18,6 @@ public class createCommercialViewController
   private ProjectList projects;  // Declare as a field
 
 
-
   @FXML
   private TextField idField;
   @FXML
@@ -67,14 +66,6 @@ public class createCommercialViewController
   private Label errorLabelNrOfFloors;
   @FXML
   private Label errorLabelGeneralError;
-
-  private void printProjects() {
-    System.out.println("Projects List:");
-    for (Project project : projects.getAllProjects()) {
-      System.out.println(project);
-    }
-    System.out.println("End of Projects List");
-  }
 
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
@@ -142,6 +133,14 @@ public class createCommercialViewController
     {
       errorLabelId.setText("Negative ID");
       return;
+    }
+    for(int i=0; i<ProjectStorage.getAllProjects().size();i++)
+    {
+      if(ProjectStorage.getAllProjects().get(i).getID()==id)
+      {
+        errorLabelId.setText("ID already exist");
+        return;
+      }
     }
 
     if (String.valueOf(id).length() == 0)
@@ -213,9 +212,10 @@ public class createCommercialViewController
     Commercial newCommercial = new Commercial(
         id, title, budget, size, address,
         ProjectType.COMMERCIAL,numberOfFloors,timeline, useOfBuilding);
-    projects.addProject(newCommercial);
 
-    printProjects();
+    ProjectStorage.addProject(newCommercial);
+
+    ProjectStorage.printProjects();
   }
 
   catch (NumberFormatException e) {

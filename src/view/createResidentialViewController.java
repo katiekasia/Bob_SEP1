@@ -7,11 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
-import model.Project;
-import model.ProjectPlanningModel;
-import model.Residential;
-import model.ProjectType;
-import model.ProjectList;
+import model.*;
 
 public class createResidentialViewController {
 
@@ -287,12 +283,8 @@ projects = new ProjectList();
           numberOfKitchens, numberOfBathrooms, numberOfOtherRooms,
           isNewBuilding, timeline);
 
-//      System.out.println(newResidential);
-      projects.addProject(newResidential);
-
-      printProjects();
-
-
+      ProjectStorage.addProject(newResidential);
+      ProjectStorage.printProjects();
 
     }
     catch (NumberFormatException e) {
