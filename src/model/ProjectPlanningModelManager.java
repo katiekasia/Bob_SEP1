@@ -1,14 +1,12 @@
 package model;
 
 import java.util.ArrayList;
-<<<<<<< Updated upstream
 
 public class ProjectPlanningModelManager implements ProjectPlanningModel
 {
   public void ProjectPlanningModel()
   {
-=======
->>>>>>> Stashed changes
+
 
 public class ProjectPlanningModelManager implements ProjectPlanningModel {
   private ArrayList<Project> projectList;
@@ -22,20 +20,10 @@ public class ProjectPlanningModelManager implements ProjectPlanningModel {
     return projectList;
   }
 
-<<<<<<< Updated upstream
-  @Override public ArrayList<Project> getAllProjects()
-  {
-    return null;
-  }
-
-  // @Override public projectList<Project> getAllProjects()
-  {
- //   return null;
-=======
   @Override
   public void addProject(Project project) {
     projectList.add(project);
->>>>>>> Stashed changes
+
   }
 
   @Override
