@@ -30,6 +30,11 @@ public class RoadConstruction extends Project
     return length;
   }
 
+  public int getTimeline()
+  {
+    return timeline;
+  }
+
   public void setLength(double length)
   {
     this.length = length;

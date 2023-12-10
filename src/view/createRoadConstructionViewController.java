@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.*;
+import model.RoadConstruction;
 
 
 public class createRoadConstructionViewController

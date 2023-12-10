@@ -91,7 +91,7 @@ public class ViewEditGeneralController
     title.setCellValueFactory(new PropertyValueFactory<>("title"));
     ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
     budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
-    timeline.setCellValueFactory(new PropertyValueFactory<>("timeline"));
+    timeline.setCellValueFactory(new PropertyValueFactory<>("Timeline"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
 
     // Populate TableView with project details from ProjectStorage
