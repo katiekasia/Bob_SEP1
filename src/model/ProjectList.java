@@ -42,10 +42,27 @@ public class ProjectList
     }
     return null;
   }
+  public ArrayList<Project> getProjectsBySize(String sizeRange) {
+    ArrayList<Project> matchingProjects = new ArrayList<>();
+
+    for (Project project : projects) {
+      double projectSize = project.getSize();
+
+      if (sizeRange.equals("0-100m2") && projectSize >= 0 && projectSize <= 100) {
+        matchingProjects.add(project);
+      } else if (sizeRange.equals("101-500m2") && projectSize > 100 && projectSize <= 500) {
+        matchingProjects.add(project);
+      } else if (sizeRange.equals("500+m2") && projectSize > 500) {
+        matchingProjects.add(project);
+      }
+    }
+
+    return matchingProjects;
+  }
 
 
 
-  public ArrayList<Project> getProjectsByBudgetRange(double minBudget, double maxBudget)
+  public ArrayList<Project> getProjectsByBudgetRange()
   {
     ArrayList<Project> matchingProjects = new ArrayList<>();
 
@@ -53,9 +70,18 @@ public class ProjectList
     {
       double projectBudget = project.getBudget();
 
-      if (projectBudget >= minBudget && projectBudget <= maxBudget) {
+      if (projectBudget >= 0 && projectBudget <= 500000 ) {
         matchingProjects.add(project);
       }
+      else if (projectBudget > 500000 && projectBudget <= 2000000 )
+      {
+        matchingProjects.add(project);
+      }
+      else if (projectBudget > 2000000 && projectBudget <= 10000000 )
+      {
+        matchingProjects.add(project);
+      }
+
     }
 
     return matchingProjects;
