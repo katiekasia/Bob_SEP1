@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
@@ -14,25 +15,38 @@ import model.ProjectType;
 import javafx.scene.control.TableView;
 import java.util.ArrayList;
 
+import javafx.scene.layout.Region;
+import javafx.stage.Stage;
+import model.ProjectList;
+import model.ProjectPlanningModel;
+
+import javax.swing.text.View;
+
+
 public class ViewEditGeneralController
 {
 
   @FXML
-  private TextField IDField;
+ private RadioButton allRadioButton;
+
   @FXML
-  private TextField TitleField;
+  private TextField idTextField;
+
   @FXML
-  private TextField timelineField;
+  private TextField titleTextField;
+
   @FXML
-  private RadioButton AllButton;
+  private ChoiceBox<String> budgetChoiceBox;
+
   @FXML
-  private ChoiceBox SizeChoice;
+  private ChoiceBox<String> typeChoiceBox;
+
   @FXML
-  private ChoiceBox BudgetChoice;
+  private ChoiceBox<String> sizeChoiceBox;
+
   @FXML
-  private ChoiceBox timeLineChoice;
-  @FXML
-  private ChoiceBox TypeChoice;
+  private ChoiceBox<String> timelineChoiceBox;
+
   @FXML
   private TableView ProjectTable;
   @FXML
@@ -47,12 +61,14 @@ public class ViewEditGeneralController
   private TableColumn<Project, ProjectType> type;
   @FXML
   private Button DetailsEdit;
+
+  private Button detailsEditButton;
+
   @FXML
   private Button deleteButton;
 
   @FXML
   private Button backButton;
-
   private ProjectPlanningModel model;
   private Region root;
   private ViewHandler viewHandler;
@@ -66,6 +82,7 @@ public class ViewEditGeneralController
     this.model = model;
     this.root = root;
   }
+
   public void initialize() {
     // Associate TableColumn with the respective property in the Project class
     title.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -79,6 +96,33 @@ public class ViewEditGeneralController
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
   }
+
+  /*public void setProjectList(ProjectList projectList) {
+    this.projectList = projectList;
+  }
+
+
+  @FXML
+  private void handleAllRadioButtonAction() {
+    if (allRadioButton.isSelected()) {
+      // Show all projects in the table view
+      // Example:
+      tableView.setItems(projectList.getAllProjects());
+    }
+  }
+  @FXML
+  private void handleIDTextFieldAction() {
+    String enteredID = idTextField.getText();
+    if (enteredID.length() == 6 && enteredID.matches("\\d+")) {
+      // Show project with entered ID in the table view
+      // Example:
+      Project project = projectList.getProjectByID(Integer.parseInt(enteredID));
+      if (project != null) {
+        tableView.setItems(projectList.getProjectAsList(project));
+      }
+    }
+  }*/
+
   @FXML
   private void backButtonClicked() {
     viewHandler.openView("projects");

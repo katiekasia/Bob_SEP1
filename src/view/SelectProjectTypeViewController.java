@@ -40,9 +40,6 @@ public class SelectProjectTypeViewController {
   }
 
 
-  public void setPrimaryStage(Stage primaryStage) {
-    this.primaryStage = primaryStage;
-  }
 
   @FXML
   private void handleResidentialButton()
