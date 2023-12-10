@@ -217,6 +217,8 @@ int timeline = Integer.parseInt(timelineTextField.getText());
           id, title, budget, address,ProjectType.ROADCONSTRUCTION,length,width,hasBridges,hasTunnels,timeline,hasChallenges);
 
       ProjectStorage.addProject(newRoadConstruction);
+      viewHandler.updateViewEditGeneralTable();
+      viewHandler.openView("viewProject");
       ProjectStorage.printProjects();
 
     }
@@ -234,6 +236,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
     this.model = model;
     this.root = root;
     projects = new ProjectList();
+
     // initiate the default settings
     int defaultTimeline = (int) RoadConstruction.defaultRoadConstruction[0];
     boolean defaultHasBridges = (boolean) RoadConstruction.defaultRoadConstruction[1];

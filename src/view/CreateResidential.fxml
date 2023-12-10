@@ -27,11 +27,11 @@
                 </Label>
 
                 <TextField fx:id="titleTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-              <Label fx:id="errorLabelTitle" prefHeight="20.0" prefWidth="132.0" text="" textFill="RED">
-                  <font>
-                      <Font size="14.0" />
-                  </font>
-            </Label>
+                <Label fx:id="errorLabelTitle" prefHeight="20.0" prefWidth="132.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
 
             </children></HBox>
         <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="79.0" prefHeight="30.0" prefWidth="500.0" spacing="20.0">
@@ -42,15 +42,15 @@
                     </font>
                 </Label>
 
-      
-                      <TextField fx:id="idTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-            <Label fx:id="errorLabelId" prefHeight="20.0" prefWidth="138.0" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
 
-                  </children>
+                <TextField fx:id="idTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
+                <Label fx:id="errorLabelId" prefHeight="20.0" prefWidth="138.0" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+            </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="115.0" prefHeight="30.0" prefWidth="500.0">
             <children>
@@ -60,33 +60,33 @@
                     </font>
                 </Label>
                 <TextField fx:id="budgetTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0">
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </TextField>
-            <Label fx:id="errorLabelBudget" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </TextField>
+                <Label fx:id="errorLabelBudget" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="382.0" spacing="20.0">
             <children>
-                  <Label prefHeight="20.0" prefWidth="70.0" text="Size">
-                      <font>
-                          <Font size="14.0" />
-                      </font>
-                  </Label>
-                  <TextField fx:id="sizeTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin></TextField>
-            <Label fx:id="errorLabelSize" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label prefHeight="20.0" prefWidth="70.0" text="Size">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="sizeTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin></TextField>
+                <Label fx:id="errorLabelSize" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="197.0" prefHeight="29.0" prefWidth="382.0" spacing="20.0">
@@ -97,11 +97,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="timelineTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-            <Label fx:id="errorLabelTimeline" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label fx:id="errorLabelTimeline" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="365.0" spacing="20.0">
@@ -112,14 +112,14 @@
                     </font>
                 </Label>
                 <TextField fx:id="addressTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin></TextField>
-            <Label fx:id="errorLabelAddress" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin></TextField>
+                <Label fx:id="errorLabelAddress" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="275.0" prefHeight="29.0" prefWidth="415.0" spacing="20.0">
@@ -130,11 +130,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="numberOfKitchensTextField" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" />
-            <Label fx:id="errorLabelNrOfKitchens" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label fx:id="errorLabelNrOfKitchens" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="20.0">
@@ -145,11 +145,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="numberOfBathroomsTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-            <Label fx:id="errorLabelNrOfBathrooms" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label fx:id="errorLabelNrOfBathrooms" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="354.0" prefHeight="29.0" prefWidth="415.0" spacing="20.0">
@@ -160,11 +160,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="numberOfOtherRoomsTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-            <Label fx:id="errorLabelNrOfRooms" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label fx:id="errorLabelNrOfRooms" prefHeight="20.0" prefWidth="138.0" text="" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="391.0" prefHeight="38.0" prefWidth="365.0" spacing="20.0">
@@ -175,11 +175,11 @@
                     </font>
                 </Label>
                 <TextField fx:id="isNewBuildingTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
-            <Label  prefHeight="20.0" prefWidth="138.0" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+                <Label  prefHeight="20.0" prefWidth="138.0" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </HBox>
         <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="20.0">
@@ -189,10 +189,10 @@
                 <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="35.0" prefWidth="75.0" text="back" />
             </children>
         </HBox>
-      <Label fx:id="errorLabelGeneralError" layoutX="182.0" layoutY="443.0" prefHeight="20.0" prefWidth="90.0" textFill="#ff1100">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+        <Label fx:id="errorLabelGeneralError" layoutX="182.0" layoutY="443.0" prefHeight="20.0" prefWidth="90.0" textFill="#ff1100">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

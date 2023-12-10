@@ -76,6 +76,7 @@ public class createIndustrialViewController
     this.root = root;
     projects = new ProjectList();
 
+
     int defaultTimeline = (int) Industrial.defaultIndustrial[0];
     // Inject the textfields with initiated defaults settings
     timelineField.setText(String.valueOf(defaultTimeline));
@@ -200,7 +201,7 @@ public class createIndustrialViewController
 
       if (typeOfFacility.isEmpty())
       {
-        errorLabelAddress.setText("Type of facility is empty");
+        errorLabelTypeOfFacility.setText("Type of facility is empty");
         return;
       }
 
@@ -211,6 +212,8 @@ public class createIndustrialViewController
           typeOfFacility, timeline);
 
       ProjectStorage.addProject(newIndustrial);
+      viewHandler.updateViewEditGeneralTable();
+      viewHandler.openView("viewProject");
       ProjectStorage.printProjects();
 
     }
@@ -228,7 +231,6 @@ public class createIndustrialViewController
     sizeField.clear();
     addressField.clear();;
     typeOfFacilityField.clear();
-    timelineField.clear();
     errorLabelGeneralError.setText("");
     viewHandler.openView("selectType");
   }
@@ -242,7 +244,6 @@ public class createIndustrialViewController
     sizeField.clear();
     addressField.clear();;
     typeOfFacilityField.clear();
-    timelineField.clear();
     errorLabelGeneralError.setText("");
     viewHandler.openView("selectType");
   }

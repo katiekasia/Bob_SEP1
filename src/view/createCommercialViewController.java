@@ -72,6 +72,7 @@ public class createCommercialViewController
     this.model = model;
     this.root = root;
     projects = new ProjectList();
+
     // initiate the default settings
     int defaultNumberOfFloors = (int) Commercial.defaultCommercial[0];
     int defaultTimeline = (int) Commercial.defaultCommercial[1];
@@ -214,6 +215,8 @@ public class createCommercialViewController
         ProjectType.COMMERCIAL,numberOfFloors,timeline, useOfBuilding);
 
     ProjectStorage.addProject(newCommercial);
+      viewHandler.updateViewEditGeneralTable();
+      viewHandler.openView("viewProject");
     ProjectStorage.printProjects();
   }
 
@@ -228,9 +231,7 @@ public class createCommercialViewController
     idField.clear();
     budgetField.clear();
     sizeField.clear();
-    addressField.clear();;
-    numberOfFloorsField.clear();
-    timelineField.clear();
+    addressField.clear();
     useOfBuildingField.clear();
     errorLabelGeneralError.setText("");
     viewHandler.openView("selectType");

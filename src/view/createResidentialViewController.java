@@ -89,15 +89,17 @@ public class createResidentialViewController {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
-projects = new ProjectList();
-// initiate the default settings
+    projects = new ProjectList();
+
+
+    // initiate the default settings
     int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
     int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
     int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
     int defaultTimeline = (int) Residential.defaultResidential[3];
     boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
 
-// Inject the textfields with initiated defaults settings
+    // Inject the textfields with initiated defaults settings
     numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
     numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
@@ -283,7 +285,12 @@ projects = new ProjectList();
           isNewBuilding, timeline);
 
       ProjectStorage.addProject(newResidential);
+
       ProjectStorage.printProjects();
+
+      viewHandler.updateViewEditGeneralTable();
+      viewHandler.openView("viewProject");
+
 
     }
     catch (NumberFormatException e) {
@@ -293,19 +300,17 @@ projects = new ProjectList();
 
   @FXML
   private void backButtonClicked() {
-//    WHEN YOU PRESS BACK , EVERYTHING BASICALLY SETS BACK lol
-titleTextField.clear();
-idTextField.clear();
-budgetTextField.clear();
-sizeTextField.clear();
-addressTextField.clear();;
-numberOfKitchensTextField.clear();
-numberOfBathroomsTextField.clear();
-numberOfOtherRoomsTextField.clear();
-isNewBuildingTextField.clear();
-errorLabelGeneralError.setText("");
-
-
+    //    WHEN YOU PRESS BACK , EVERYTHING BASICALLY SETS BACK lol
+    titleTextField.clear();
+    idTextField.clear();
+    budgetTextField.clear();
+    sizeTextField.clear();
+    addressTextField.clear();;
+    numberOfKitchensTextField.clear();
+    numberOfBathroomsTextField.clear();
+    numberOfOtherRoomsTextField.clear();
+    isNewBuildingTextField.clear();
+    errorLabelGeneralError.setText("");
 
 
     viewHandler.openView("selectType");
@@ -314,7 +319,7 @@ errorLabelGeneralError.setText("");
 
   public void reset()
   {
-//    same as for back, by pressing it everything resets
+    //    same as for back, by pressing it everything resets
     titleTextField.clear();
     idTextField.clear();
     budgetTextField.clear();
@@ -333,7 +338,3 @@ errorLabelGeneralError.setText("");
     return root;
   }
 }
-
-
-
-

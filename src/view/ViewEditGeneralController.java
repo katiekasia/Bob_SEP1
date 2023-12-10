@@ -27,7 +27,7 @@ public class ViewEditGeneralController
 {
 
   @FXML
- private RadioButton allRadioButton;
+  private RadioButton allRadioButton;
 
   @FXML
   private TextField idTextField;
@@ -93,12 +93,21 @@ public class ViewEditGeneralController
     budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
     timeline.setCellValueFactory(new PropertyValueFactory<>("Timeline"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
-
+    updateTable();
     // Populate TableView with project details from ProjectStorage
     ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
   }
+
+  public void updateTable() {
+    // Populate TableView with project details from ProjectStorage
+    ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+    ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
+    ProjectTable.setItems(projectData);
+  }
+
+
 
   /*public void setProjectList(ProjectList projectList) {
     this.projectList = projectList;
@@ -128,13 +137,14 @@ public class ViewEditGeneralController
 
   @FXML
   private void backButtonClicked() {
+    updateTable();
     viewHandler.openView("projects");
 
 
   }
 
   @FXML
-    private void detailsButtonClicked() {
+  private void detailsButtonClicked() {
     // Implement saving to XML functionality here
 
     // If input is incorrect, display errorLabel

@@ -48,6 +48,11 @@ import javafx.collections.ObservableList;
       this.primaryStage = primaryStage;
       openView("projects");
     }
+    public void updateViewEditGeneralTable() {
+      if (editGeneralController != null) {
+        editGeneralController.updateTable();
+      }
+    }
 
     private Region loadMainMenu(String fxmlFile)
     {
