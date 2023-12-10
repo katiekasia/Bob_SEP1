@@ -25,7 +25,7 @@ import javax.swing.text.View;
 
 public class ViewEditGeneralController
 {
-/*sjhj*/
+
   @FXML
  private RadioButton allRadioButton;
 
