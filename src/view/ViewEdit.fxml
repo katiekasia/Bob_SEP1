@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -40,41 +41,49 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="409.0" layoutY="91.0" text="Type" >
+            <Label layoutX="409.0" layoutY="91.0" text="Type">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="91.0" text="Size" >
+            <Label layoutX="25.0" layoutY="91.0" text="Size">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="598.0" layoutY="91.0" text="Timeline" >
+            <Label layoutX="598.0" layoutY="91.0" text="Timeline">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TableView layoutX="25.0" layoutY="152.0" prefHeight="352.0" prefWidth="622.0" fx:id="ProjectTable">
-              <columns>
-                <TableColumn prefWidth="196.79998779296875" text="Title" fx:id="title"/>
-                  <TableColumn prefWidth="100.0" text="ID" fx:id="ID"/>
-                  <TableColumn prefWidth="158.4000244140625" text="Budget" fx:id="budget"/>
-                  <TableColumn prefWidth="53.5999755859375" text="Timeline" fx:id="timeline"/>
-                  <TableColumn prefWidth="118.4000244140625" text="Type" fx:id="type"/>
-              </columns>
-            </TableView>
-            <Button layoutX="673.0" layoutY="309.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Details/Edit" fx:id="DetailsEdit" onAction="#detailsButtonClicked">
+            <ScrollPane layoutX="13.0" layoutY="193.0" prefHeight="304.0" prefWidth="656.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="656.0">
+                     <children>
+                        <TableView fx:id="ProjectTable" layoutX="-2.0" layoutY="2.0" prefHeight="511.0" prefWidth="645.0">
+                          <columns>
+                            <TableColumn fx:id="title" prefWidth="196.79998779296875" text="Title" />
+                              <TableColumn fx:id="ID" prefWidth="95.20002746582031" text="ID" />
+                              <TableColumn fx:id="budget" prefWidth="164.0" text="Budget" />
+                              <TableColumn fx:id="timeline" prefWidth="53.5999755859375" text="Timeline" />
+                              <TableColumn fx:id="type" prefWidth="118.4000244140625" text="Type" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button fx:id="DetailsEdit" layoutX="673.0" layoutY="309.0" mnemonicParsing="false" onAction="#detailsButtonClicked" prefHeight="50.0" prefWidth="100.0" text="Details/Edit">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="673.0" layoutY="219.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Delete" fx:id="deleteButton" onAction="#deleteButtonClicked">
+            <Button fx:id="deleteButton" layoutX="673.0" layoutY="219.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="50.0" prefWidth="100.0" text="Delete">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="673.0" layoutY="401.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Back" fx:id="backButton" onAction="#backButtonClicked">
+            <Button fx:id="backButton" layoutX="673.0" layoutY="401.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="50.0" prefWidth="100.0" text="Back">
                <font>
                   <Font size="14.0" />
                </font>
