@@ -2,18 +2,13 @@ package model;
 
 import java.util.ArrayList;
 
-public class ProjectPlanningModelManager implements ProjectPlanningModel
-{
-  public void ProjectPlanningModel()
-  {
-
-
 public class ProjectPlanningModelManager implements ProjectPlanningModel {
   private ArrayList<Project> projectList;
 
   public ProjectPlanningModelManager() {
     this.projectList = new ArrayList<>();
   }
+
 
   @Override
   public ArrayList<Project> getAllProjects() {

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public interface ProjectPlanningModel
 {
-
-  public void createProject(Project project);
   ArrayList<Project> getAllProjects();
 
   void addProject(Project project);
