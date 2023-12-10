@@ -214,7 +214,6 @@ public class createCommercialViewController
         ProjectType.COMMERCIAL,numberOfFloors,timeline, useOfBuilding);
 
     ProjectStorage.addProject(newCommercial);
-
     ProjectStorage.printProjects();
   }
 

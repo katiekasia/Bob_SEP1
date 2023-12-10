@@ -36,17 +36,9 @@ public class ProjectPlanningModelManager implements ProjectPlanningModel {
     return null;
   }
 
-  @Override
-  public ArrayList<Project> getProjectsByBudgetRange(double minBudget, double maxBudget) {
-    ArrayList<Project> matchingProjects = new ArrayList<>();
-
-    for (Project project : projectList) {
-      double projectBudget = project.getBudget();
-      if (projectBudget >= minBudget && projectBudget <= maxBudget) {
-        matchingProjects.add(project);
-      }
-    }
-    return matchingProjects;
+  @Override public ArrayList<Project> getProjectsByBudgetRange()
+  {
+    return null;
   }
 
   @Override
@@ -71,5 +63,10 @@ public class ProjectPlanningModelManager implements ProjectPlanningModel {
       }
     }
     return matchingProjects;
+  }
+
+  @Override public ArrayList<Project> getProjectsBySize()
+  {
+    return null;
   }
 }
