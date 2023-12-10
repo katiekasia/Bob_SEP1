@@ -287,6 +287,10 @@ public class createResidentialViewController {
       ProjectStorage.addProject(newResidential);
 
       ProjectStorage.printProjects();
+      // Write projects to XML
+      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+      String filePath = "projects.xml"; // Set your desired file path
+      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject");

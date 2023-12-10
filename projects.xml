@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Projects>
+    <Project>
+        <ID>223344</ID>
+        <title>hgf</title>
+        <budget>45.0</budget>
+        <size>987.0</size>
+        <address>lkjhg</address>
+        <numberOfKitchens>1</numberOfKitchens>
+        <numberOfBathrooms>1</numberOfBathrooms>
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+        <isNewBuilding>true</isNewBuilding>
+        <timeline>9</timeline>
+        <type>RESIDENTIAL</type>
+    </Project>
+    <Project>
+        <ID>123452</ID>
+        <title>jhgfr</title>
+        <budget>234.0</budget>
+        <size>1234.0</size>
+        <address>asdfg</address>
+        <numberOfFloors>1</numberOfFloors>
+        <useOfBuilding>asdfg</useOfBuilding>
+        <timeline>18</timeline>
+        <type>COMMERCIAL</type>
+    </Project>
+</Projects>
