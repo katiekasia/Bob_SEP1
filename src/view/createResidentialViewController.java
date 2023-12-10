@@ -304,6 +304,10 @@ numberOfBathroomsTextField.clear();
 numberOfOtherRoomsTextField.clear();
 isNewBuildingTextField.clear();
 errorLabelGeneralError.setText("");
+
+
+
+
     viewHandler.openView("selectType");
   }
 

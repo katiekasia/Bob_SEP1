@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="499.0" prefWidth="586.0" userData="createRoadConstruction" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createRoadConstructionViewController">
+<AnchorPane prefHeight="567.0" prefWidth="586.0" userData="createRoadConstruction" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createRoadConstructionViewController">
     <children>
         <HBox layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="341.0" spacing="160.0">
             <children>
@@ -16,7 +16,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="titleTextField" prefHeight="25.0" prefWidth="153.0" />
             </children></HBox>
         <HBox layoutX="7.0" layoutY="109.0" prefHeight="29.0" prefWidth="200.0">
             <children>
@@ -34,7 +34,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="idTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="25.0" layoutY="115.0" prefHeight="29.0" prefWidth="347.0" spacing="145.0">
@@ -44,7 +44,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="budgetTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="382.0">
@@ -56,7 +56,7 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="25.0" prefWidth="153.0" />
+                        <TextField fx:id="addressTextField" prefHeight="25.0" prefWidth="153.0" />
                     </children>
                 </HBox>
             </children>
@@ -68,7 +68,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="timelineTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="354.0" spacing="153.0">
@@ -78,7 +78,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="widthTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="25.0" layoutY="275.0" prefHeight="30.0" prefWidth="354.0" spacing="150.0">
@@ -88,82 +88,93 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="lengthTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
         <HBox layoutX="26.0" layoutY="316.0" prefHeight="26.0" prefWidth="347.0" spacing="60.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="130.0" text="Bridges/Tunnels">
+                <Label prefHeight="20.0" prefWidth="130.0" text="Bridges">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="bridgesTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
-        <HBox layoutX="24.0" layoutY="354.0" prefHeight="29.0" prefWidth="347.0" spacing="125.0">
+        <HBox layoutX="14.0" layoutY="403.0" prefHeight="29.0" prefWidth="347.0" spacing="125.0">
             <children>
                 <Label text="Challenges">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField prefHeight="25.0" prefWidth="153.0" />
+                <TextField fx:id="challengesTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
-        <HBox alignment="CENTER" layoutX="109.0" layoutY="410.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">
+        <HBox alignment="CENTER" layoutX="102.0" layoutY="460.0" prefHeight="58.0" prefWidth="382.0" spacing="40.0">
             <children>
                 <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="36.0" prefWidth="75.0" text="cancel" />
                 <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="75.0" text="save" />
                 <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="35.0" prefWidth="75.0" text="back" />
             </children>
         </HBox>
-      <Label layoutX="373.0" layoutY="43.0" prefHeight="20.0" prefWidth="130.0" text="title" textFill="RED">
+      <Label fx:id="errorLabelTitle" layoutX="373.0" layoutY="43.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="373.0" layoutY="84.0" prefHeight="20.0" prefWidth="130.0" text="id" textFill="RED">
+      <Label fx:id="errorLabelId" layoutX="373.0" layoutY="84.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="373.0" layoutY="120.0" prefHeight="20.0" prefWidth="130.0" text="budget" textFill="RED">
+      <Label fx:id="errorLabelBudget" layoutX="373.0" layoutY="120.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="373.0" layoutY="161.0" prefHeight="20.0" prefWidth="130.0" text="address" textFill="RED">
+      <Label fx:id="errorLabelAddress" layoutX="373.0" layoutY="161.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="202.0" prefHeight="20.0" prefWidth="130.0" text="timeline" textFill="RED">
+      <Label fx:id="errorLabelTimeline" layoutX="375.0" layoutY="202.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="240.0" prefHeight="20.0" prefWidth="130.0" text="width" textFill="RED">
+      <Label fx:id="errorLabelWidth" layoutX="375.0" layoutY="240.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="275.0" prefHeight="20.0" prefWidth="130.0" text="length" textFill="RED">
+      <Label fx:id="errorLabelLength" layoutX="375.0" layoutY="275.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="319.0" prefHeight="20.0" prefWidth="130.0" text="bridgesblabbla" textFill="RED">
+      <Label fx:id="errorLabelBridges" layoutX="375.0" layoutY="319.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="235.0" layoutY="400.0" prefHeight="20.0" prefWidth="130.0" text="general" textFill="RED">
+      <Label fx:id="errorLabelGeneralError" layoutX="256.0" layoutY="440.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="375.0" layoutY="359.0" prefHeight="20.0" prefWidth="130.0" text="challenges" textFill="RED">
+      <Label fx:id="errorLabelChallenges" layoutX="361.0" layoutY="408.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabelBridgetOrTunnels" layoutX="37.0" layoutY="368.0" prefHeight="20.0" prefWidth="130.0" text="Tunnels">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tunnelsTextField" layoutX="213.0" layoutY="365.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label layoutX="373.0" layoutY="368.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
