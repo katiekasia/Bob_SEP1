@@ -18,21 +18,17 @@ import model.ProjectPlanningModel;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
     private SelectProjectTypeViewController selectProjectTypeViewController;
-    private createCommercialViewController commercialViewController;
-    private SelectProjectTypeViewController selectProjectController;
     private ViewEditGeneralController editGeneralController;
     private createResidentialViewController createResidentialController;
     private createCommercialViewController createCommercialController;
     private createIndustrialViewController createIndustrialController;
-
     private createRoadConstructionViewController createRoadContructionController;
-    /*
 
-          private EditCommercialController editCommercialController;
-          private EditResidentialController editResidentialController;
-          private EditIndustrialController editIndustrialController;
-          private EditRoadContructionController editRoadContructionController;
-    */
+   /* private EditCommercial1Controller editCommercialController;
+    private EditResidential1Controller editResidential1Controller;
+    private editIndustrial1Controller editIndustrial1Controller;
+    private editroadConstruction1Controller editroadContruction1Controller;*/
+
     private ProjectPlanningModel model;
 
     public ViewHandler(ProjectPlanningModel model)
@@ -70,6 +66,11 @@ import model.ProjectPlanningModel;
         mainMenuController.reset();
       return mainMenuController.getRoot();
     }
+
+
+    /*public void setCreateCommercialController(createCommercialViewController viewController) {
+      this.createCommercialController = viewController;
+    }*/
 
     private Region loadSelectProjectTypeViewController(String fxmlFile)
     {
@@ -213,10 +214,39 @@ import model.ProjectPlanningModel;
       return createResidentialController.getRoot();
     }
 
+<<<<<<< Updated upstream
     public void closeView()
     {
       primaryStage.close();
     }
+=======
+    /*private Region loadRoadConstruction1Controller(String fxmlFile)
+    {
+      Region root = null;
+      if (editroadContruction1Controller == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          editroadContruction1Controller = loader.getController();
+          editroadContruction1Controller.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editroadContruction1Controller.reset();
+      return editroadContruction1Controller.getRoot();
+    }*/
+
+
+
+>>>>>>> Stashed changes
 
     public void openView(String id)
     {

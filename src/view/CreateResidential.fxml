@@ -95,7 +95,26 @@
                 <TextField alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
+<<<<<<< Updated upstream
         <HBox layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="87.0">
+=======
+        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="275.0" prefHeight="29.0" prefWidth="415.0" spacing="20.0">
+            <children>
+                <Label prefHeight="20.0" prefWidth="142.0" text="Nr. of Kitchens">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="numberOfKitchensTextField" alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+            <Label fx:id="errorLabelNrOfKitchens" prefHeight="20.0" prefWidth="96.0" text="" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="20.0">
+>>>>>>> Stashed changes
             <children>
                 <Label text="Nr. of bathrooms">
                     <font>

@@ -21,9 +21,6 @@ public Project(int ID, String title,double budget, double size, String address, 
   this.type = type;
 }
 
-  public Project(int id, String title, double budget)
-  {
-  }
 
   public int getID()
   {

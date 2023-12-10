@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class SelectProjectTypeViewController {
 
-  private Stage primaryStage;
+
   private ViewHandler viewHandler;
   private Region root;
   private ProjectPlanningModel model;
@@ -36,9 +36,6 @@ public class SelectProjectTypeViewController {
   }
 
 
-  public void setPrimaryStage(Stage primaryStage) {
-    this.primaryStage = primaryStage;
-  }
 
   @FXML
   private void handleResidentialButton() {
