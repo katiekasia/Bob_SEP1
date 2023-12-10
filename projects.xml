@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Projects>
+                
+    
+    
+    <Project>
+                                
+        
+        
+        <ID>444444</ID>
+                                
+        
+        
+        <title>njdncv</title>
+                                
+        
+        
+        <budget>233.0</budget>
+                                
+        
+        
+        <size>45.0</size>
+                                
+        
+        
+        <address>mnkf</address>
+                                
+        
+        
+        <numberOfFloors>1</numberOfFloors>
+                                
+        
+        
+        <useOfBuilding>kdff</useOfBuilding>
+                                
+        
+        
+        <timeline>18</timeline>
+                                
+        
+        
+        <type>COMMERCIAL</type>
+                            
+    
+    
+    </Project>
+            
+    
+    
+    <Project>
+                        
+        
+        <ID>111111</ID>
+                        
+        
+        <title>jhg</title>
+                        
+        
+        <budget>38.0</budget>
+                        
+        
+        <size>3766.0</size>
+                        
+        
+        <address>kchgbc</address>
+                        
+        
+        <numberOfKitchens>1</numberOfKitchens>
+                        
+        
+        <numberOfBathrooms>1</numberOfBathrooms>
+                        
+        
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                        
+        
+        <isNewBuilding>true</isNewBuilding>
+                        
+        
+        <timeline>9</timeline>
+                        
+        
+        <type>RESIDENTIAL</type>
+                    
+    
+    </Project>
+        
+    
+    <Project>
+                
+        <ID>111111</ID>
+                
+        <title>jhg</title>
+                
+        <budget>38.0</budget>
+                
+        <size>3766.0</size>
+                
+        <address>kchgbc</address>
+                
+        <numberOfKitchens>1</numberOfKitchens>
+                
+        <numberOfBathrooms>1</numberOfBathrooms>
+                
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                
+        <isNewBuilding>true</isNewBuilding>
+                
+        <timeline>9</timeline>
+                
+        <type>RESIDENTIAL</type>
+            
+    </Project>
+        
+    <Project>
+                
+        <ID>111123</ID>
+                
+        <title>jhg</title>
+                
+        <budget>38.0</budget>
+                
+        <size>3766.0</size>
+                
+        <address>kchgbc</address>
+                
+        <numberOfKitchens>1</numberOfKitchens>
+                
+        <numberOfBathrooms>1</numberOfBathrooms>
+                
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                
+        <isNewBuilding>true</isNewBuilding>
+                
+        <timeline>9</timeline>
+                
+        <type>RESIDENTIAL</type>
+            
+    </Project>
+    
+    <Project>
+        <ID>878787</ID>
+        <title>kjhgf</title>
+        <budget>56.0</budget>
+        <size>87.0</size>
+        <address>knhbf</address>
+        <numberOfFloors>1</numberOfFloors>
+        <useOfBuilding>kjh</useOfBuilding>
+        <timeline>18</timeline>
+        <type>COMMERCIAL</type>
+    </Project>
+</Projects>

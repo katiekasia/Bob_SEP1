@@ -54,7 +54,7 @@ public class HelloController
         stage.show();
     }
     public void switchToEditRoadConstruction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/EditroadConstruction1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/EditRoadConstructionController.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -214,11 +214,18 @@ public class createCommercialViewController
         ProjectType.COMMERCIAL,numberOfFloors,timeline, useOfBuilding);
 
     ProjectStorage.addProject(newCommercial);
-
     ProjectStorage.printProjects();
+      // Write projects to XML
+      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+      String filePath = "projects.xml"; // Set your desired file path
+      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
   }
+    /*// Save the updated list of projects to XML
+    String filePath = "projects.xml"; // Path to your XML file
+    XMLwriter.writeProjectsToXML(projects.getAllProjects(), filePath);*/
 
-  catch (NumberFormatException e) {
+
+    catch (NumberFormatException e) {
   errorLabelGeneralError.setText("Check inputs");
 }
 }

@@ -40,28 +40,28 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="409.0" layoutY="91.0" text="Type">
+            <Label layoutX="409.0" layoutY="91.0" text="Type" >
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="91.0" text="Size">
+            <Label layoutX="25.0" layoutY="91.0" text="Size" >
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="598.0" layoutY="91.0" text="Timeline">
+            <Label layoutX="598.0" layoutY="91.0" text="Timeline" >
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TableView layoutX="25.0" layoutY="152.0" prefHeight="352.0" prefWidth="622.0">
+            <TableView layoutX="25.0" layoutY="152.0" prefHeight="352.0" prefWidth="622.0" fx:id="ProjectTable">
               <columns>
-                <TableColumn prefWidth="196.79998779296875" text="Title" />
-                  <TableColumn prefWidth="100.0" text="ID" />
-                  <TableColumn prefWidth="158.4000244140625" text="Budget" />
-                  <TableColumn prefWidth="53.5999755859375" text="Timeline" />
-                  <TableColumn prefWidth="118.4000244140625" text="Type" />
+                <TableColumn prefWidth="196.79998779296875" text="Title" fx:id="title"/>
+                  <TableColumn prefWidth="100.0" text="ID" fx:id="ID"/>
+                  <TableColumn prefWidth="158.4000244140625" text="Budget" fx:id="budget"/>
+                  <TableColumn prefWidth="53.5999755859375" text="Timeline" fx:id="timeline"/>
+                  <TableColumn prefWidth="118.4000244140625" text="Type" fx:id="type"/>
               </columns>
             </TableView>
             <Button layoutX="673.0" layoutY="309.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Details/Edit" fx:id="DetailsEdit" onAction="#detailsButtonClicked">

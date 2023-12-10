@@ -78,13 +78,6 @@ public class createResidentialViewController {
   private Label errorLabelGeneralError;
 
 
-  private void printProjects() {
-    System.out.println("Projects List:");
-    for (Project project : projects.getAllProjects()) {
-      System.out.println(project);
-    }
-    System.out.println("End of Projects List");
-  }
 
   @FXML
   private void cancelButtonClicked() {
@@ -292,8 +285,11 @@ projects = new ProjectList();
       ProjectStorage.addProject(newResidential);
       ProjectStorage.printProjects();
 
-    }
-    catch (NumberFormatException e) {
+      // Write projects to XML
+      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+      String filePath = "projects.xml"; // Set your desired file path
+      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
+    } catch (NumberFormatException e) {
       errorLabelGeneralError.setText("Check inputs");
     }
   }
