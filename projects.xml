@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
-                                    
+                                                    
+    
+    
+    
+    
     
     
     
@@ -9,7 +13,11 @@
     
     
     <Project>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -18,7 +26,11 @@
         
         
         <ID>432234</ID>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -27,7 +39,11 @@
         
         
         <title>fre</title>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -36,7 +52,11 @@
         
         
         <budget>3.0</budget>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -45,7 +65,11 @@
         
         
         <size>3.0</size>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -54,7 +78,11 @@
         
         
         <address>3</address>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -63,7 +91,11 @@
         
         
         <numberOfKitchens>1</numberOfKitchens>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -72,7 +104,11 @@
         
         
         <numberOfBathrooms>1</numberOfBathrooms>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -81,7 +117,11 @@
         
         
         <numberOfOtherRooms>1</numberOfOtherRooms>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -90,7 +130,11 @@
         
         
         <isNewBuilding>true</isNewBuilding>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -99,7 +143,11 @@
         
         
         <timeline>9</timeline>
-                                                                        
+                                                                                                        
+        
+        
+        
+        
         
         
         
@@ -108,7 +156,11 @@
         
         
         <type>RESIDENTIAL</type>
-                                                                    
+                                                                                                    
+    
+    
+    
+    
     
     
     
@@ -117,7 +169,389 @@
     
     
     </Project>
-                                
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <ID>432235</ID>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>543345</title>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>3.0</budget>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>3.0</size>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>3</address>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfKitchens>1</numberOfKitchens>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfBathrooms>1</numberOfBathrooms>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <isNewBuilding>true</isNewBuilding>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>9</timeline>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <type>RESIDENTIAL</type>
+                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </Project>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <ID>678876</ID>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>gteertg</title>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>6.0</budget>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>6.0</size>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>6</address>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfFloors>1</numberOfFloors>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <useOfBuilding>6</useOfBuilding>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>18</timeline>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <type>COMMERCIAL</type>
+                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </Project>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <ID>987789</ID>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>gtrert</title>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>7.0</budget>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>7.0</size>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>7</address>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <typeOfFacility>7</typeOfFacility>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>30</timeline>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <type>INDUSTRIAL</type>
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    </Project>
+                                    
+  
+
     
     
     
@@ -133,7 +567,7 @@
         
         
         
-        <ID>432235</ID>
+        <ID>890098</ID>
                                                                 
         
         
@@ -141,7 +575,7 @@
         
         
         
-        <title>543345</title>
+        <title>road</title>
                                                                 
         
         
@@ -157,7 +591,7 @@
         
         
         
-        <size>3.0</size>
+        <size>0.0</size>
                                                                 
         
         
@@ -173,7 +607,7 @@
         
         
         
-        <numberOfKitchens>1</numberOfKitchens>
+        <hasBridges>false</hasBridges>
                                                                 
         
         
@@ -181,7 +615,7 @@
         
         
         
-        <numberOfBathrooms>1</numberOfBathrooms>
+        <timeline>18</timeline>
                                                                 
         
         
@@ -189,7 +623,7 @@
         
         
         
-        <numberOfOtherRooms>1</numberOfOtherRooms>
+        <hasTunnels>false</hasTunnels>
                                                                 
         
         
@@ -197,7 +631,7 @@
         
         
         
-        <isNewBuilding>true</isNewBuilding>
+        <hasChallenges>false</hasChallenges>
                                                                 
         
         
@@ -205,7 +639,7 @@
         
         
         
-        <timeline>9</timeline>
+        <length>3.0</length>
                                                                 
         
         
@@ -213,7 +647,15 @@
         
         
         
-        <type>RESIDENTIAL</type>
+        <width>3.0</width>
+                                                                
+        
+        
+        
+        
+        
+        
+        <type>ROADCONSTRUCTION</type>
                                                             
     
     
@@ -236,49 +678,42 @@
         
         
         
-        <ID>678876</ID>
+        <ID>654456</ID>
                                                         
         
         
         
         
         
-        <title>gteertg</title>
+        <title>radfgh</title>
                                                         
         
         
         
         
         
-        <budget>6.0</budget>
+        <budget>5.0</budget>
                                                         
         
         
         
         
         
-        <size>6.0</size>
+        <size>0.0</size>
                                                         
         
         
         
         
         
-        <address>6</address>
+        <address>5</address>
                                                         
         
         
         
         
         
-        <numberOfFloors>1</numberOfFloors>
-                                                        
-        
-        
-        
-        
-        
-        <useOfBuilding>6</useOfBuilding>
+        <hasBridges>false</hasBridges>
                                                         
         
         
@@ -292,7 +727,35 @@
         
         
         
-        <type>COMMERCIAL</type>
+        <hasTunnels>false</hasTunnels>
+                                                        
+        
+        
+        
+        
+        
+        <hasChallenges>false</hasChallenges>
+                                                        
+        
+        
+        
+        
+        
+        <length>5.0</length>
+                                                        
+        
+        
+        
+        
+        
+        <width>5.0</width>
+                                                        
+        
+        
+        
+        
+        
+        <type>ROADCONSTRUCTION</type>
                                                     
     
     
@@ -304,203 +767,11 @@
     
     
     
+        
     
-    
-    <Project>
-                                                
-        
-        
-        
-        
-        <ID>987789</ID>
-                                                
-        
-        
-        
-        
-        <title>gtrert</title>
-                                                
-        
-        
-        
-        
-        <budget>7.0</budget>
-                                                
-        
-        
-        
-        
-        <size>7.0</size>
-                                                
-        
-        
-        
-        
-        <address>7</address>
-                                                
-        
-        
-        
-        
-        <typeOfFacility>7</typeOfFacility>
-                                                
-        
-        
-        
-        
-        <timeline>30</timeline>
-                                                
-        
-        
-        
-        
-        <type>INDUSTRIAL</type>
-                                            
-    
-    
-    
-    
-    </Project>
-                    
-  
+
+
 
     
-    
-    
-    <Project>
-                                
-        
-        
-        <ID>890098</ID>
-                                
-        
-        
-        <title>road</title>
-                                
-        
-        
-        <budget>3.0</budget>
-                                
-        
-        
-        <size>0.0</size>
-                                
-        
-        
-        <address>3</address>
-                                
-        
-        
-        <hasBridges>false</hasBridges>
-                                
-        
-        
-        <timeline>18</timeline>
-                                
-        
-        
-        <hasTunnels>false</hasTunnels>
-                                
-        
-        
-        <hasChallenges>false</hasChallenges>
-                                
-        
-        
-        <length>3.0</length>
-                                
-        
-        
-        <width>3.0</width>
-                                
-        
-        
-        <type>ROADCONSTRUCTION</type>
-                            
-    
-    
-    </Project>
-            
-    
-    
-    <Project>
-                        
-        
-        <ID>654456</ID>
-                        
-        
-        <title>radfgh</title>
-                        
-        
-        <budget>5.0</budget>
-                        
-        
-        <size>0.0</size>
-                        
-        
-        <address>5</address>
-                        
-        
-        <hasBridges>false</hasBridges>
-                        
-        
-        <timeline>18</timeline>
-                        
-        
-        <hasTunnels>false</hasTunnels>
-                        
-        
-        <hasChallenges>false</hasChallenges>
-                        
-        
-        <length>5.0</length>
-                        
-        
-        <width>5.0</width>
-                        
-        
-        <type>ROADCONSTRUCTION</type>
-                    
-    
-    </Project>
-        
-    
-    <Project>
-                
-        <ID>765876</ID>
-                
-        <title>gtrewsdf</title>
-                
-        <budget>5.0</budget>
-                
-        <size>0.0</size>
-                
-        <address>5</address>
-                
-        <hasBridges>false</hasBridges>
-                
-        <timeline>18</timeline>
-                
-        <hasTunnels>false</hasTunnels>
-                
-        <hasChallenges>false</hasChallenges>
-                
-        <length>5.0</length>
-                
-        <width>5.0</width>
-                
-        <type>ROADCONSTRUCTION</type>
-            
-    </Project>
-    
-    <Project>
-        <ID>543345</ID>
-        <title>gtyhjuik</title>
-        <budget>5.0</budget>
-        <size>5.0</size>
-        <address>5</address>
-        <typeOfFacility>5</typeOfFacility>
-        <timeline>30</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
+
 </Projects>

@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -216,8 +217,42 @@ public class XMLwriter {
       e.printStackTrace();
     }
   }
+  public static boolean removeProjectFromXML(Project projectToRemove, String filePath) {
+    try {
+      Document doc = loadOrCreateDocument(filePath);
+      if (doc == null) {
+        return false;
+      }
 
+      NodeList projects = doc.getElementsByTagName("Project");
+      for (int i = 0; i < projects.getLength(); i++) {
+        Element projectElement = (Element) projects.item(i);
+
+        String projectId = projectElement.getElementsByTagName("ID").item(0).getTextContent();
+        if (projectId.equals(String.valueOf(projectToRemove.getID()))) {
+          projectElement.getParentNode().removeChild(projectElement);
+          saveDocumentToFile(doc, filePath);
+          return true;
+        }
+      }
+      return false;
+    } catch (Exception e) {
+      e.printStackTrace();
+      return false;
+    }
+  }
+
+  private static void saveDocumentToFile(Document doc, String filePath) throws TransformerException {
+    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+    Transformer transformer = transformerFactory.newTransformer();
+    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+    DOMSource source = new DOMSource(doc);
+    StreamResult result = new StreamResult(new File(filePath));
+    transformer.transform(source, result);
+  }
 }
+
 /*
  public static void appendProjectsToXML(ArrayList<Project> projects, String filePath) {
     try {

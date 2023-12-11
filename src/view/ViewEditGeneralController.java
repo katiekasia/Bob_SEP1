@@ -168,24 +168,26 @@ public class ViewEditGeneralController
   }
   @FXML
   private void deleteButtonClicked() {
-    // Implement saving to XML functionality here
+    Project selectedProject = (Project) ProjectTable.getSelectionModel().getSelectedItem();
 
-    // If input is incorrect, display errorLabel
-    //    if (!validateInput()) {
-    //      errorLabel.setText("Incorrect input!");
-    //      errorLabel.setVisible(true);
-    //    } else {
-    //      // Example: Get data from text fields
-    //      String title = titleTextField.getText();
-    //      int id = Integer.parseInt(idTextField.getText());
-    //      double budget = Double.parseDouble(budgetTextField.getText());
-    //      // ...other fields
-    //
-    //      errorLabel.setVisible(false);
-    //      viewHandler.openView("viewProject");
-    //      // Save details to XML
-    // }
+    if (selectedProject != null) {
+      // Remove from TableView
+      ProjectTable.getItems().remove(selectedProject);
+
+      // Remove from XML file
+      boolean removed = XMLwriter.removeProjectFromXML(selectedProject, "projects.xml");
+      if (removed) {
+        System.out.println("Project removed from XML");
+      } else {
+        System.out.println("Error removing project from XML");
+        // Add logic to handle the error
+      }
+    } else {
+      // Handle case when no item is selected
+      System.out.println("No project selected");
+    }
   }
+
 
   private boolean validateInput()
   {
