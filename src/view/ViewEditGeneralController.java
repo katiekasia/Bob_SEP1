@@ -229,6 +229,38 @@ public class ViewEditGeneralController
 
 
   }
+  @FXML
+  private void handleIDTextFieldAction() {
+    String enteredID = idTextField.getText();
+    if (enteredID.length() == 6 && enteredID.matches("\\d+")) {
+      int idToFilter = Integer.parseInt(enteredID);
+      ArrayList<Project> filteredProjects = filterProjectsByID(idToFilter);
+      updateTableWithFilteredProjects(filteredProjects);
+    } else {
+      // Handle invalid input (e.g., show an error message)
+    }
+  }
+
+  private ArrayList<Project> filterProjectsByID(int id) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    for (Project project : allProjects) {
+      if (project.getID() == id) {
+        filteredProjects.add(project);
+      }
+    }
+
+    return filteredProjects;
+  }
+
+  private void updateTableWithFilteredProjects(ArrayList<Project> projects) {
+    ObservableList<Project> projectData = FXCollections.observableArrayList(projects);
+    ProjectTable.setItems(projectData);
+  }
+
+  // ... (other existing code)
+
 
   @FXML
   private void detailsButtonClicked() {
