@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.Project;
 import model.ProjectPlanningModel;
+import model.RoadConstruction;
 
 public class EditRoadConstructionController
 {
@@ -35,10 +36,9 @@ public class EditRoadConstructionController
   private TextField addressTextField;
 
   @FXML
-  private TextField numberOfKitchensTextField;
-
+  private TextField bridgesTextField;
   @FXML
-  private TextField birdgesOrtunnelsTextField;
+  private TextField tunnelsTextField;
 
   @FXML
   private TextField challengesTextField;
@@ -59,6 +59,13 @@ public class EditRoadConstructionController
     titleTextField.setText(selectedProject.getTitle());
     budgetTextField.setText(String.valueOf(selectedProject.getBudget()));
     addressTextField.setText(selectedProject.getAddress());
+    RoadConstruction projectRoad = (RoadConstruction) selectedProject;
+    tunnelsTextField.setText(String.valueOf(projectRoad.getHasTunnels()));
+    timelineTextField.setText(String.valueOf(projectRoad.getTimeline()));
+    bridgesTextField.setText(String.valueOf(projectRoad.getHasBridges()));
+    challengesTextField.setText(String.valueOf(projectRoad.getHasChallenges()));
+    widthTextField.setText(String.valueOf(projectRoad.getWidth()));
+    lengthTextField.setText(String.valueOf(projectRoad.getLength()));
 
   }
   @FXML
@@ -80,10 +87,7 @@ public class EditRoadConstructionController
     //      // Save details to XML
     //    }
   }
-  @FXML
-  private void backButtonClicked() {
-    viewHandler.openView("selectType", null);
-  }
+
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;

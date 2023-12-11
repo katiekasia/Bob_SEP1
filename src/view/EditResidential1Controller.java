@@ -12,6 +12,7 @@ import model.Residential;
 
 public class EditResidential1Controller
 {
+
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
@@ -44,7 +45,7 @@ public class EditResidential1Controller
   private TextField numberOfOtherRoomsTextField;
 
   @FXML
-  private TextField buildingUseTextField;
+ private TextField isNewBuildingTextField;
 
   @FXML
   private Button backButton;
@@ -78,7 +79,7 @@ public class EditResidential1Controller
     numberOfBathroomsTextField.setText(String.valueOf(projectResidential.getNumberOfBathrooms()));
     numberOfKitchensTextField.setText(String.valueOf(projectResidential.getNumberOfKitchens()));
     numberOfOtherRoomsTextField.setText(String.valueOf(projectResidential.getNumberOfOtherRooms()));
-    buildingUseTextField.setText(String.valueOf(projectResidential.getIsNewBuilding()));
+    isNewBuildingTextField.setText(String.valueOf(projectResidential.getIsNewBuilding()));
   }
   public void reset()
   {
@@ -110,10 +111,7 @@ public class EditResidential1Controller
     //      // Save details to XML
     // }
   }
-  @FXML
-  private void backButtonClicked() {
-    viewHandler.openView("selectType", null);
-  }
+
   private boolean validateInput()
   {
     // Implement input validation logic here

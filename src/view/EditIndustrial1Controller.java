@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import model.Industrial;
 import model.Project;
 import model.ProjectPlanningModel;
 
@@ -26,7 +27,7 @@ public class EditIndustrial1Controller
 
   @FXML private TextField addressField;
 
-  @FXML private TextField TypeOfFacilityField;
+  @FXML private TextField typeOfFacility;
 
   @FXML private Button backButton;
   @FXML private Button saveButton;
@@ -60,6 +61,9 @@ public class EditIndustrial1Controller
     budgetField.setText(String.valueOf(selectedProject.getBudget()));
     sizeField.setText(String.valueOf(selectedProject.getSize()));
     addressField.setText(selectedProject.getAddress());
+    Industrial projectIndustrial = (Industrial) selectedProject;
+    timelineField.setText(String.valueOf(projectIndustrial.getTimeline()));
+    typeOfFacility.setText(projectIndustrial.getTypeOfFacility());
 
   }
 
@@ -89,16 +93,7 @@ public class EditIndustrial1Controller
     // }
   }
 
-  @FXML private void backButtonClicked()
-  {
-    viewHandler.openView("selectType", null);
-  }
 
-  private boolean validateInput()
-  {
-    // Implement input validation logic here
-    // Return true if input is correct, false otherwise
-    return true; // Placeholder - add validation checks
-  }
+
 
 }

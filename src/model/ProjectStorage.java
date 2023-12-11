@@ -16,7 +16,6 @@ public class ProjectStorage {
   public static void removeProject(Project project) {
     allProjects.remove(project);
   }
-
   public static Project getProjectByID(int ID) {
     for (Project project : allProjects) {
       if (project.getID() == ID) {
@@ -25,8 +24,6 @@ public class ProjectStorage {
     }
     return null;
   }
-
-
   public ArrayList<Project> getProjectsByBudgetRange() {
     ArrayList<Project> matchingProjects = new ArrayList<>();
 
