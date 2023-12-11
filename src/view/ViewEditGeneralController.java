@@ -106,7 +106,44 @@ public class ViewEditGeneralController
     });
     allRadioButton.setOnAction(event -> clearFieldsAndShowAll());
 
+    budgetChoiceBox.getItems().addAll("0-500000", "500001-2000000", "2000001-10000000");
+    // Listen for changes in the budget choice box
+    budgetChoiceBox.getSelectionModel().selectedItemProperty().addListener(
+        (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+          handleBudgetFilter(newValue);
+        });
 
+
+
+  }
+  private void handleBudgetFilter(String budgetRange) {
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+    switch (budgetRange) {
+      case "0-500000":
+        filteredProjects = filterProjectsByBudgetRange(0, 500000);
+        break;
+      case "500001-2000000":
+        filteredProjects = filterProjectsByBudgetRange(500001, 2000000);
+        break;
+      case "2000000-10000000":
+        filteredProjects = filterProjectsByBudgetRange(2000000, 10000000);
+        break;
+    }
+
+    updateTableWithFilteredProjects(filteredProjects);
+  }
+  private ArrayList<Project> filterProjectsByBudgetRange(double minBudget, double maxBudget) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    for (Project project : allProjects) {
+      double projectBudget = project.getBudget();
+      if (projectBudget >= minBudget && projectBudget <= maxBudget) {
+        filteredProjects.add(project);
+      }
+    }
+
+    return filteredProjects;
   }
   @FXML
   private void handleSearchByIDTextFieldAction(ActionEvent event) {

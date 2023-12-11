@@ -35,7 +35,7 @@
 
             <Label layoutX="466.0" layoutY="57.0" prefHeight="26.0" prefWidth="35.0" text="Title" />
 
-            <ChoiceBox layoutX="224.0" layoutY="111.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="budgetChoiceBox" layoutX="224.0" layoutY="111.0" prefWidth="150.0" />
             <ChoiceBox layoutX="409.0" layoutY="111.0" prefWidth="150.0" />
             <ChoiceBox layoutX="25.0" layoutY="111.0" prefWidth="150.0" />
             <ChoiceBox layoutX="598.0" layoutY="111.0" prefWidth="150.0" />
