@@ -1,27 +1,495 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
+                                
+    
+    
+    
+    
+    
+    
     <Project>
-        <ID>223344</ID>
-        <title>hgf</title>
-        <budget>45.0</budget>
-        <size>987.0</size>
-        <address>lkjhg</address>
+                                                                
+        
+        
+        
+        
+        
+        
+        <ID>123456</ID>
+                                                                
+        
+        
+        
+        
+        
+        
+        <title>New</title>
+                                                                
+        
+        
+        
+        
+        
+        
+        <budget>1.0</budget>
+                                                                
+        
+        
+        
+        
+        
+        
+        <size>1.0</size>
+                                                                
+        
+        
+        
+        
+        
+        
+        <address>1</address>
+                                                                
+        
+        
+        
+        
+        
+        
         <numberOfKitchens>1</numberOfKitchens>
+                                                                
+        
+        
+        
+        
+        
+        
         <numberOfBathrooms>1</numberOfBathrooms>
+                                                                
+        
+        
+        
+        
+        
+        
         <numberOfOtherRooms>1</numberOfOtherRooms>
+                                                                
+        
+        
+        
+        
+        
+        
         <isNewBuilding>true</isNewBuilding>
+                                                                
+        
+        
+        
+        
+        
+        
         <timeline>9</timeline>
+                                                                
+        
+        
+        
+        
+        
+        
         <type>RESIDENTIAL</type>
+                                                            
+    
+    
+    
+    
+    
+    
     </Project>
+                            
+    
+    
+    
+    
+    
+    
     <Project>
-        <ID>123452</ID>
-        <title>jhgfr</title>
-        <budget>234.0</budget>
-        <size>1234.0</size>
-        <address>asdfg</address>
+                                                        
+        
+        
+        
+        
+        
+        <ID>654321</ID>
+                                                        
+        
+        
+        
+        
+        
+        <title>Commercial</title>
+                                                        
+        
+        
+        
+        
+        
+        <budget>1.0</budget>
+                                                        
+        
+        
+        
+        
+        
+        <size>1.0</size>
+                                                        
+        
+        
+        
+        
+        
+        <address>1</address>
+                                                        
+        
+        
+        
+        
+        
         <numberOfFloors>1</numberOfFloors>
-        <useOfBuilding>asdfg</useOfBuilding>
+                                                        
+        
+        
+        
+        
+        
+        <useOfBuilding>1</useOfBuilding>
+                                                        
+        
+        
+        
+        
+        
         <timeline>18</timeline>
+                                                        
+        
+        
+        
+        
+        
         <type>COMMERCIAL</type>
+                                                    
+    
+    
+    
+    
+    
+    </Project>
+                        
+    
+    
+    
+    
+    
+    <Project>
+                                                
+        
+        
+        
+        
+        <ID>876544</ID>
+                                                
+        
+        
+        
+        
+        <title>43</title>
+                                                
+        
+        
+        
+        
+        <budget>4.0</budget>
+                                                
+        
+        
+        
+        
+        <size>3.0</size>
+                                                
+        
+        
+        
+        
+        <address>4</address>
+                                                
+        
+        
+        
+        
+        <numberOfFloors>1</numberOfFloors>
+                                                
+        
+        
+        
+        
+        <useOfBuilding>3</useOfBuilding>
+                                                
+        
+        
+        
+        
+        <timeline>18</timeline>
+                                                
+        
+        
+        
+        
+        <type>COMMERCIAL</type>
+                                            
+    
+    
+    
+    
+    </Project>
+                    
+    
+    
+    
+    
+    <Project>
+                                        
+        
+        
+        
+        <ID>908765</ID>
+                                        
+        
+        
+        
+        <title>Industrial</title>
+                                        
+        
+        
+        
+        <budget>2.0</budget>
+                                        
+        
+        
+        
+        <size>3.0</size>
+                                        
+        
+        
+        
+        <address>3</address>
+                                        
+        
+        
+        
+        <typeOfFacility>4</typeOfFacility>
+                                        
+        
+        
+        
+        <timeline>30</timeline>
+                                        
+        
+        
+        
+        <type>INDUSTRIAL</type>
+                                    
+    
+    
+    
+    </Project>
+                
+    
+    
+    
+    <Project>
+                                
+        
+        
+        <ID>654320</ID>
+                                
+        
+        
+        <title>12345</title>
+                                
+        
+        
+        <budget>1.0</budget>
+                                
+        
+        
+        <size>1.0</size>
+                                
+        
+        
+        <address>1</address>
+                                
+        
+        
+        <numberOfFloors>1</numberOfFloors>
+                                
+        
+        
+        <useOfBuilding>1</useOfBuilding>
+                                
+        
+        
+        <timeline>18</timeline>
+                                
+        
+        
+        <type>COMMERCIAL</type>
+                            
+    
+    
+    </Project>
+            
+    
+    
+    <Project>
+                        
+        
+        <ID>654320</ID>
+                        
+        
+        <title>12345</title>
+                        
+        
+        <budget>1.0</budget>
+                        
+        
+        <size>1.0</size>
+                        
+        
+        <address>1</address>
+                        
+        
+        <numberOfFloors>1</numberOfFloors>
+                        
+        
+        <useOfBuilding>1</useOfBuilding>
+                        
+        
+        <timeline>18</timeline>
+                        
+        
+        <type>COMMERCIAL</type>
+                    
+    
+    </Project>
+            
+    
+    <Project>
+                        
+        
+        <ID>876543</ID>
+                        
+        
+        <title>54321</title>
+                        
+        
+        <budget>3.0</budget>
+                        
+        
+        <size>3.0</size>
+                        
+        
+        <address>3</address>
+                        
+        
+        <numberOfKitchens>1</numberOfKitchens>
+                        
+        
+        <numberOfBathrooms>1</numberOfBathrooms>
+                        
+        
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                        
+        
+        <isNewBuilding>true</isNewBuilding>
+                        
+        
+        <timeline>9</timeline>
+                        
+        
+        <type>RESIDENTIAL</type>
+                    
+    
+    </Project>
+        
+    
+    <Project>
+                
+        <ID>654320</ID>
+                
+        <title>12345</title>
+                
+        <budget>1.0</budget>
+                
+        <size>1.0</size>
+                
+        <address>1</address>
+                
+        <numberOfFloors>1</numberOfFloors>
+                
+        <useOfBuilding>1</useOfBuilding>
+                
+        <timeline>18</timeline>
+                
+        <type>COMMERCIAL</type>
+            
+    </Project>
+        
+    <Project>
+                
+        <ID>876543</ID>
+                
+        <title>54321</title>
+                
+        <budget>3.0</budget>
+                
+        <size>3.0</size>
+                
+        <address>3</address>
+                
+        <numberOfKitchens>1</numberOfKitchens>
+                
+        <numberOfBathrooms>1</numberOfBathrooms>
+                
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                
+        <isNewBuilding>true</isNewBuilding>
+                
+        <timeline>9</timeline>
+                
+        <type>RESIDENTIAL</type>
+            
+    </Project>
+        
+    <Project>
+                
+        <ID>256876</ID>
+                
+        <title>road</title>
+                
+        <budget>5.0</budget>
+                
+        <size>0.0</size>
+                
+        <address>5</address>
+            
+    </Project>
+    
+    <Project>
+        <ID>786987</ID>
+        <title>working</title>
+        <budget>4.0</budget>
+        <size>4.0</size>
+        <address>4</address>
+        <typeOfFacility>4</typeOfFacility>
+        <timeline>30</timeline>
+        <type>INDUSTRIAL</type>
     </Project>
 </Projects>

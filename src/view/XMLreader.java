@@ -1,6 +1,6 @@
 package view;
 
-import model.Project;
+import model.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -15,7 +15,7 @@ public class XMLreader {
     ArrayList<Project> projects = new ArrayList<>();
 
     try {
-      File file = new File(filePath);
+      File file = new File("projects.xml");
       if (!file.exists()) {
         // If the file doesn't exist, return an empty list of projects
         return projects;
@@ -30,8 +30,49 @@ public class XMLreader {
 
       for (int i = 0; i < projectList.getLength(); i++) {
         Element projectElement = (Element) projectList.item(i);
-        // Extract project details similarly to the XMLwriter class
-        // Create Project objects and add them to the 'projects' ArrayList
+        int id = Integer.parseInt(projectElement.getElementsByTagName("ID").item(0).getTextContent());
+        String title = projectElement.getElementsByTagName("title").item(0).getTextContent();
+        double size = Double.parseDouble(projectElement.getElementsByTagName("size").item(0).getTextContent());
+        double budget = Double.parseDouble(projectElement.getElementsByTagName("budget").item(0).getTextContent());
+        String address = projectElement.getElementsByTagName("address").item(0).getTextContent();
+        String typeString = projectElement.getElementsByTagName("type").item(0).getTextContent();
+
+        ProjectType type = ProjectType.valueOf(typeString);
+
+        switch (type) {
+          case RESIDENTIAL:
+            int numberOfKitchens = Integer.parseInt(projectElement.getElementsByTagName("numberOfKitchens").item(0).getTextContent());;
+            int numberOfBathrooms = Integer.parseInt(projectElement.getElementsByTagName("numberOfBathrooms").item(0).getTextContent());
+            int numberOfOtherRooms = Integer.parseInt(projectElement.getElementsByTagName("numberOfOtherRooms").item(0).getTextContent());
+            boolean isNewBuilding = Boolean.parseBoolean(projectElement.getElementsByTagName("isNewBuilding").item(0).getTextContent());
+            int timeline = Integer.parseInt(projectElement.getElementsByTagName("timeline").item(0).getTextContent());
+            projects.add(new Residential(id, title, budget, size, address, type, numberOfKitchens, numberOfBathrooms, numberOfOtherRooms, isNewBuilding, timeline));
+            break;
+          case COMMERCIAL:
+            int numberOfFloors = Integer.parseInt(projectElement.getElementsByTagName("numberOfFloors").item(0).getTextContent());
+            String useOfBuilding = projectElement.getElementsByTagName("useOfBuilding").item(0).getTextContent();
+            int commercialTimeline = Integer.parseInt(projectElement.getElementsByTagName("timeline").item(0).getTextContent());
+            projects.add(new Commercial(id, title, budget, size, address, type, numberOfFloors, commercialTimeline, useOfBuilding));
+            break;
+          case INDUSTRIAL:
+            String typeOfFacility = projectElement.getAttribute("typeOfFacility");
+            int industrialTimeline = Integer.parseInt(projectElement.getElementsByTagName("timeline").item(0).getTextContent());
+            projects.add(new Industrial(id, title, budget, size, address, type, typeOfFacility, industrialTimeline));
+            break;
+          case ROADCONSTRUCTION:
+            double length = Double.parseDouble(projectElement.getAttribute("length"));
+            double width = Double.parseDouble(projectElement.getAttribute("width"));
+            boolean hasBridges = Boolean.parseBoolean(projectElement.getAttribute("hasBridges"));
+            boolean hasTunnels = Boolean.parseBoolean(projectElement.getAttribute("hasTunnels"));
+            boolean hasChallenges = Boolean.parseBoolean(projectElement.getAttribute("hasChallenges"));
+            int roadTimeline = Integer.parseInt(projectElement.getElementsByTagName("timeline").item(0).getTextContent());
+
+            projects.add(new RoadConstruction(id, title, budget, address, type, length, width, hasBridges, hasTunnels, roadTimeline, hasChallenges));
+            break;
+
+          default:
+            break;
+        }
       }
     } catch (Exception e) {
       e.printStackTrace();

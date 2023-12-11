@@ -95,14 +95,14 @@ public class ViewEditGeneralController
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
     updateTable();
     // Populate TableView with project details from ProjectStorage
-    ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
   }
 
   public void updateTable() {
     // Populate TableView with project details from ProjectStorage
-    ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
   }
