@@ -92,4 +92,8 @@ public Project(int ID, String title,double budget, double size, String address, 
      return ID == other.ID && title.equals(other.title) && budget==other.budget && size == other.size && address.equals(other.address);
   }
 
+  public int getTimeline()
+  {
+    return 0;
+  }
 }

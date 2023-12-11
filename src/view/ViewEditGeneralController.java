@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
+import model.Commercial;
 import model.Project;
 import model.ProjectPlanningModel;
 import model.ProjectType;
@@ -111,9 +112,57 @@ public class ViewEditGeneralController
         (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
           handleBudgetFilter(newValue);
         });
+    // Timeline choice box options
+    timelineChoiceBox.getItems().addAll("0-12 months", "12-24 months", "24-36 months", "36 +");
+
+    // Listen for changes in the timeline choice box
+    timelineChoiceBox.getSelectionModel().selectedItemProperty().addListener(
+        (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+          handleTimelineFilter(newValue);
+        });
 
 
 
+
+  }
+  private void handleTimelineFilter(String timelineRange) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    switch (timelineRange) {
+      case "0-12 months":
+        filteredProjects = filterProjectsByTimeline(0, 12, allProjects);
+        break;
+      case "12-24 months":
+        filteredProjects = filterProjectsByTimeline(12, 24, allProjects);
+        break;
+      case "24-36 months":
+        filteredProjects = filterProjectsByTimeline(24, 36, allProjects);
+        break;
+      case "36 +":
+        filteredProjects = filterProjectsByTimeline(36, Integer.MAX_VALUE, allProjects);
+        break;
+    }
+
+    updateTableWithFilteredProjects(filteredProjects);
+  }
+  private ArrayList<Project> filterProjectsByTimeline(int minMonths, int maxMonths, ArrayList<Project> allProjects) {
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    for (Project project : allProjects) {
+      int projectTimeline;
+      if (project instanceof Commercial) {
+        projectTimeline = ((Commercial) project).getTimeline(); // Access timeline from Commercial class
+      } else {
+        projectTimeline = project.getTimeline(); // Fallback to Project class for other types
+      }
+
+      if (projectTimeline >= minMonths && projectTimeline <= maxMonths) {
+        filteredProjects.add(project);
+      }
+    }
+
+    return filteredProjects;
   }
   private void handleBudgetFilter(String budgetRange) {
     ArrayList<Project> filteredProjects = new ArrayList<>();

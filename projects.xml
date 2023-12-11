@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
-                                                                                                                                        
+                                                                                                                                                
     
     
     
@@ -133,8 +133,12 @@
     
     
     
+    
+    
     <Project>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -145,7 +149,9 @@
         
         
         <ID>123456</ID>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -156,7 +162,9 @@
         
         
         <title>123</title>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -167,7 +175,9 @@
         
         
         <budget>654.0</budget>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -178,7 +188,9 @@
         
         
         <size>654.0</size>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -189,7 +201,9 @@
         
         
         <address>654</address>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -200,7 +214,9 @@
         
         
         <numberOfKitchens>1</numberOfKitchens>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -211,7 +227,9 @@
         
         
         <numberOfBathrooms>1</numberOfBathrooms>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -222,7 +240,9 @@
         
         
         <numberOfOtherRooms>1</numberOfOtherRooms>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -233,7 +253,9 @@
         
         
         <isNewBuilding>true</isNewBuilding>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -244,7 +266,9 @@
         
         
         <timeline>9</timeline>
-                                                                                        
+                                                                                                        
+        
+        
         
         
         
@@ -255,7 +279,9 @@
         
         
         <type>RESIDENTIAL</type>
-                                                                                    
+                                                                                                    
+    
+    
     
     
     
@@ -266,7 +292,7 @@
     
     
     </Project>
-                                        
+                                                
     
     
     
@@ -293,240 +319,378 @@
     
     
     
+    
+    
     <Project>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <ID>654321</ID>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <title>sugi pula</title>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <budget>21.0</budget>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <size>213.0</size>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <address>231</address>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <numberOfKitchens>1</numberOfKitchens>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <numberOfBathrooms>1</numberOfBathrooms>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <numberOfOtherRooms>1</numberOfOtherRooms>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <isNewBuilding>true</isNewBuilding>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <timeline>9</timeline>
-                                                        
+                                                                        
+        
+        
         
         
         
         
         
         <type>RESIDENTIAL</type>
-                                                    
+                                                                    
+    
+    
     
     
     
     
     
     </Project>
-                        
+                                
+    
+    
     
     
     
     
     
     <Project>
-                                                
+                                                                
+        
+        
         
         
         
         
         <ID>852963</ID>
-                                                
+                                                                
+        
+        
         
         
         
         
         <title>sugi pula the continuation</title>
-                                                
+                                                                
+        
+        
         
         
         
         
         <budget>65465.0</budget>
-                                                
+                                                                
+        
+        
         
         
         
         
         <size>0.0</size>
-                                                
+                                                                
+        
+        
         
         
         
         
         <address>564</address>
-                                                
+                                                                
+        
+        
         
         
         
         
         <hasBridges>false</hasBridges>
-                                                
+                                                                
+        
+        
         
         
         
         
         <timeline>18</timeline>
-                                                
+                                                                
+        
+        
         
         
         
         
         <hasTunnels>false</hasTunnels>
-                                                
+                                                                
+        
+        
         
         
         
         
         <hasChallenges>false</hasChallenges>
-                                                
+                                                                
+        
+        
         
         
         
         
         <length>654.0</length>
-                                                
+                                                                
+        
+        
         
         
         
         
         <width>654.0</width>
-                                                
+                                                                
+        
+        
         
         
         
         
         <type>ROADCONSTRUCTION</type>
-                                            
+                                                            
+    
+    
     
     
     
     
     </Project>
-                    
+                            
 
 
+    
+    
     
     
     <Project>
-                        
+                                        
+        
+        
         
         <ID>224477</ID>
-                        
+                                        
+        
+        
         
         <title>cevaq</title>
-                        
+                                        
+        
+        
         
         <budget>3.0E7</budget>
-                        
+                                        
+        
+        
         
         <size>23.0</size>
-                        
+                                        
+        
+        
         
         <address>dsfgh</address>
-                        
+                                        
+        
+        
         
         <numberOfKitchens>1</numberOfKitchens>
-                        
+                                        
+        
+        
         
         <numberOfBathrooms>1</numberOfBathrooms>
-                        
+                                        
+        
+        
         
         <numberOfOtherRooms>1</numberOfOtherRooms>
-                        
+                                        
+        
+        
         
         <isNewBuilding>true</isNewBuilding>
-                        
+                                        
+        
+        
         
         <timeline>9</timeline>
-                        
+                                        
+        
+        
         
         <type>RESIDENTIAL</type>
-                    
+                                    
+    
+    
     
     </Project>
+                
+    
+    
+    
+    <Project>
+                                
         
+        
+        <ID>221155</ID>
+                                
+        
+        
+        <title>bleaaa</title>
+                                
+        
+        
+        <budget>2000000.0</budget>
+                                
+        
+        
+        <size>45.0</size>
+                                
+        
+        
+        <address>dfgh</address>
+                                
+        
+        
+        <numberOfFloors>1</numberOfFloors>
+                                
+        
+        
+        <useOfBuilding>dfg</useOfBuilding>
+                                
+        
+        
+        <timeline>18</timeline>
+                                
+        
+        
+        <type>COMMERCIAL</type>
+                            
+    
+    
+    </Project>
+            
+
     
     <Project>
                 
-        <ID>221155</ID>
+        <ID>557788</ID>
                 
-        <title>bleaaa</title>
+        <title>lkjhg</title>
                 
-        <budget>2000000.0</budget>
+        <budget>345678.0</budget>
                 
-        <size>45.0</size>
+        <size>3344.0</size>
                 
-        <address>dfgh</address>
+        <address>zxdcfgh</address>
                 
-        <numberOfFloors>1</numberOfFloors>
+        <typeOfFacility>sdfg</typeOfFacility>
                 
-        <useOfBuilding>dfg</useOfBuilding>
+        <timeline>37</timeline>
                 
-        <timeline>18</timeline>
-                
-        <type>COMMERCIAL</type>
+        <type>INDUSTRIAL</type>
             
     </Project>
     
+    <Project>
+        <ID>234567</ID>
+        <title>kjhg</title>
+        <budget>234.0</budget>
+        <size>0.0</size>
+        <address>sdfg</address>
+        <hasBridges>false</hasBridges>
+        <timeline>18</timeline>
+        <hasTunnels>false</hasTunnels>
+        <hasChallenges>false</hasChallenges>
+        <length>45.0</length>
+        <width>23.0</width>
+        <type>ROADCONSTRUCTION</type>
+    </Project>
 </Projects>
