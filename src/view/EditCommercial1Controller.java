@@ -97,8 +97,6 @@ public class EditCommercial1Controller
   @FXML
   private void saveButtonClicked() {
     try {
-
-
       int id = Integer.parseInt(idField.getText());
       String title = titleField.getText();
       double budget = Double.parseDouble(budgetField.getText());
@@ -108,27 +106,40 @@ public class EditCommercial1Controller
       int timeline = Integer.parseInt(timelineField.getText());
       String useOfBuilding = useOfBuildingField.getText();
 
-      Commercial oldCommercial = (Commercial) getProjectByID(id);
 
-      if (oldCommercial != null) {
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+
+      Commercial oldCommercial=null;
+
+      for(int i=0; i<allProjects.size(); i++)
+      {
+        if(allProjects.get(i).getID()==id)
+        {
+          oldCommercial= (Commercial) allProjects.get(i);
+        }
+      }
+      Commercial newCommercial= (Commercial) oldCommercial;
+
+      // Remove the old project from XML
+      XMLwriter.removeProjectFromXML(oldCommercial, "projects.xml");
+
+      // Add the updated project to XML
+      ProjectStorage.removeProject(oldCommercial); // Remove the old project
+
+      if (newCommercial != null) {
         // Update the existing project object with new values
-        oldCommercial.setTitle(title);
-        oldCommercial.setBudget(budget);
-        oldCommercial.setSize(size);
-        oldCommercial.setAddress(address);
-        oldCommercial.setNumberOfFloors(numberOfFloors);
-        oldCommercial.setTimeline(timeline);
-        oldCommercial.setUseOfBuilding(useOfBuilding);
+        newCommercial.setTitle(title);
+        newCommercial.setBudget(budget);
+        newCommercial.setSize(size);
+        newCommercial.setAddress(address);
+        newCommercial.setNumberOfFloors(numberOfFloors);
+        newCommercial.setTimeline(timeline);
+        newCommercial.setUseOfBuilding(useOfBuilding);
 
-        // Remove the old project from XML
-        XMLwriter.removeProjectFromXML(oldCommercial, "projects.xml");
-
-        // Add the updated project to XML
-        ProjectStorage.removeProject(oldCommercial); // Remove the old project
-        ProjectStorage.addProject(oldCommercial); // Add the updated project
+        ProjectStorage.addProject(newCommercial); // Add the updated project
 
         // Write the updated projects to XML
-        ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+        allProjects = ProjectStorage.getAllProjects();
         XMLwriter.appendProjectsToXML(allProjects, "projects.xml");
 
         // Update the ViewTable
