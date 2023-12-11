@@ -41,8 +41,7 @@ public class ViewEditGeneralController
   @FXML
   private ChoiceBox<String> timelineChoiceBox;
 
-  @FXML
-  private TableView tableView;
+
 
   @FXML
   private TableView ProjectTable;
@@ -196,31 +195,7 @@ public class ViewEditGeneralController
 
 
 
-  /*public void setProjectList(ProjectList projectList) {
-    this.projectList = projectList;
-  }
 
-
-  @FXML
-  private void handleAllRadioButtonAction() {
-    if (allRadioButton.isSelected()) {
-      // Show all projects in the table view
-      // Example:
-      tableView.setItems(projectList.getAllProjects());
-    }
-  }
-  @FXML
-  private void handleIDTextFieldAction() {
-    String enteredID = idTextField.getText();
-    if (enteredID.length() == 6 && enteredID.matches("\\d+")) {
-      // Show project with entered ID in the table view
-      // Example:
-      Project project = projectList.getProjectByID(Integer.parseInt(enteredID));
-      if (project != null) {
-        tableView.setItems(projectList.getProjectAsList(project));
-      }
-    }
-  }*/
 
   @FXML
   private void backButtonClicked() {
@@ -264,23 +239,7 @@ public class ViewEditGeneralController
 
   @FXML
   private void detailsButtonClicked() {
-    // Implement saving to XML functionality here
 
-    // If input is incorrect, display errorLabel
-    //    if (!validateInput()) {
-    //      errorLabel.setText("Incorrect input!");
-    //      errorLabel.setVisible(true);
-    //    } else {
-    //      // Example: Get data from text fields
-    //      String title = titleTextField.getText();
-    //      int id = Integer.parseInt(idTextField.getText());
-    //      double budget = Double.parseDouble(budgetTextField.getText());
-    //      // ...other fields
-    //
-    //      errorLabel.setVisible(false);
-    //      viewHandler.openView("viewProject");
-    //      // Save details to XML
-    // }
   }
   @FXML
   private void deleteButtonClicked() {
@@ -302,14 +261,6 @@ public class ViewEditGeneralController
       // Handle case when no item is selected
       System.out.println("No project selected");
     }
-  }
-
-
-  private boolean validateInput()
-  {
-    // Implement input validation logic here
-    // Return true if input is correct, false otherwise
-    return true; // Placeholder - add validation checks
   }
 
   public void reset() {
