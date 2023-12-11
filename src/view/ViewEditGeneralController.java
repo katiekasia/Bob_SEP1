@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
+import model.Commercial;
 import model.Project;
 import model.ProjectPlanningModel;
 import model.ProjectType;
@@ -105,7 +106,100 @@ public class ViewEditGeneralController
     });
     allRadioButton.setOnAction(event -> clearFieldsAndShowAll());
 
+    budgetChoiceBox.getItems().addAll("0-500000", "500001-2000000", "2000001-5000000","5000000 --> max");
+    // Listen for changes in the budget choice box
+    budgetChoiceBox.getSelectionModel().selectedItemProperty().addListener(
+        (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+          handleBudgetFilter(newValue);
+        });
+    // Timeline choice box options
+    timelineChoiceBox.getItems().addAll("0-12 months", "12-24 months", "24-36 months", "36 --> max");
 
+    // Listen for changes in the timeline choice box
+    timelineChoiceBox.getSelectionModel().selectedItemProperty().addListener(
+        (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+          handleTimelineFilter(newValue);
+        });
+
+
+
+
+  }
+  private void handleTimelineFilter(String timelineRange) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+    if (timelineRange != null) {
+      switch (timelineRange) {
+        case "0-12 months":
+          filteredProjects = filterProjectsByTimeline(0, 12, allProjects);
+          break;
+        case "12-24 months":
+          filteredProjects = filterProjectsByTimeline(12, 24, allProjects);
+          break;
+        case "24-36 months":
+          filteredProjects = filterProjectsByTimeline(24, 36, allProjects);
+          break;
+        case "36 +":
+          filteredProjects = filterProjectsByTimeline(36, Integer.MAX_VALUE, allProjects);
+          break;
+      }
+    } else {
+      // Show all projects if timeline range is null
+      filteredProjects.addAll(allProjects);
+    }
+
+    updateTableWithFilteredProjects(filteredProjects);
+  }
+  private ArrayList<Project> filterProjectsByTimeline(int minMonths, int maxMonths, ArrayList<Project> allProjects) {
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    for (Project project : allProjects) {
+      int projectTimeline;
+      if (project instanceof Commercial) {
+        projectTimeline = ((Commercial) project).getTimeline(); // Access timeline from Commercial class
+      } else {
+        projectTimeline = project.getTimeline(); // Fallback to Project class for other types
+      }
+
+      if (projectTimeline >= minMonths && projectTimeline <= maxMonths) {
+        filteredProjects.add(project);
+      }
+    }
+
+    return filteredProjects;
+  }
+  private void handleBudgetFilter(String budgetRange) {
+    if (budgetRange != null) {
+      ArrayList<Project> filteredProjects = new ArrayList<>();
+      switch (budgetRange) {
+        case "0-500000":
+          filteredProjects = filterProjectsByBudgetRange(0, 500000);
+          break;
+        case "500001-2000000":
+          filteredProjects = filterProjectsByBudgetRange(500001, 2000000);
+          break;
+        case "2000000-10000000":
+          filteredProjects = filterProjectsByBudgetRange(2000000, 10000000);
+          break;
+        case "5000000 --> max":
+          filteredProjects = filterProjectsByBudgetRange(5000000, 2147483647);
+          break;
+      }
+      updateTableWithFilteredProjects(filteredProjects);
+    }
+  }
+  private ArrayList<Project> filterProjectsByBudgetRange(double minBudget, double maxBudget) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    for (Project project : allProjects) {
+      double projectBudget = project.getBudget();
+      if (projectBudget >= minBudget && projectBudget <= maxBudget) {
+        filteredProjects.add(project);
+      }
+    }
+
+    return filteredProjects;
   }
   @FXML
   private void handleSearchByIDTextFieldAction(ActionEvent event) {
@@ -174,6 +268,10 @@ public class ViewEditGeneralController
 
   @FXML
   private void clearFieldsAndShowAll() {
+    budgetChoiceBox.getSelectionModel().clearSelection();
+    budgetChoiceBox.setValue(null);
+    timelineChoiceBox.getSelectionModel().clearSelection();
+    timelineChoiceBox.setValue(null);
     idTextField.clear();
     titleTextField.clear();
     // Clear other input fields as needed
@@ -198,7 +296,10 @@ public class ViewEditGeneralController
 
   @FXML
   private void backButtonClicked() {
-
+    budgetChoiceBox.getSelectionModel().clearSelection();
+    budgetChoiceBox.setValue(null);
+    timelineChoiceBox.getSelectionModel().clearSelection();
+    timelineChoiceBox.setValue(null);
     viewHandler.openView("projects", null);
 
 
