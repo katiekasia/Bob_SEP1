@@ -5,7 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import model.Commercial;
+import model.Project;
 import model.ProjectPlanningModel;
+import model.Residential;
 
 public class EditCommercial1Controller
 {
@@ -56,9 +59,23 @@ public class EditCommercial1Controller
     this.model = model;
     this.root = root;
   }
+
+  public void setProjectDetailsCommercial(Project selectedProject) {
+    // Populate the TextFields with selectedProject details
+    idField.setText(String.valueOf(selectedProject.getID()));
+    titleField.setText(selectedProject.getTitle());
+    budgetField.setText(String.valueOf(selectedProject.getBudget()));
+    sizeField.setText(String.valueOf(selectedProject.getSize()));
+    addressField.setText(selectedProject.getAddress());
+    Commercial projectCommercial = (Commercial)selectedProject;
+    useOfBuildingField.setText(String.valueOf(projectCommercial.getUseOfBuilding()));
+    timelineField.setText(String.valueOf(projectCommercial.getTimeline()));
+    numberOfFloorsField.setText(String.valueOf(projectCommercial.getNumberOfFloors()));
+  }
+
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("viewProject", null);
   }
 
   @FXML
@@ -83,7 +100,7 @@ public class EditCommercial1Controller
   }
   @FXML
   private void backButtonClicked() {
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
   private boolean validateInput()
   {

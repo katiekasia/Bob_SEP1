@@ -81,7 +81,7 @@ public class createResidentialViewController {
 
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
   }
 
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
@@ -293,7 +293,7 @@ public class createResidentialViewController {
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
       viewHandler.updateViewEditGeneralTable();
-      viewHandler.openView("viewProject");
+      viewHandler.openView("viewProject", null);
 
 
     }
@@ -317,7 +317,7 @@ public class createResidentialViewController {
     errorLabelGeneralError.setText("");
 
 
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
 

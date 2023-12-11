@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import model.Project;
 import model.ProjectPlanningModel;
 
 public class EditRoadConstructionController
@@ -51,9 +52,18 @@ public class EditRoadConstructionController
   @FXML
   private Label errorLabel;
 
+  public void setProjectDetailsRoadConstruction(Project selectedProject)
+  {
+    // Populate the TextFields with selectedProject details
+    idTextField.setText(String.valueOf(selectedProject.getID()));
+    titleTextField.setText(selectedProject.getTitle());
+    budgetTextField.setText(String.valueOf(selectedProject.getBudget()));
+    addressTextField.setText(selectedProject.getAddress());
+
+  }
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("viewProject", null);
   }
 
   @FXML
@@ -72,7 +82,7 @@ public class EditRoadConstructionController
   }
   @FXML
   private void backButtonClicked() {
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;

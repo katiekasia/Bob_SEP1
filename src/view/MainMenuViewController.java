@@ -46,11 +46,11 @@ public class MainMenuViewController implements Initializable
     imageView.setImage(image);
   }
   @FXML public void createProject() {
-    viewHandler.openView("selectType"); // Call the method to open SelectProjectType
+    viewHandler.openView("selectType", null); // Call the method to open SelectProjectType
   }
 
   @FXML public void viewProject() {
-      viewHandler.openView("viewProject"); // Call the method to open View Projects
+      viewHandler.openView("viewProject", null); // Call the method to open View Projects
   }
 
   public void reset() {

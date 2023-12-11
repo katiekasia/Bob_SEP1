@@ -66,7 +66,7 @@ public class createIndustrialViewController
 
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
   }
 
 
@@ -220,7 +220,7 @@ public class createIndustrialViewController
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
       viewHandler.updateViewEditGeneralTable();
-      viewHandler.openView("viewProject");
+      viewHandler.openView("viewProject", null);
     }
 
     catch (NumberFormatException e) {
@@ -238,7 +238,7 @@ public class createIndustrialViewController
     addressField.clear();;
     typeOfFacilityField.clear();
     errorLabelGeneralError.setText("");
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
 
@@ -251,7 +251,7 @@ public class createIndustrialViewController
     addressField.clear();;
     typeOfFacilityField.clear();
     errorLabelGeneralError.setText("");
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
 
