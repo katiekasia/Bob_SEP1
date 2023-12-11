@@ -80,6 +80,9 @@ public class ViewEditGeneralController
   }
 
   public void initialize() {
+
+    initializeTypeFilter(); //
+
     // Associate TableColumn with the respective property in the Project class
     title.setCellValueFactory(new PropertyValueFactory<>("title"));
     ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
@@ -93,6 +96,8 @@ public class ViewEditGeneralController
     ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
+
+
 
     idTextField.textProperty().addListener(new ChangeListener<String>() {
       @Override
@@ -125,6 +130,37 @@ public class ViewEditGeneralController
 
 
   }
+
+
+  private void initializeTypeFilter() {
+    typeChoiceBox.getItems().addAll("Commercial", "Residential", "Industrial", "Road Construction");
+
+    // Listen for changes in the type choice box
+    typeChoiceBox.getSelectionModel().selectedItemProperty().addListener(
+        (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+          handleTypeFilter(newValue);
+        });
+  }
+
+  private void handleTypeFilter(String selectedType) {
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+    ArrayList<Project> filteredProjects = new ArrayList<>();
+
+    if (selectedType != null) {
+      for (Project project : allProjects) {
+        if (project.getType().toString().equalsIgnoreCase(selectedType)) {
+          filteredProjects.add(project);
+        }
+      }
+    } else {
+      // Show all projects if type is null
+      filteredProjects.addAll(allProjects);
+    }
+
+    updateTableWithFilteredProjects(filteredProjects);
+  }
+
+
   private void handleTimelineFilter(String timelineRange) {
     ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ArrayList<Project> filteredProjects = new ArrayList<>();
@@ -268,8 +304,8 @@ public class ViewEditGeneralController
 
   @FXML
   private void clearFieldsAndShowAll() {
-    budgetChoiceBox.getSelectionModel().clearSelection();
-    budgetChoiceBox.setValue(null);
+    typeChoiceBox.getSelectionModel().clearSelection();
+    typeChoiceBox.setValue(null);
     timelineChoiceBox.getSelectionModel().clearSelection();
     timelineChoiceBox.setValue(null);
     idTextField.clear();
@@ -296,6 +332,8 @@ public class ViewEditGeneralController
 
   @FXML
   private void backButtonClicked() {
+    typeChoiceBox.getSelectionModel().clearSelection();
+    typeChoiceBox.setValue(null);
     budgetChoiceBox.getSelectionModel().clearSelection();
     budgetChoiceBox.setValue(null);
     timelineChoiceBox.getSelectionModel().clearSelection();
