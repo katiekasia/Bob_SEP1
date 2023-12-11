@@ -2,25 +2,19 @@ package view;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
-import javafx.stage.Stage;
 import model.Project;
 import model.ProjectPlanningModel;
-import model.ProjectStorage;
 import model.ProjectType;
 import javafx.scene.control.TableView;
 import java.util.ArrayList;
 
-import javafx.scene.layout.Region;
-import javafx.stage.Stage;
-import model.ProjectStorage;
-import model.ProjectPlanningModel;
-
-import javax.swing.text.View;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 
 
 public class ViewEditGeneralController
@@ -100,7 +94,97 @@ public class ViewEditGeneralController
     ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
+
+    idTextField.textProperty().addListener(new ChangeListener<String>() {
+      @Override
+      public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+        // Handle the filtering logic here
+        handleSearchByID();
+      }
+    });
+    titleTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      handleSearchByTitle();
+    });
+    allRadioButton.setOnAction(event -> clearFieldsAndShowAll());
+
+
   }
+  @FXML
+  private void handleSearchByIDTextFieldAction(ActionEvent event) {
+    handleSearchByID();
+  }
+  @FXML
+  private void handleSearchByID() {
+    String enteredID = idTextField.getText();
+
+    if (enteredID.length() == 6 && enteredID.matches("\\d+")) {
+      int projectID = Integer.parseInt(enteredID);
+
+      // Get all projects from XML
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+
+      // Filter projects based on the entered ID
+      ObservableList<Project> filteredProjects = FXCollections.observableArrayList();
+      for (Project project : allProjects) {
+        if (project.getID() == projectID) {
+          filteredProjects.add(project);
+        }
+      }
+      allRadioButton.setSelected(false);
+      // Update the TableView with the filtered projects
+      ProjectTable.setItems(filteredProjects);
+    } else {
+      // If the ID is not valid or the TextField is empty, show all projects
+      updateTable();
+      allRadioButton.setSelected(false);
+    }
+  }
+
+  @FXML
+  private void handleSearchByTitleTextFieldAction(ActionEvent event) {
+    handleSearchByTitle();
+  }
+
+  @FXML
+  private void handleSearchByTitle() {
+    String enteredTitle = titleTextField.getText();
+
+    if (!enteredTitle.isEmpty()) {
+      // Get all projects from XML
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+
+      // Filter projects based on the entered title (case-insensitive)
+      ObservableList<Project> filteredProjects = FXCollections.observableArrayList();
+      for (Project project : allProjects) {
+        if (project.getTitle().toLowerCase().contains(enteredTitle.toLowerCase())) {
+          filteredProjects.add(project);
+        }
+      }
+
+
+      // Update the TableView with the filtered projects
+      ProjectTable.setItems(filteredProjects);
+      allRadioButton.setSelected(false);
+
+    } else {
+      // If the title TextField is empty, show all projects
+      updateTable();
+      allRadioButton.setSelected(false);
+
+    }
+  }
+
+  @FXML
+  private void clearFieldsAndShowAll() {
+    idTextField.clear();
+    titleTextField.clear();
+    // Clear other input fields as needed
+
+    // Show all projects in the table view
+    updateTable();
+  }
+
+
 
   public void updateTable() {
     ProjectTable.getItems().clear();
@@ -200,5 +284,6 @@ public class ViewEditGeneralController
     // Reset logic
     init(viewHandler, model, root);
   }
+
 
 }
