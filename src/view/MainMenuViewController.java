@@ -20,6 +20,7 @@ public class MainMenuViewController implements Initializable
   @FXML private Label title;
   @FXML private Button create;
   @FXML private Button view;
+  @FXML private Label counterLabel;
   @FXML private TextField nrOfProjects;
   @FXML private ImageView imageView;
 
@@ -30,6 +31,7 @@ public class MainMenuViewController implements Initializable
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
+    updateCounterLabel(); // every time the app ( main menu is lauched ) the method to update the label is launched
   }
 
   public Region getRoot() {
@@ -49,6 +51,12 @@ public class MainMenuViewController implements Initializable
     viewHandler.openView("selectType"); // Call the method to open SelectProjectType
   }
 
+  // updates the label in the main menu fxml with the number of projects from projects.fxml file ( see the method in the xml reader)
+  public void updateCounterLabel()
+  {
+    int numberOfProjects = XMLreader.getNumberOfProjects("projects.xml");
+    counterLabel.setText(String.valueOf(numberOfProjects));
+  }
   @FXML public void viewProject() {
       viewHandler.openView("viewProject"); // Call the method to open View Projects
   }

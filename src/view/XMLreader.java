@@ -11,6 +11,33 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class XMLreader {
+
+  // method used for displaying number of projects, if there are no projects to view it will return 0
+  // otherwise , its gets all elements with the tag project, counts them and gets the length of it
+  public static int getNumberOfProjects(String filePath) {
+    try {
+      File file = new File(filePath);
+      if (!file.exists()) {
+        // If the file doesn't exist, return 0 projects
+        return 0;
+      }
+
+      DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+      DocumentBuilder builder = factory.newDocumentBuilder();
+      Document doc = builder.parse(file);
+
+      Element root = doc.getDocumentElement();
+      NodeList projectList = root.getElementsByTagName("Project");
+
+      return projectList.getLength();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    return 0; // Return 0 in case of an error
+  }
+
+
   public static ArrayList<Project> readProjectsFromXML(String filePath) {
     ArrayList<Project> projects = new ArrayList<>();
 
