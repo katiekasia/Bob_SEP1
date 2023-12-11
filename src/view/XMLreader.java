@@ -15,7 +15,7 @@ public class XMLreader {
     ArrayList<Project> projects = new ArrayList<>();
 
     try {
-      File file = new File("projects.xml");
+      File file = new File(filePath);
       if (!file.exists()) {
         // If the file doesn't exist, return an empty list of projects
         return projects;

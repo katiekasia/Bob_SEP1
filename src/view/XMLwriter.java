@@ -17,19 +17,31 @@ import java.util.ArrayList;
 
 public class XMLwriter {
 
-  public static void appendProjectsToXML(ArrayList<Project> projects, String filePath) {
+  private static Document loadOrCreateDocument(String filePath) {
     try {
+      File file = new File("projects.xml");
       DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
       DocumentBuilder builder = factory.newDocumentBuilder();
-      Document doc;
 
-      File file = new File(filePath);
       if (file.exists()) {
-        doc = builder.parse(file);
+        return builder.parse(file);
       } else {
-        doc = builder.newDocument();
+        Document doc = builder.newDocument();
         Element rootElement = doc.createElement("Projects");
         doc.appendChild(rootElement);
+        return doc;
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
+  public static void appendProjectsToXML(ArrayList<Project> projects, String filePath) {
+    try {
+      Document doc = loadOrCreateDocument(filePath);
+      if (doc == null) {
+        // Handle error or return
+        return;
       }
       Element rootElement = doc.getDocumentElement();
 
@@ -171,7 +183,7 @@ public class XMLwriter {
       transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
       DOMSource source = new DOMSource(doc);
-      StreamResult result = new StreamResult(file);
+      StreamResult result = new StreamResult(new File(filePath));
       transformer.transform(source, result);
 
       System.out.println("Projects appended to " + filePath);
