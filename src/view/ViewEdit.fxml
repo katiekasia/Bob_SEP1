@@ -24,7 +24,7 @@
             </Label>
             <RadioButton layoutX="188.0" layoutY="61.0" mnemonicParsing="false" text="All" />
             <Label layoutX="283.0" layoutY="62.0" prefHeight="18.0" prefWidth="16.0" text="ID" />
-            <TextField layoutX="315.0" layoutY="58.0" prefHeight="26.0" prefWidth="119.0" />
+            <TextField fx:id="idTextField" layoutX="315.0" layoutY="58.0" prefHeight="26.0" prefWidth="119.0" onAction="#handleIDTextFieldAction" />
             <Label layoutX="356.0" text="View">
                <font>
                   <Font size="25.0" />
@@ -62,7 +62,7 @@
                      <children>
                         <TableView fx:id="ProjectTable" layoutX="-2.0" layoutY="2.0" prefHeight="511.0" prefWidth="645.0">
                           <columns>
-                            <TableColumn fx:id="title" prefWidth="196.79998779296875" text="Title" />
+                            <TableColumn fx:id="title"  prefWidth="196.79998779296875" text="Title" />
                               <TableColumn fx:id="ID" prefWidth="95.20002746582031" text="ID" />
                               <TableColumn fx:id="budget" prefWidth="164.0" text="Budget" />
                               <TableColumn fx:id="timeline" prefWidth="53.5999755859375" text="Timeline" />
