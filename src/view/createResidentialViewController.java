@@ -15,7 +15,7 @@ public class createResidentialViewController {
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectList projects;  // Declare as a field
+  private ProjectStorage projects;  // Declare as a field
 
 
 
@@ -89,7 +89,7 @@ public class createResidentialViewController {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
-    projects = new ProjectList();
+    projects = new ProjectStorage();
 
 
     // initiate the default settings

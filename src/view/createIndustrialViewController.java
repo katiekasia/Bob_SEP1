@@ -15,7 +15,7 @@ public class createIndustrialViewController
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectList projects;  // Declare as a field
+  private ProjectStorage projects;  // Declare as a field
 
 
   @FXML
@@ -74,7 +74,7 @@ public class createIndustrialViewController
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
-    projects = new ProjectList();
+    projects = new ProjectStorage();
 
 
     int defaultTimeline = (int) Industrial.defaultIndustrial[0];
@@ -218,6 +218,7 @@ public class createIndustrialViewController
       ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
       String filePath = "projects.xml"; // Set your desired file path
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
+
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject");
     }

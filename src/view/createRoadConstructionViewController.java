@@ -17,7 +17,7 @@ public class createRoadConstructionViewController
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectList projects;  // Declare as a field
+  private ProjectStorage projects;  // Declare as a field
 
 
   @FXML
@@ -222,6 +222,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
       ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
       String filePath = "projects.xml"; // Set your desired file path
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
+
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject");
     }
@@ -231,6 +232,15 @@ int timeline = Integer.parseInt(timelineTextField.getText());
   }
   @FXML
   private void backButtonClicked() {
+    titleTextField.clear();
+    idTextField.clear();
+    budgetTextField.clear();
+    widthTextField.clear();
+    lengthTextField.clear();
+    addressTextField.clear();
+    errorLabelGeneralError.setText("");
+
+
     viewHandler.openView("selectType");
   }
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
@@ -238,7 +248,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
-    projects = new ProjectList();
+    projects = new ProjectStorage();
 
     // initiate the default settings
     int defaultTimeline = (int) RoadConstruction.defaultRoadConstruction[0];

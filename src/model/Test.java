@@ -13,10 +13,7 @@ public class Test
         ProjectType.INDUSTRIAL, "Smth", 1);
 
 
-    ProjectList projects = new ProjectList();
 
-    projects.addProject(commercial1);
-    projects.addProject(industrial1);
 
     //    for (int i =0; i <projects.getAllProjects().size();i++)
     //    {

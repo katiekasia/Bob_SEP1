@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
-import model.ProjectList;
+import model.ProjectStorage;
 import model.ProjectPlanningModel;
 
 import javax.swing.text.View;
@@ -93,14 +93,17 @@ public class ViewEditGeneralController
     budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
     timeline.setCellValueFactory(new PropertyValueFactory<>("Timeline"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
-    updateTable();
+
     // Populate TableView with project details from ProjectStorage
+
+    updateTable();
     ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
     ProjectTable.setItems(projectData);
   }
 
   public void updateTable() {
+    ProjectTable.getItems().clear();
     // Populate TableView with project details from ProjectStorage
     ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
     ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
@@ -137,7 +140,7 @@ public class ViewEditGeneralController
 
   @FXML
   private void backButtonClicked() {
-    updateTable();
+
     viewHandler.openView("projects");
 
 

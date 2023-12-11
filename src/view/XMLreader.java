@@ -15,7 +15,7 @@ public class XMLreader {
     ArrayList<Project> projects = new ArrayList<>();
 
     try {
-      File file = new File(filePath);
+      File file = new File("projects.xml");
       if (!file.exists()) {
         // If the file doesn't exist, return an empty list of projects
         return projects;
@@ -35,6 +35,7 @@ public class XMLreader {
         double size = Double.parseDouble(projectElement.getElementsByTagName("size").item(0).getTextContent());
         double budget = Double.parseDouble(projectElement.getElementsByTagName("budget").item(0).getTextContent());
         String address = projectElement.getElementsByTagName("address").item(0).getTextContent();
+
         String typeString = projectElement.getElementsByTagName("type").item(0).getTextContent();
 
         ProjectType type = ProjectType.valueOf(typeString);
@@ -60,11 +61,11 @@ public class XMLreader {
             projects.add(new Industrial(id, title, budget, size, address, type, typeOfFacility, industrialTimeline));
             break;
           case ROADCONSTRUCTION:
-            double length = Double.parseDouble(projectElement.getAttribute("length"));
-            double width = Double.parseDouble(projectElement.getAttribute("width"));
-            boolean hasBridges = Boolean.parseBoolean(projectElement.getAttribute("hasBridges"));
-            boolean hasTunnels = Boolean.parseBoolean(projectElement.getAttribute("hasTunnels"));
-            boolean hasChallenges = Boolean.parseBoolean(projectElement.getAttribute("hasChallenges"));
+            double length = Double.parseDouble(projectElement.getElementsByTagName("length").item(0).getTextContent());
+            double width = Double.parseDouble(projectElement.getElementsByTagName("width").item(0).getTextContent());
+            boolean hasBridges = Boolean.parseBoolean(projectElement.getElementsByTagName("hasBridges").item(0).getTextContent());
+            boolean hasTunnels = Boolean.parseBoolean(projectElement.getElementsByTagName("hasTunnels").item(0).getTextContent());
+            boolean hasChallenges = Boolean.parseBoolean(projectElement.getElementsByTagName("hasChallenges").item(0).getTextContent());
             int roadTimeline = Integer.parseInt(projectElement.getElementsByTagName("timeline").item(0).getTextContent());
 
             projects.add(new RoadConstruction(id, title, budget, address, type, length, width, hasBridges, hasTunnels, roadTimeline, hasChallenges));
