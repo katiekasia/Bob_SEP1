@@ -58,7 +58,6 @@ public class ViewEditGeneralController
   @FXML
   private Button DetailsEdit;
 
-  private Button detailsEditButton;
 
   @FXML
   private Button deleteButton;
@@ -237,7 +236,7 @@ public class ViewEditGeneralController
   @FXML
   private void backButtonClicked() {
 
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
 
 
   }
@@ -276,6 +275,62 @@ public class ViewEditGeneralController
 
   @FXML
   private void detailsButtonClicked() {
+
+    Project selectedProject = (Project) ProjectTable.getSelectionModel().getSelectedItem();
+
+    if (selectedProject != null && selectedProject.getType() == ProjectType.COMMERCIAL) {
+      // Retrieve details for a Commercial project
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+      for (Project project : allProjects) {
+        if (project.getID() == selectedProject.getID()) {
+          if (project.getType() == ProjectType.COMMERCIAL) {
+            // Open the edit window for Commercial project and pass its details
+            viewHandler.openView("editCommercial", selectedProject);
+            break;
+          }
+        }
+      }
+    }
+    if (selectedProject != null && selectedProject.getType() == ProjectType.RESIDENTIAL) {
+      // Retrieve details for a Commercial project
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+      for (Project project : allProjects) {
+        if (project.getID() == selectedProject.getID()) {
+          if (project.getType() == ProjectType.RESIDENTIAL) {
+            // Open the edit window for Residential project and pass its details
+            viewHandler.openView("editResidential", selectedProject);
+            break;
+          }
+        }
+      }
+    }
+    if (selectedProject != null && selectedProject.getType() == ProjectType.INDUSTRIAL) {
+      // Retrieve details for a Commercial project
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+      for (Project project : allProjects) {
+        if (project.getID() == selectedProject.getID()) {
+          if (project.getType() == ProjectType.INDUSTRIAL) {
+            // Open the edit window for Residential project and pass its details
+            viewHandler.openView("editIndustrial", selectedProject);
+            break;
+          }
+        }
+      }
+    }
+    if (selectedProject != null && selectedProject.getType() == ProjectType.ROADCONSTRUCTION) {
+      // Retrieve details for a Commercial project
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+      for (Project project : allProjects) {
+        if (project.getID() == selectedProject.getID()) {
+          if (project.getType() == ProjectType.ROADCONSTRUCTION) {
+            // Open the edit window for Residential project and pass its details
+            viewHandler.openView("editRoadConstruction", selectedProject);
+            break;
+          }
+        }
+      }
+    }
+
 
   }
   @FXML

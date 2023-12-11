@@ -82,7 +82,7 @@ public class createCommercialViewController
   }
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
   }
 
   @FXML
@@ -222,7 +222,7 @@ public class createCommercialViewController
       String filePath = "projects.xml"; // Set your desired file path
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
       viewHandler.updateViewEditGeneralTable();
-      viewHandler.openView("viewProject");
+      viewHandler.openView("viewProject", null);
   }
 
   catch (NumberFormatException e) {
@@ -239,7 +239,7 @@ public class createCommercialViewController
     addressField.clear();
     useOfBuildingField.clear();
     errorLabelGeneralError.setText("");
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
 
@@ -252,7 +252,7 @@ public class createCommercialViewController
     addressField.clear();;
     useOfBuildingField.clear();
     errorLabelGeneralError.setText("");
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
   public Region getRoot()

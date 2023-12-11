@@ -85,7 +85,7 @@ public class createRoadConstructionViewController
   }
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
   }
 
   @FXML
@@ -224,7 +224,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
       XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
       viewHandler.updateViewEditGeneralTable();
-      viewHandler.openView("viewProject");
+      viewHandler.openView("viewProject", null);
     }
     catch (NumberFormatException e) {
       errorLabelGeneralError.setText("Check inputs");
@@ -241,7 +241,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
     errorLabelGeneralError.setText("");
 
 
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
   {
@@ -275,7 +275,7 @@ int timeline = Integer.parseInt(timelineTextField.getText());
     errorLabelGeneralError.setText("");
 
 
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
 
   public Region getRoot()

@@ -5,7 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import model.Project;
 import model.ProjectPlanningModel;
+import model.ProjectType;
+import model.Residential;
 
 public class EditResidential1Controller
 {
@@ -51,9 +54,40 @@ public class EditResidential1Controller
   private Button cancelButton;
   @FXML
   private Label errorLabel;
+
+
+  public Region getRoot()
+  {
+    return root;
+  }
+
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
+  }
+  public void setProjectDetailsResidential(Project selectedProject) {
+    // Populate the TextFields with selectedProject details
+    idTextField.setText(String.valueOf(selectedProject.getID()));
+    titleTextField.setText(selectedProject.getTitle());
+    budgetTextField.setText(String.valueOf(selectedProject.getBudget()));
+    addressTextField.setText(selectedProject.getAddress());
+    sizeTextField.setText(selectedProject.getAddress());
+    Residential projectResidential = (Residential)selectedProject;
+    timelineTextField.setText(String.valueOf(projectResidential.getTimeline()));
+    numberOfBathroomsTextField.setText(String.valueOf(projectResidential.getNumberOfBathrooms()));
+    numberOfKitchensTextField.setText(String.valueOf(projectResidential.getNumberOfKitchens()));
+    numberOfOtherRoomsTextField.setText(String.valueOf(projectResidential.getNumberOfOtherRooms()));
+    buildingUseTextField.setText(String.valueOf(projectResidential.getIsNewBuilding()));
+  }
+  public void reset()
+  {
+    // Reset logic
+    init(viewHandler, model, root);
+  }
   @FXML
   private void cancelButtonClicked() {
-    viewHandler.openView("projects");
+    viewHandler.openView("viewProject", null);
   }
 
   @FXML
@@ -78,7 +112,7 @@ public class EditResidential1Controller
   }
   @FXML
   private void backButtonClicked() {
-    viewHandler.openView("selectType");
+    viewHandler.openView("selectType", null);
   }
   private boolean validateInput()
   {
@@ -88,21 +122,6 @@ public class EditResidential1Controller
   }
 
 
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
-    this.viewHandler = viewHandler;
-    this.model = model;
-    this.root = root;
-  }
-  public void reset()
-  {
-    // Reset logic
-    init(viewHandler, model, root);
-  }
 
-  public Region getRoot()
-  {
-    return root;
-  }
 }
-
 

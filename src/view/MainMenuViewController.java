@@ -48,7 +48,7 @@ public class MainMenuViewController implements Initializable
     imageView.setImage(image);
   }
   @FXML public void createProject() {
-    viewHandler.openView("selectType"); // Call the method to open SelectProjectType
+    viewHandler.openView("selectType", null); // Call the method to open SelectProjectType
   }
 
   // updates the label in the main menu fxml with the number of projects from projects.fxml file ( see the method in the xml reader)
@@ -58,7 +58,7 @@ public class MainMenuViewController implements Initializable
     counterLabel.setText(String.valueOf(numberOfProjects));
   }
   @FXML public void viewProject() {
-      viewHandler.openView("viewProject"); // Call the method to open View Projects
+      viewHandler.openView("viewProject", null); // Call the method to open View Projects
   }
 
   public void reset() {

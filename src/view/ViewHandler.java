@@ -5,10 +5,12 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import model.Project;
 import model.ProjectPlanningModel;
 import javafx.collections.FXCollections;
 import javafx.scene.control.TableView.*;
@@ -46,7 +48,7 @@ import javafx.collections.ObservableList;
     public void start(Stage primaryStage)
     {
       this.primaryStage = primaryStage;
-      openView("projects");
+      openView("projects", null);
     }
     public void updateViewEditGeneralTable() {
       if (editGeneralController != null) {
@@ -219,10 +221,106 @@ import javafx.collections.ObservableList;
         createResidentialController.reset();
       return createResidentialController.getRoot();
     }
+    /*
+    --------------------- LOADING PAGES FOR ALL THE EDIT PAGES -----------------------------------
+     */
+    private Region loadEditCommercialViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (editCommercialController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          editCommercialController = loader.getController();
+          editCommercialController.init(this, model, root);
+
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editCommercialController.reset();
+      return editCommercialController.getRoot();
+    }
 
 
+    private Region loadEditResidentialViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (editResidentialController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
 
-    public void openView(String id)
+          editResidentialController = loader.getController();
+          editResidentialController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editResidentialController.reset();
+      return editResidentialController.getRoot();
+    }
+    private Region loadEditIndustrialViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (editIndustrialController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          editIndustrialController = loader.getController();
+          editIndustrialController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editIndustrialController.reset();
+      return editIndustrialController.getRoot();
+    }
+    private Region loadEditRoadConstructionViewController(String fxmlFile)
+    {
+      Region root = null;
+      if (editRoadContructionController == null)
+      {
+        try
+        {
+          FXMLLoader loader = new FXMLLoader();
+          loader.setLocation(getClass().getResource(fxmlFile));
+          root = loader.load();
+
+          editRoadContructionController = loader.getController();
+          editRoadContructionController.init(this, model, root);
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      else
+        editRoadContructionController.reset();
+      return editRoadContructionController.getRoot();
+    }
+
+    public void openView(String id, Project selectedProject)
     {
       Region root = null;
 
@@ -263,6 +361,38 @@ import javafx.collections.ObservableList;
         case "roadConstructionProject":
         {
           root = loadCreateRoadConstructionViewController("createRoadConstruction.fxml");
+          break;
+        }
+        case "editCommercial":
+        {
+          root = loadEditCommercialViewController("editCommercial.fxml");
+          if (editCommercialController != null) {
+            editCommercialController.setProjectDetailsCommercial(selectedProject);
+          }
+          break;
+        }
+        case "editResidential":
+        {
+          root = loadEditResidentialViewController("editResidential.fxml");
+          if (editResidentialController != null) {
+            editResidentialController.setProjectDetailsResidential(selectedProject);
+          }
+          break;
+        }
+        case "editIndustrial":
+        {
+          root = loadEditIndustrialViewController("editIndustrial.fxml");
+          if (editIndustrialController != null) {
+            editIndustrialController.setProjectDetailsIndustrial(selectedProject);
+          }
+          break;
+        }
+        case "editRoadConstruction":
+        {
+          root = loadEditRoadConstructionViewController("editRoadConstruction.fxml");
+          if (editRoadContructionController != null) {
+            editRoadContructionController.setProjectDetailsRoadConstruction(selectedProject);
+          }
           break;
         }
       }

@@ -44,24 +44,24 @@ public class SelectProjectTypeViewController {
   @FXML
   private void handleResidentialButton()
   {
-    viewHandler.openView("residentialProject"); // Call the method to open create Residential project
+    viewHandler.openView("residentialProject", null); // Call the method to open create Residential project
   }
 
   @FXML
   private void handleCommercialButton() {
-    viewHandler.openView("commercialProject"); // Call the method to open create Commercial Project
+    viewHandler.openView("commercialProject", null); // Call the method to open create Commercial Project
   }
   @FXML
   private void handleIndustrialButton() {
-    viewHandler.openView("industrialProject");
+    viewHandler.openView("industrialProject", null);
   }
   @FXML
   private void handleRoadConstructionButton() {
-    viewHandler.openView("roadConstructionProject");
+    viewHandler.openView("roadConstructionProject", null);
   }
   @FXML
   private void handleBackButton() {
-    viewHandler.openView("projects");
+    viewHandler.openView("projects", null);
   }
 
 
