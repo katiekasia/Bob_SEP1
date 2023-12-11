@@ -5,10 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
-import model.Project;
-import model.ProjectPlanningModel;
-import model.ProjectType;
-import model.Residential;
+import model.*;
+
+import java.util.ArrayList;
 
 public class EditResidential1Controller
 {
@@ -54,7 +53,27 @@ public class EditResidential1Controller
   @FXML
   private Button cancelButton;
   @FXML
-  private Label errorLabel;
+  private Label errorLabelTitle;
+  @FXML
+  private Label errorLabelId;
+  @FXML
+  private Label errorLabelTimeline;
+  @FXML
+  private Label errorLabelSize;
+  @FXML
+  private Label errorLabelAddress;
+  @FXML
+  private Label errorLabelBudget;
+  @FXML
+  private Label errorLabelNrOfKitchens;
+  @FXML
+  private Label errorLabelNrOfBathrooms;
+  @FXML
+  private Label errorLabelNrOfRooms;
+  @FXML
+  private Label errorLabelGeneralError;
+
+
 
 
   public Region getRoot()
@@ -73,7 +92,7 @@ public class EditResidential1Controller
     titleTextField.setText(selectedProject.getTitle());
     budgetTextField.setText(String.valueOf(selectedProject.getBudget()));
     addressTextField.setText(selectedProject.getAddress());
-    sizeTextField.setText(selectedProject.getAddress());
+    sizeTextField.setText(String.valueOf(selectedProject.getSize()));
     Residential projectResidential = (Residential)selectedProject;
     timelineTextField.setText(String.valueOf(projectResidential.getTimeline()));
     numberOfBathroomsTextField.setText(String.valueOf(projectResidential.getNumberOfBathrooms()));
@@ -93,25 +112,69 @@ public class EditResidential1Controller
 
   @FXML
   private void saveButtonClicked() {
-    // Implement saving to XML functionality here
+    try {
+      int id = Integer.parseInt(idTextField.getText());
+      String title = titleTextField.getText();
+      double budget = Double.parseDouble(budgetTextField.getText());
+      double size = Double.parseDouble(sizeTextField.getText());
+      String address = addressTextField.getText();
+      int numberOfKitchens = Integer.parseInt(numberOfKitchensTextField.getText());
+      int numberOfBathrooms = Integer.parseInt(numberOfBathroomsTextField.getText());
+      int numberOfOtherRooms = Integer.parseInt(numberOfOtherRoomsTextField.getText());
+      int timeline = Integer.parseInt(timelineTextField.getText());
+      boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
 
-    // If input is incorrect, display errorLabel
-    //    if (!validateInput()) {
-    //      errorLabel.setText("Incorrect input!");
-    //      errorLabel.setVisible(true);
-    //    } else {
-    //      // Example: Get data from text fields
-    //      String title = titleTextField.getText();
-    //      int id = Integer.parseInt(idTextField.getText());
-    //      double budget = Double.parseDouble(budgetTextField.getText());
-    //      // ...other fields
-    //
-    //      errorLabel.setVisible(false);
-    //      viewHandler.openView("viewProject");
-    //      // Save details to XML
-    // }
+
+      ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
+
+      Residential oldResidential=null;
+
+      for(int i=0; i<allProjects.size(); i++)
+      {
+        if(allProjects.get(i).getID()==id)
+        {
+          oldResidential= (Residential) allProjects.get(i);
+        }
+      }
+      Residential newResidential= (Residential) oldResidential;
+
+      // Remove the old project from XML
+      XMLwriter.removeProjectFromXML(oldResidential, "projects.xml");
+
+      // Add the updated project to XML
+      ProjectStorage.removeProject(oldResidential); // Remove the old project
+
+      if (newResidential != null) {
+        // Update the existing project object with new values
+        newResidential.setTitle(title);
+        newResidential.setBudget(budget);
+        newResidential.setSize(size);
+        newResidential.setAddress(address);
+        newResidential.setNumberOfBathrooms(numberOfBathrooms);
+        newResidential.setTimeline(timeline);
+        newResidential.setIsNewBuilding(isNewBuilding);
+        newResidential.setNumberOfKitchens(numberOfKitchens);
+        newResidential.setNumberOfOtherRooms(numberOfOtherRooms);
+
+
+        ProjectStorage.addProject(newResidential); // Add the updated project
+
+        // Write the updated projects to XML
+        allProjects = ProjectStorage.getAllProjects();
+        XMLwriter.appendProjectsToXML(allProjects, "projects.xml");
+
+        // Update the ViewTable
+        viewHandler.updateViewEditGeneralTable();
+        viewHandler.openView("viewProject", null);
+      }
+      else {
+        // Handle case where the project with the given ID doesn't exist
+        errorLabelGeneralError.setText("Project not found");
+      }
+    } catch (NumberFormatException e) {
+      errorLabelGeneralError.setText("Check inputs");
+    }
   }
-
   private boolean validateInput()
   {
     // Implement input validation logic here

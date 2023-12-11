@@ -308,8 +308,11 @@ public class ViewEditGeneralController
     typeChoiceBox.setValue(null);
     timelineChoiceBox.getSelectionModel().clearSelection();
     timelineChoiceBox.setValue(null);
+    budgetChoiceBox.getSelectionModel().clearSelection();
+    budgetChoiceBox.setValue(null);
     idTextField.clear();
     titleTextField.clear();
+
     // Clear other input fields as needed
 
     // Show all projects in the table view
