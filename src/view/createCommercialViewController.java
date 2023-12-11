@@ -97,8 +97,6 @@ public class createCommercialViewController
     int timeline = Integer.parseInt(timelineField.getText());
     String useOfBuilding = useOfBuildingField.getText();
 
-
-
     Commercial.defaultCommercial[0] = numberOfFloors;
     Commercial.defaultCommercial[1] = timeline;
 

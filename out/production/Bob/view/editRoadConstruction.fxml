@@ -115,7 +115,6 @@
             <children>
                 <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="36.0" prefWidth="75.0" text="cancel" />
                 <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="75.0" text="save" />
-                <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="35.0" prefWidth="75.0" text="edit" />
             </children>
         </HBox>
       <Label fx:id="errorLabelTitle" layoutX="373.0" layoutY="43.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
