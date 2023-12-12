@@ -1,283 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
-<<<<<<< Updated upstream
+                                    
 
-        <Project>
-            <ID>111111</ID>
-            <title>Kamtjatka Studielejligheder</title>
-            <budget>1400000.0</budget>
-            <size>190.0</size>
-            <address>Kamtjatka 13</address>
-            <numberOfKitchens>88</numberOfKitchens>
-            <numberOfBathrooms>130</numberOfBathrooms>
-            <numberOfOtherRooms>240</numberOfOtherRooms>
-            <isNewBuilding>true</isNewBuilding>
-            <timeline>9</timeline>
-            <type>RESIDENTIAL</type>
-        </Project>
+    
+    
+    
+    
+            
+    
+    
+    
+    
+    
+    
     <Project>
-        <ID>654321</ID>
-        <title>Oceanfront Condos</title>
-        <budget>2500000.0</budget>
-        <size>300.0</size>
-        <address>Beachfront Avenue 22</address>
-        <numberOfKitchens>40</numberOfKitchens>
-        <numberOfBathrooms>50</numberOfBathrooms>
-        <numberOfOtherRooms>80</numberOfOtherRooms>
-        <isNewBuilding>true</isNewBuilding>
-        <timeline>12</timeline>
-        <type>RESIDENTIAL</type>
-    </Project>
-
-    <Project>
-        <ID>987123</ID>
-        <title>Tech Park Tower</title>
-        <budget>6000000.0</budget>
-        <size>900.0</size>
-        <address>Technology Park 5</address>
-        <numberOfFloors>18</numberOfFloors>
-        <useOfBuilding>Technology Hub</useOfBuilding>
-        <timeline>24</timeline>
-=======
                                                         
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Project>
-                                                                                                
         
         
         
         
         
-        
-        
-        
-        
-        
-        <ID>234432</ID>
-                                                                                                
-        
-        
-        
-        
-        
+        <ID>543444</ID>
+                                                        
         
         
         
         
         
         <title>432</title>
-                                                                                                
+                                                        
         
         
         
         
         
+        <budget>4.0</budget>
+                                                        
         
         
         
         
         
-        <budget>2.0</budget>
-                                                                                                
+        <size>4.0</size>
+                                                        
         
         
         
         
         
+        <address>4</address>
+                                                        
         
         
         
         
         
-        <size>2.0</size>
-                                                                                                
+        <numberOfFloors>1</numberOfFloors>
+                                                        
         
         
         
         
         
+        <useOfBuilding>4</useOfBuilding>
+                                                        
         
         
         
         
         
-        <address>2</address>
-                                                                                                
+        <timeline>9</timeline>
+                                                        
         
         
         
         
         
-        
-        
-        
-        
-        
-        <numberOfFloors>50</numberOfFloors>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <useOfBuilding>MALL</useOfBuilding>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timeline>60</timeline>
-                                                                                                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
->>>>>>> Stashed changes
         <type>COMMERCIAL</type>
-    </Project>
-<<<<<<< Updated upstream
-
-    <Project>
-        <ID>456789</ID>
-        <title>Urban Loft Living</title>
-        <budget>1800000.0</budget>
-        <size>250.0</size>
-        <address>City Center Loft 12</address>
-        <numberOfKitchens>30</numberOfKitchens>
-        <numberOfBathrooms>35</numberOfBathrooms>
-        <numberOfOtherRooms>55</numberOfOtherRooms>
-        <isNewBuilding>true</isNewBuilding>
-        <timeline>14</timeline>
-        <type>RESIDENTIAL</type>
-=======
-                                            
-    
-
-
-    
-
-
-    
-    
-    
-    
-    
-    
-    <Project>
-                                                        
-        
-        
-        
-        
-        
-        <ID>456678</ID>
-                                                        
-        
-        
-        
-        
-        
-        <title>TESTROAD</title>
-                                                        
-        
-        
-        
-        
-        
-        <budget>6.0</budget>
-                                                        
-        
-        
-        
-        
-        
-        <size>0.0</size>
-                                                        
-        
-        
-        
-        
-        
-        <address>6</address>
-                                                        
-        
-        
-        
-        
-        
-        <hasBridges>true</hasBridges>
-                                                        
-        
-        
-        
-        
-        
-        <timeline>1000</timeline>
-                                                        
-        
-        
-        
-        
-        
-        <hasTunnels>false</hasTunnels>
-                                                        
-        
-        
-        
-        
-        
-        <hasChallenges>false</hasChallenges>
-                                                        
-        
-        
-        
-        
-        
-        <length>6.0</length>
-                                                        
-        
-        
-        
-        
-        
-        <width>6.0</width>
-                                                        
-        
-        
-        
-        
-        
-        <type>ROADCONSTRUCTION</type>
                                                     
     
     
@@ -287,328 +86,144 @@
     </Project>
                         
     
-
-
+    
     
     
     
     <Project>
-                                
+                                                
         
         
-        <ID>432233</ID>
-                                
         
         
-        <title>543</title>
-                                
+        <ID>777666</ID>
+                                                
         
         
-        <budget>3.0</budget>
-                                
         
         
-        <size>3.0</size>
-                                
+        <title>5432</title>
+                                                
         
         
-        <address>3</address>
-                                
         
         
-        <typeOfFacility/>
-                                
+        <budget>6.0</budget>
+                                                
         
         
-        <timeline>100</timeline>
-                                
         
         
-        <type>INDUSTRIAL</type>
-                            
-    
-    
-    </Project>
-            
-    
-
-
-    <Project>
-        <ID>444444</ID>
-        <title>gtrfs</title>
-        <budget>4.0</budget>
         <size>0.0</size>
-        <address>4</address>
-        <hasBridges>true</hasBridges>
-        <timeline>500</timeline>
+                                                
+        
+        
+        
+        
+        <address>6</address>
+                                                
+        
+        
+        
+        
+        <hasBridges>false</hasBridges>
+                                                
+        
+        
+        
+        
+        <timeline>18</timeline>
+                                                
+        
+        
+        
+        
         <hasTunnels>false</hasTunnels>
+                                                
+        
+        
+        
+        
         <hasChallenges>false</hasChallenges>
-        <length>4.0</length>
-        <width>4.0</width>
+                                                
+        
+        
+        
+        
+        <length>6.0</length>
+                                                
+        
+        
+        
+        
+        <width>6.0</width>
+                                                
+        
+        
+        
+        
         <type>ROADCONSTRUCTION</type>
->>>>>>> Stashed changes
+                                            
+    
+    
+    
+    
     </Project>
+                    
+    
+    
+    
+        
 
+    
+    
     <Project>
-        <ID>123456</ID>
-        <title>High-Tech Research Facility</title>
-        <budget>10000000.0</budget>
-        <size>15000.0</size>
-        <address>Research Avenue 8</address>
-        <typeOfFacility>Research and Development</typeOfFacility>
-        <timeline>36</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>951753</ID>
-        <title>Countryside Wind Farm</title>
-        <budget>6000000.0</budget>
-        <size>10000.0</size>
-        <address>Windmill Valley</address>
-        <typeOfFacility>Renewable Energy</typeOfFacility>
-        <timeline>36</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-    <Project>
-        <ID>135792</ID>
-        <title>Luxury Penthouse Suites</title>
-        <budget>3500000.0</budget>
-        <size>400.0</size>
-        <address>Skyscraper Avenue 77</address>
-        <numberOfKitchens>50</numberOfKitchens>
-        <numberOfBathrooms>60</numberOfBathrooms>
-        <numberOfOtherRooms>90</numberOfOtherRooms>
+                        
+        
+        <ID>444444</ID>
+                        
+        
+        <title>fred</title>
+                        
+        
+        <budget>4.0</budget>
+                        
+        
+        <size>4.0</size>
+                        
+        
+        <address>4</address>
+                        
+        
+        <numberOfKitchens>1</numberOfKitchens>
+                        
+        
+        <numberOfBathrooms>1</numberOfBathrooms>
+                        
+        
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                        
+        
         <isNewBuilding>true</isNewBuilding>
-        <timeline>18</timeline>
+                        
+        
+        <timeline>12</timeline>
+                        
+        
         <type>RESIDENTIAL</type>
+                    
+    
     </Project>
+        
 
     <Project>
-        <ID>246813</ID>
-        <title>Green Technology Campus</title>
-        <budget>8000000.0</budget>
-        <size>1200.0</size>
-        <address>Eco Street 21</address>
-        <numberOfFloors>10</numberOfFloors>
-        <useOfBuilding>Green Technology Research</useOfBuilding>
-        <timeline>30</timeline>
-        <type>COMMERCIAL</type>
-    </Project>
-
-    <Project>
-        <ID>579321</ID>
-        <title>Seaside Retreat Villas</title>
-        <budget>4000000.0</budget>
-        <size>600.0</size>
-        <address>Beachfront Villa Lane 3</address>
-        <numberOfKitchens>70</numberOfKitchens>
-        <numberOfBathrooms>80</numberOfBathrooms>
-        <numberOfOtherRooms>120</numberOfOtherRooms>
-        <isNewBuilding>true</isNewBuilding>
-        <timeline>24</timeline>
-        <type>RESIDENTIAL</type>
-    </Project>
-
-    <Project>
-        <ID>753159</ID>
-        <title>Urban Art Gallery</title>
-        <budget>1200000.0</budget>
-        <size>200.0</size>
-        <address>Art District 10</address>
-        <numberOfFloors>2</numberOfFloors>
-        <useOfBuilding>Art Gallery</useOfBuilding>
-        <timeline>18</timeline>
-        <type>COMMERCIAL</type>
-    </Project>
-    <Project>
-        <ID>951753</ID>
-        <title>Countryside Wind Farm</title>
-        <budget>6000000.0</budget>
-        <size>10000.0</size>
-        <address>Windmill Valley</address>
-        <typeOfFacility>Renewable Energy</typeOfFacility>
-        <timeline>36</timeline>
+        <ID>555666</ID>
+        <title>hygg</title>
+        <budget>6.0</budget>
+        <size>6.0</size>
+        <address>6</address>
+        <typeOfFacility>223</typeOfFacility>
+        <timeline>6</timeline>
         <type>INDUSTRIAL</type>
     </Project>
-
-    <Project>
-        <ID>369147</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-    <Project>
-        <ID>142515</ID>
-        <title>Steel Manufacturing Facility</title>
-        <budget>10000000.0</budget>
-        <size>8000.0</size>
-        <address>Steelworks Street 15</address>
-        <typeOfFacility>Steel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-    <Project>
-        <ID>543636</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>857945</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>9597486</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>9874156</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>9874515</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>9874624</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>987451</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>789574</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>5356264</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>532659</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>643735</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>754857</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-    <Project>
-        <ID>8325634</ID>
-        <title>Solar Panel Manufacturing Plant</title>
-        <budget>15000000.0</budget>
-        <size>3000.0</size>
-        <address>Solar Street 5</address>
-        <typeOfFacility>Solar Panel Manufacturing</typeOfFacility>
-        <timeline>48</timeline>
-        <type>INDUSTRIAL</type>
-    </Project>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </Projects>

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="546.0" prefWidth="450.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createResidentialViewController">
+<AnchorPane prefHeight="553.0" prefWidth="453.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createResidentialViewController">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" text="Residential project" textAlignment="CENTER">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-36.0" prefHeight="20.0" prefWidth="341.0" text="Residential project" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
@@ -106,7 +106,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="237.0" prefHeight="30.0" prefWidth="425.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="157.0" text="Address">
+                <Label prefHeight="20.0" prefWidth="161.0" text="Address">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -129,7 +129,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="numberOfKitchensTextField" alignment="CENTER" prefHeight="26.0" prefWidth="130.0" />
+                <TextField fx:id="numberOfKitchensTextField" alignment="CENTER" prefHeight="25.0" prefWidth="130.0" />
                 <Label fx:id="errorLabelNrOfKitchens" prefHeight="20.0" prefWidth="126.0" text="" textFill="RED">
                     <font>
                         <Font size="14.0" />
