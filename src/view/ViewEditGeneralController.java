@@ -7,10 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Region;
-import model.Commercial;
-import model.Project;
-import model.ProjectPlanningModel;
-import model.ProjectType;
+import model.*;
 import javafx.scene.control.TableView;
 import java.util.ArrayList;
 
@@ -189,15 +186,26 @@ public class ViewEditGeneralController
   }
   private ArrayList<Project> filterProjectsByTimeline(int minMonths, int maxMonths, ArrayList<Project> allProjects) {
     ArrayList<Project> filteredProjects = new ArrayList<>();
+    int projectTimeline=0;
 
     for (Project project : allProjects) {
-      int projectTimeline;
-      if (project instanceof Commercial) {
-        projectTimeline = ((Commercial) project).getTimeline(); // Access timeline from Commercial class
-      } else {
-        projectTimeline = project.getTimeline(); // Fallback to Project class for other types
-      }
 
+      if (project instanceof Commercial)
+      {
+        projectTimeline = ((Commercial) project).getTimeline(); // Access timeline from Commercial class
+      }
+      else if (project instanceof Residential)
+      {
+        projectTimeline = ((Residential) project).getTimeline();
+      }
+      else if (project instanceof Industrial)
+      {
+        projectTimeline = ((Industrial) project).getTimeline(); // Fallback to Project class for other types
+      }
+        else if (project instanceof RoadConstruction)
+      {
+      projectTimeline = ((RoadConstruction) project).getTimeline(); // Fallback to Project class for other types
+      }
       if (projectTimeline >= minMonths && projectTimeline <= maxMonths) {
         filteredProjects.add(project);
       }
