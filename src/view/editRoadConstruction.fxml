@@ -101,7 +101,7 @@
                 <TextField fx:id="bridgesTextField" prefHeight="25.0" prefWidth="153.0" />
             </children>
         </HBox>
-        <HBox layoutX="14.0" layoutY="403.0" prefHeight="29.0" prefWidth="347.0" spacing="125.0">
+        <HBox layoutX="27.0" layoutY="403.0" prefHeight="29.0" prefWidth="347.0" spacing="125.0">
             <children>
                 <Label text="Challenges">
                     <font>
@@ -167,12 +167,12 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="errorLabelBridgetOrTunnels" layoutX="37.0" layoutY="368.0" prefHeight="20.0" prefWidth="130.0" text="Tunnels">
+      <Label fx:id="errorLabelBridgetOrTunnels" layoutX="25.0" layoutY="358.0" prefHeight="20.0" prefWidth="130.0" text="Tunnels">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tunnelsTextField" layoutX="213.0" layoutY="365.0" prefHeight="25.0" prefWidth="153.0" />
+      <TextField fx:id="tunnelsTextField" layoutX="216.0" layoutY="365.0" prefHeight="25.0" prefWidth="153.0" />
       <Label layoutX="373.0" layoutY="368.0" prefHeight="20.0" prefWidth="130.0" textFill="RED">
          <font>
             <Font size="14.0" />

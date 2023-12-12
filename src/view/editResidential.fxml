@@ -8,19 +8,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="546.0" prefWidth="450.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditResidential1Controller">
+<AnchorPane prefHeight="546.0" prefWidth="564.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditResidential1Controller">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" text="Residential project" textAlignment="CENTER">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" text="Residential project" textAlignment="CENTER">
             <font>
-                <Font size="14.0" />
+                <Font size="18.0" />
             </font>
             <padding>
                 <Insets left="190.0" />
             </padding>
         </Label>
-        <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="38.0" prefHeight="30.0" prefWidth="500.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="38.0" prefHeight="30.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="70.0" text="Title">
+                <Label prefHeight="20.0" prefWidth="241.0" text="Title">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -34,9 +34,9 @@
                 </Label>
 
             </children></HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="79.0" prefHeight="30.0" prefWidth="500.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="79.0" prefHeight="30.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="83.0" text="ID ( 6 digits) ">
+                <Label prefHeight="20.0" prefWidth="241.0" text="ID ( 6 digits) ">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -54,7 +54,7 @@
         </HBox>
         <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="115.0" prefHeight="30.0" prefWidth="500.0">
             <children>
-                <Label prefWidth="70.0" text="Budget">
+                <Label prefHeight="20.0" prefWidth="226.0" text="Budget">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -71,9 +71,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="382.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="70.0" text="Size">
+                <Label prefHeight="20.0" prefWidth="237.0" text="Size">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -89,9 +89,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="197.0" prefHeight="29.0" prefWidth="382.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="197.0" prefHeight="25.0" prefWidth="500.0">
             <children>
-                <Label prefWidth="70.0" text="Timeline">
+                <Label prefHeight="20.0" prefWidth="247.0" text="Timeline">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -104,9 +104,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="365.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="237.0" prefHeight="29.0" prefWidth="500.0">
             <children>
-                <Label prefWidth="70.0" text="Address">
+                <Label prefHeight="20.0" prefWidth="231.0" text="Address">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -122,9 +122,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="275.0" prefHeight="29.0" prefWidth="415.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="275.0" prefHeight="25.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="142.0" text="Nr. of Kitchens">
+                <Label prefHeight="20.0" prefWidth="252.0" text="Nr. of Kitchens">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -137,9 +137,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="402.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="316.0" prefHeight="38.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="147.0" text="Nr. of bathrooms">
+                <Label prefHeight="20.0" prefWidth="243.0" text="Nr. of bathrooms">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -152,9 +152,9 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="354.0" prefHeight="29.0" prefWidth="415.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="24.0" layoutY="354.0" prefHeight="25.0" prefWidth="500.0">
             <children>
-                <Label prefHeight="20.0" prefWidth="155.0" text=" Nr. of other rooms">
+                <Label prefHeight="20.0" prefWidth="246.0" text=" Nr. of other rooms">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -167,7 +167,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="391.0" prefHeight="38.0" prefWidth="365.0" spacing="20.0">
+        <HBox alignment="CENTER_LEFT" layoutX="26.0" layoutY="391.0" prefHeight="26.0" prefWidth="500.0">
             <children>
                 <Label prefHeight="20.0" prefWidth="242.0" text="New Building or renovation">
                     <font>
@@ -182,7 +182,7 @@
                 </Label>
             </children>
         </HBox>
-        <HBox alignment="CENTER" layoutX="37.0" layoutY="463.0" prefHeight="58.0" prefWidth="382.0" spacing="20.0">
+        <HBox alignment="CENTER" layoutX="91.0" layoutY="453.0" prefHeight="58.0" prefWidth="382.0" spacing="30.0">
             <children>
                 <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="36.0" prefWidth="75.0" text="cancel" />
                 <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="75.0" text="save" />

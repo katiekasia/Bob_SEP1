@@ -10,14 +10,14 @@
 <AnchorPane prefHeight="491.0" prefWidth="574.0" userData="createCommercial" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.createCommercialViewController">
 
    <children>
-      <HBox layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="341.0" spacing="160.0">
+      <HBox layoutX="27.0" layoutY="38.0" prefHeight="29.0" prefWidth="341.0" spacing="152.0">
          <children>
             <Label text="Title">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="titleField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="titleField" prefHeight="25.0" prefWidth="160.0" />
          </children></HBox>
       <HBox layoutX="7.0" layoutY="109.0" prefHeight="29.0" prefWidth="200.0">
          <children>
@@ -28,78 +28,78 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <HBox layoutX="26.0" layoutY="79.0" prefHeight="29.0" prefWidth="341.0" spacing="174.0">
+      <HBox layoutX="26.0" layoutY="79.0" prefHeight="29.0" prefWidth="341.0" spacing="40.0">
          <children>
             <Label prefHeight="20.0" prefWidth="140.0" text="ID (6 digits) ">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="idField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="idField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
-      <HBox layoutX="25.0" layoutY="115.0" prefHeight="29.0" prefWidth="347.0" spacing="145.0">
+      <HBox layoutX="25.0" layoutY="115.0" prefHeight="29.0" prefWidth="341.0" spacing="135.0">
          <children>
             <Label text="Budget">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="budgetField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="budgetField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
-      <HBox layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="382.0">
+      <HBox layoutX="25.0" layoutY="156.0" prefHeight="29.0" prefWidth="341.0">
          <children>
-            <HBox prefHeight="29.0" prefWidth="343.0" spacing="165.0">
+            <HBox prefHeight="29.0" prefWidth="343.0" spacing="155.0">
                <children>
                   <Label text="Size">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="sizeField" prefHeight="25.0" prefWidth="153.0" />
+                  <TextField fx:id="sizeField" prefHeight="25.0" prefWidth="160.0" />
                </children>
             </HBox>
          </children>
       </HBox>
-      <HBox layoutX="26.0" layoutY="197.0" prefHeight="29.0" prefWidth="341.0" spacing="138.0">
+      <HBox layoutX="26.0" layoutY="197.0" prefHeight="29.0" prefWidth="341.0" spacing="115.0">
          <children>
             <Label prefHeight="20.0" prefWidth="63.0" text="Timeline">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="timelineField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="timelineField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
-      <HBox layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="365.0" spacing="140.0">
+      <HBox layoutX="26.0" layoutY="237.0" prefHeight="38.0" prefWidth="341.0" spacing="128.0">
          <children>
             <Label text="Address">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="addressField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="addressField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
-      <HBox layoutX="25.0" layoutY="275.0" prefHeight="30.0" prefWidth="347.0" spacing="118.0">
+      <HBox layoutX="25.0" layoutY="275.0" prefHeight="30.0" prefWidth="341.0" spacing="105.0">
          <children>
             <Label text="Nr. of floors">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="numberOfFloorsField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="numberOfFloorsField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
-      <HBox layoutX="26.0" layoutY="316.0" prefHeight="26.0" prefWidth="347.0" spacing="75.0">
+      <HBox layoutX="26.0" layoutY="316.0" prefHeight="26.0" prefWidth="341.0" spacing="60.0">
          <children>
             <Label text="Use of the Building">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="useOfBuildingField" prefHeight="25.0" prefWidth="153.0" />
+            <TextField fx:id="useOfBuildingField" prefHeight="25.0" prefWidth="160.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="68.0" layoutY="411.0" prefHeight="57.0" prefWidth="438.0" spacing="40.0">
