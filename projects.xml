@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
-                                            
+                                                    
 
     
     
@@ -15,8 +15,12 @@
     
     
     
+    
+    
     <Project>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -25,7 +29,9 @@
         
         
         <ID>543444</ID>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -34,7 +40,9 @@
         
         
         <title>432</title>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -43,7 +51,9 @@
         
         
         <budget>4.0</budget>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -52,7 +62,9 @@
         
         
         <size>4.0</size>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -61,7 +73,9 @@
         
         
         <address>4</address>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -70,7 +84,9 @@
         
         
         <numberOfFloors>1</numberOfFloors>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -79,7 +95,9 @@
         
         
         <useOfBuilding>4</useOfBuilding>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -88,7 +106,9 @@
         
         
         <timeline>9</timeline>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -97,7 +117,9 @@
         
         
         <type>COMMERCIAL</type>
-                                                                    
+                                                                                    
+    
+    
     
     
     
@@ -106,7 +128,9 @@
     
     
     </Project>
-                                
+                                        
+    
+    
     
     
     
@@ -115,7 +139,9 @@
     
     
     <Project>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -123,7 +149,9 @@
         
         
         <ID>777666</ID>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -131,7 +159,9 @@
         
         
         <title>5432</title>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -139,7 +169,9 @@
         
         
         <budget>6.0</budget>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -147,7 +179,9 @@
         
         
         <size>0.0</size>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -155,7 +189,9 @@
         
         
         <address>6</address>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -163,7 +199,9 @@
         
         
         <hasBridges>false</hasBridges>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -171,7 +209,9 @@
         
         
         <timeline>18</timeline>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -179,7 +219,9 @@
         
         
         <hasTunnels>false</hasTunnels>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -187,7 +229,9 @@
         
         
         <hasChallenges>false</hasChallenges>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -195,7 +239,9 @@
         
         
         <length>6.0</length>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -203,7 +249,9 @@
         
         
         <width>6.0</width>
-                                                                
+                                                                                
+        
+        
         
         
         
@@ -211,7 +259,9 @@
         
         
         <type>ROADCONSTRUCTION</type>
-                                                            
+                                                                            
+    
+    
     
     
     
@@ -219,7 +269,7 @@
     
     
     </Project>
-                            
+                                    
     
     
     
@@ -229,68 +279,97 @@
     
     
     
+    
+    
     <Project>
-                                        
+                                                        
+        
+        
         
         
         
         <ID>444444</ID>
-                                        
+                                                        
+        
+        
         
         
         
         <title>fred</title>
-                                        
+                                                        
+        
+        
         
         
         
         <budget>4.0</budget>
-                                        
+                                                        
+        
+        
         
         
         
         <size>4.0</size>
-                                        
+                                                        
+        
+        
         
         
         
         <address>4</address>
-                                        
+                                                        
+        
+        
         
         
         
         <numberOfKitchens>1</numberOfKitchens>
-                                        
+                                                        
+        
+        
         
         
         
         <numberOfBathrooms>1</numberOfBathrooms>
-                                        
+                                                        
+        
+        
         
         
         
         <numberOfOtherRooms>1</numberOfOtherRooms>
-                                        
+                                                        
+        
+        
         
         
         
         <isNewBuilding>true</isNewBuilding>
-                                        
+                                                        
+        
+        
         
         
         
         <timeline>12</timeline>
-                                        
+                                                        
+        
+        
         
         
         
         <type>RESIDENTIAL</type>
-                                    
+                                                    
+    
+    
     
     
     
     </Project>
-                
+                        
+
+    
+
 
     
 
@@ -302,7 +381,7 @@
         <size>6.0</size>
         <address>6</address>
         <typeOfFacility/>
-        <timeline>30</timeline>
+        <timeline>100</timeline>
         <type>INDUSTRIAL</type>
     </Project>
 </Projects>

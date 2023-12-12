@@ -12,7 +12,7 @@ public class Commercial extends Project
   {
     super(ID,title,budget,size,address,type);
 
-    Object[] defaultCommercial = view.DefaultSettingsHandler.loadCommercialDefaultSettings();
+    Object[] defaultCommercial = DefaultSettingsHandler.loadCommercialDefaultSettings();
     this.numberOfFloors = (numberOfFloors != 0) ? numberOfFloors : (int) defaultCommercial[0];
     this.timeline = (timeline != 0) ? timeline : (int) defaultCommercial[1];
     this.useOfBuilding = useOfBuilding;

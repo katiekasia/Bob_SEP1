@@ -11,7 +11,7 @@ public class Industrial extends Project
   {
     super(ID, title, budget, size, address, type);
 
-    Object[] defaultIndustrial = view.DefaultSettingsHandler.loadIndustrialDefaultSettings();
+    Object[] defaultIndustrial = DefaultSettingsHandler.loadIndustrialDefaultSettings();
 
     this.typeOfFacility = typeOfFacility;
     this.timeline = (timeline != 0) ? timeline :  (int) defaultIndustrial[0];

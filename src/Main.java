@@ -1,7 +1,6 @@
 
 import javafx.application.Application;
-import model.*;
-import view.DefaultSettingsHandler;
+import model.DefaultSettingsHandler;
 
 
 public class Main {

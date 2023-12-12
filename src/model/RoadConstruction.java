@@ -16,7 +16,7 @@ public class RoadConstruction extends Project
   {
     super(ID, title, budget, 0, address, type);
 
-    Object[] defaultRoadConstruction = view.DefaultSettingsHandler.loadRoadConstructionDefaultSettings();
+    Object[] defaultRoadConstruction = DefaultSettingsHandler.loadRoadConstructionDefaultSettings();
     this.length = (length != 0) ? length : (double) defaultRoadConstruction[0];
     this.width = (width != 0) ? width : (double) defaultRoadConstruction[1];
     this.timeline = (timeline != 0) ? timeline : (int) defaultRoadConstruction[2];

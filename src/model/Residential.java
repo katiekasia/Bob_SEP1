@@ -1,5 +1,4 @@
 package model;
-import java.util.ArrayList;
 
 public class Residential extends Project
 {
@@ -14,7 +13,7 @@ public class Residential extends Project
       int numberOfKitchens, int numberOfBathrooms, int numberOfOtherRooms, boolean isNewBuilding, int timeline) {
     super(ID, title, budget, size, address, type);
 
-    Object[] defaultResidential = view.DefaultSettingsHandler.loadResidentialDefaultSettings();
+    Object[] defaultResidential = DefaultSettingsHandler.loadResidentialDefaultSettings();
     this.numberOfKitchens = (numberOfKitchens != 0) ? numberOfKitchens : (int) defaultResidential[0];
     this.numberOfBathrooms = (numberOfBathrooms != 0) ? numberOfBathrooms : (int) defaultResidential[1];
     this.numberOfOtherRooms = (numberOfOtherRooms != 0) ? numberOfOtherRooms : (int) defaultResidential[2];

@@ -1,7 +1,5 @@
 package view;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,9 +8,6 @@ import javafx.scene.layout.Region;
 import model.*;
 
 import java.util.ArrayList;
-
-import static model.ProjectStorage.getAllProjects;
-import static model.ProjectStorage.getProjectByID;
 
 public class EditCommercial1Controller
 {
