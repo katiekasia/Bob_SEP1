@@ -89,6 +89,7 @@ public class ViewEditGeneralController
     budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
     timeline.setCellValueFactory(new PropertyValueFactory<>("Timeline"));
     type.setCellValueFactory(new PropertyValueFactory<>("type"));
+    Object[] defaultResidential = DefaultSettingsHandler.loadResidentialDefaultSettings();
 
     // Populate TableView with project details from ProjectStorage
 

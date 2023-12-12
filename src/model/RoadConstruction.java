@@ -12,13 +12,14 @@ public class RoadConstruction extends Project
 
   private boolean hasChallenges;
 
-  public static final Object[] defaultRoadConstruction = {18,false,false,false};
-
-  public RoadConstruction(int ID, String title, double budget, String address, ProjectType type, double length, double width, boolean hasBridges, boolean hasTunnels, int timeline, boolean hasChallenges) {
+  public RoadConstruction(int ID, String title, double budget, String address, ProjectType type, double length, double width, boolean hasBridges, boolean hasTunnels, int timeline, boolean hasChallenges)
+  {
     super(ID, title, budget, 0, address, type);
-    this.length = length;
-    this.width = width;
-    this.timeline = timeline;
+
+    Object[] defaultRoadConstruction = view.DefaultSettingsHandler.loadRoadConstructionDefaultSettings();
+    this.length = (length != 0) ? length : (double) defaultRoadConstruction[0];
+    this.width = (width != 0) ? width : (double) defaultRoadConstruction[1];
+    this.timeline = (timeline != 0) ? timeline : (int) defaultRoadConstruction[2];
     this.hasBridges = hasBridges;
     this.hasTunnels = hasTunnels;
     this.hasChallenges = hasChallenges;
@@ -33,6 +34,10 @@ public class RoadConstruction extends Project
   public int getTimeline()
   {
     return timeline;
+  }
+  public void setTimeline(int timeline)
+  {
+    this.timeline=timeline;
   }
 
   public void setLength(double length)

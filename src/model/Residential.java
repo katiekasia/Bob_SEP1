@@ -3,24 +3,24 @@ import java.util.ArrayList;
 
 public class Residential extends Project
 {
+
   private int numberOfKitchens;
   private int numberOfBathrooms;
   private int numberOfOtherRooms;
   private int timeline;
   private boolean isNewBuilding;
 
+  public Residential(int ID, String title, double budget, double size, String address, ProjectType type,
+      int numberOfKitchens, int numberOfBathrooms, int numberOfOtherRooms, boolean isNewBuilding, int timeline) {
+    super(ID, title, budget, size, address, type);
 
-  public static final Object[] defaultResidential = {1,1,1,9,true};
-  //  I made an object arraylist which will store the defaults ( as it was done in Steffen video with Car )
+    Object[] defaultResidential = view.DefaultSettingsHandler.loadResidentialDefaultSettings();
+    this.numberOfKitchens = (numberOfKitchens != 0) ? numberOfKitchens : (int) defaultResidential[0];
+    this.numberOfBathrooms = (numberOfBathrooms != 0) ? numberOfBathrooms : (int) defaultResidential[1];
+    this.numberOfOtherRooms = (numberOfOtherRooms != 0) ? numberOfOtherRooms : (int) defaultResidential[2];
+    this.timeline = (timeline != 0) ? timeline : (int) defaultResidential[3];
+    this.isNewBuilding = (isNewBuilding) ? isNewBuilding : (boolean) defaultResidential[4];
 
-  public Residential(int ID, String title, double budget, double size, String address, ProjectType type, int numberOfKitchens, int numberOfBathrooms, int numberOfOtherRooms, boolean isNewBuilding, int timeline)
-  {
-    super(ID,title,budget,size,address,type);
-    this.numberOfKitchens = (int) defaultResidential[0];
-    this.numberOfBathrooms = (int) defaultResidential[1];
-    this.numberOfOtherRooms = (int) defaultResidential[2];
-    this.timeline = (int) defaultResidential[3];
-    this.isNewBuilding = (boolean) defaultResidential[4];
   }
   public int getNumberOfKitchens()
   {

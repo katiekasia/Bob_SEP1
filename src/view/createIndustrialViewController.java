@@ -60,8 +60,7 @@ public class createIndustrialViewController
   @FXML
   private Button cancelButton;
 
-  @FXML
-  private Label errorLabel;
+  private int defaultTimeline;
 
 
   @FXML
@@ -76,9 +75,10 @@ public class createIndustrialViewController
     this.root = root;
     projects = new ProjectStorage();
 
+    Object[] defaultSettings = DefaultSettingsHandler.loadIndustrialDefaultSettings();
 
-    int defaultTimeline = (int) Industrial.defaultIndustrial[0];
-    // Inject the textfields with initiated defaults settings
+    defaultTimeline = 30;
+
     timelineField.setText(String.valueOf(defaultTimeline));
   }
 
@@ -96,7 +96,7 @@ public class createIndustrialViewController
       String typeOfFacility = typeOfFacilityField.getText();
 
 
-      Industrial.defaultIndustrial[0] = timeline;
+      defaultTimeline= timeline;
 
       errorLabelTitle.setText("");
       errorLabelId.setText("");

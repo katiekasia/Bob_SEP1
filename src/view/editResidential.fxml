@@ -43,7 +43,7 @@
                 </Label>
 
 
-                <TextField fx:id="idTextField" alignment="CENTER" prefHeight="25.0" prefWidth="150.0" />
+                <TextField fx:id="idTextField" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="150.0" />
                 <Label fx:id="errorLabelId" prefHeight="20.0" prefWidth="138.0" textFill="RED">
                     <font>
                         <Font size="14.0" />

@@ -73,7 +73,7 @@ public class EditResidential1Controller
   @FXML
   private Label errorLabelGeneralError;
 
-
+  private Object[] defaultSettings;
 
 
   public Region getRoot()
@@ -85,8 +85,10 @@ public class EditResidential1Controller
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
+
+    defaultSettings = DefaultSettingsHandler.loadResidentialDefaultSettings();
   }
-  public void setProjectDetailsResidential(Project selectedProject) {
+    public void setProjectDetailsResidential(Project selectedProject) {
     // Populate the TextFields with selectedProject details
     idTextField.setText(String.valueOf(selectedProject.getID()));
     titleTextField.setText(selectedProject.getTitle());
@@ -99,6 +101,14 @@ public class EditResidential1Controller
     numberOfKitchensTextField.setText(String.valueOf(projectResidential.getNumberOfKitchens()));
     numberOfOtherRoomsTextField.setText(String.valueOf(projectResidential.getNumberOfOtherRooms()));
     isNewBuildingTextField.setText(String.valueOf(projectResidential.getIsNewBuilding()));
+
+      if (selectedProject == null) {
+        numberOfKitchensTextField.setText(String.valueOf(defaultSettings[0]));
+        numberOfBathroomsTextField.setText(String.valueOf(defaultSettings[1]));
+        numberOfOtherRoomsTextField.setText(String.valueOf(defaultSettings[2]));
+        isNewBuildingTextField.setText(String.valueOf(defaultSettings[4]));
+        // Assuming the defaultSettings array has the correct order
+      }
   }
   public void reset()
   {

@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.*;
 
+
 public class createResidentialViewController {
 
   private ViewHandler viewHandler;
@@ -77,6 +78,12 @@ public class createResidentialViewController {
   @FXML
   private Label errorLabelGeneralError;
 
+  private int defaultNumberOfKitchens;
+  private int defaultNumberOfBathrooms;
+  private int defaultNumberOfOtherRooms;
+  private int defaultTimeline;
+  private boolean defaultIsNewBuilding;
+
 
 
   @FXML
@@ -91,19 +98,19 @@ public class createResidentialViewController {
     this.root = root;
     projects = new ProjectStorage();
 
+    Object[] defaultSettings = DefaultSettingsHandler.loadResidentialDefaultSettings();
 
-    // initiate the default settings
-    int defaultNumberOfKitchens = (int) Residential.defaultResidential[0];
-    int defaultNumberOfBathrooms = (int) Residential.defaultResidential[1];
-    int defaultNumberOfOtherRooms = (int) Residential.defaultResidential[2];
-    int defaultTimeline = (int) Residential.defaultResidential[3];
-    boolean defaultIsNewBulding = (boolean) Residential.defaultResidential[4];
+    defaultNumberOfKitchens = 1;
+    defaultNumberOfBathrooms = 1;
+    defaultNumberOfOtherRooms = 1;
+    defaultTimeline = 9;
+    defaultIsNewBuilding = true;
 
     // Inject the textfields with initiated defaults settings
     numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
     numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
-    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBulding));
+    isNewBuildingTextField.setText(String.valueOf(defaultIsNewBuilding));
     timelineTextField.setText(String.valueOf(defaultTimeline));
   }
 
@@ -123,11 +130,11 @@ public class createResidentialViewController {
       boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
       int timeline = Integer.parseInt(timelineTextField.getText());
 
-      Residential.defaultResidential[0] = numberOfKitchens;
-      Residential.defaultResidential[1] = numberOfBathrooms;
-      Residential.defaultResidential[2] = numberOfOtherRooms;
-      Residential.defaultResidential[3] = timeline;
-      Residential.defaultResidential[4] = isNewBuilding;
+      defaultNumberOfKitchens = numberOfKitchens;
+      defaultNumberOfBathrooms = numberOfBathrooms;
+      defaultNumberOfOtherRooms = numberOfOtherRooms;
+      defaultTimeline = timeline;
+      defaultIsNewBuilding = isNewBuilding;
 
 
       // Every Time you press save it will reset the label basically !

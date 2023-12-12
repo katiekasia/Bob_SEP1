@@ -67,16 +67,20 @@ public class createCommercialViewController
   @FXML
   private Label errorLabelGeneralError;
 
+  private int defaultNumberOfFloors;
+  private int defaultTimeline;
+
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
     projects = new ProjectStorage();
 
-    // initiate the default settings
-    int defaultNumberOfFloors = (int) Commercial.defaultCommercial[0];
-    int defaultTimeline = (int) Commercial.defaultCommercial[1];
-    // Inject the textfields with initiated defaults settings
+    Object[] defaultSettings = DefaultSettingsHandler.loadCommercialDefaultSettings();
+
+    defaultNumberOfFloors = 1;
+    defaultTimeline = 9;
+
     numberOfFloorsField.setText(String.valueOf(defaultNumberOfFloors));
     timelineField.setText(String.valueOf(defaultTimeline));
   }
@@ -97,8 +101,8 @@ public class createCommercialViewController
     int timeline = Integer.parseInt(timelineField.getText());
     String useOfBuilding = useOfBuildingField.getText();
 
-    Commercial.defaultCommercial[0] = numberOfFloors;
-    Commercial.defaultCommercial[1] = timeline;
+    defaultNumberOfFloors = numberOfFloors;
+    defaultTimeline= timeline;
 
     errorLabelTitle.setText("");
     errorLabelId.setText("");

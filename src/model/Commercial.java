@@ -6,13 +6,15 @@ public class Commercial extends Project
   private int timeline;
   private String useOfBuilding;
 
-  public static final Object[] defaultCommercial = {1,18};
+
 //  the same thing for default settings as for Residential
   public Commercial(int ID, String title, double budget, double size, String address, ProjectType type,int numberOfFloors,int timeline, String useOfBuilding)
   {
     super(ID,title,budget,size,address,type);
-    this.numberOfFloors = (int) defaultCommercial[0];
-    this.timeline = (int) defaultCommercial[1];
+
+    Object[] defaultCommercial = view.DefaultSettingsHandler.loadCommercialDefaultSettings();
+    this.numberOfFloors = (numberOfFloors != 0) ? numberOfFloors : (int) defaultCommercial[0];
+    this.timeline = (timeline != 0) ? timeline : (int) defaultCommercial[1];
     this.useOfBuilding = useOfBuilding;
   }
 

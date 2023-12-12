@@ -65,15 +65,19 @@ public class EditCommercial1Controller
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
+  private Object[] defaultSettings;
+
 
   public Region getRoot()
   {
     return root;
   }
+
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
     this.root = root;
+    defaultSettings = DefaultSettingsHandler.loadCommercialDefaultSettings();
   }
 
   public void setProjectDetailsCommercial(Project selectedProject) {

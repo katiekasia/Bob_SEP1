@@ -76,17 +76,38 @@ public class createRoadConstructionViewController
   @FXML
   private Label errorLabelGeneralError;
 
-  private void printProjects() {
-    System.out.println("Projects List:");
-    for (Project project : projects.getAllProjects()) {
-      System.out.println(project);
-    }
-    System.out.println("End of Projects List");
-  }
+  private boolean defaultHasBridges;
+  private boolean defaultHasChallenges;
+  private boolean defaultHasTunnels;
+  private int defaultTimeline;
+
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects", null);
   }
+  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
+  {
+    this.viewHandler = viewHandler;
+    this.model = model;
+    this.root = root;
+    projects = new ProjectStorage();
+
+    Object[] defaultSettings = DefaultSettingsHandler.loadResidentialDefaultSettings();
+
+    // initiate the default settings
+    defaultTimeline = 18;
+    defaultHasBridges = false;
+    defaultHasTunnels = false;
+    defaultHasChallenges = false;
+
+
+    // Inject the textfields with initiated defaults settings
+    timelineTextField.setText(String.valueOf(defaultTimeline));
+    bridgesTextField.setText(String.valueOf(defaultHasBridges));
+    tunnelsTextField.setText(String.valueOf(defaultHasTunnels));
+    challengesTextField.setText(String.valueOf(defaultHasChallenges));
+  }
+
 
   @FXML
   private void saveButtonClicked() {
@@ -104,14 +125,10 @@ int timeline = Integer.parseInt(timelineTextField.getText());
       boolean hasTunnels = Boolean.parseBoolean(tunnelsTextField.getText());
       boolean hasChallenges = Boolean.parseBoolean(challengesTextField.getText());
 
-
-
-      RoadConstruction.defaultRoadConstruction[0] = timeline;
-      RoadConstruction.defaultRoadConstruction[1] = hasBridges;
-      RoadConstruction.defaultRoadConstruction[2] = hasTunnels;
-      RoadConstruction.defaultRoadConstruction[3] = hasChallenges;
-
-
+      defaultTimeline = timeline;
+      defaultHasBridges = hasBridges;
+      defaultHasTunnels = hasTunnels;
+      defaultHasChallenges = hasChallenges;
 
       // Every Time you press save it will reset the label basically !
       errorLabelTitle.setText("");
@@ -242,26 +259,6 @@ int timeline = Integer.parseInt(timelineTextField.getText());
 
 
     viewHandler.openView("selectType", null);
-  }
-  public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
-  {
-    this.viewHandler = viewHandler;
-    this.model = model;
-    this.root = root;
-    projects = new ProjectStorage();
-
-    // initiate the default settings
-    int defaultTimeline = (int) RoadConstruction.defaultRoadConstruction[0];
-    boolean defaultHasBridges = (boolean) RoadConstruction.defaultRoadConstruction[1];
-    boolean defaultHasTunnels = (boolean) RoadConstruction.defaultRoadConstruction[2];
-    boolean defaultHasChallenges = (boolean) RoadConstruction.defaultRoadConstruction[3];
-
-
-    // Inject the textfields with initiated defaults settings
-    timelineTextField.setText(String.valueOf(defaultTimeline));
-    bridgesTextField.setText(String.valueOf(defaultHasBridges));
-    tunnelsTextField.setText(String.valueOf(defaultHasTunnels));
-    challengesTextField.setText(String.valueOf(defaultHasChallenges));
   }
 
   public void reset()

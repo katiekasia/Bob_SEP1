@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
+<<<<<<< Updated upstream
 
         <Project>
             <ID>111111</ID>
@@ -37,8 +38,134 @@
         <numberOfFloors>18</numberOfFloors>
         <useOfBuilding>Technology Hub</useOfBuilding>
         <timeline>24</timeline>
+=======
+                                                        
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <ID>234432</ID>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>432</title>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>2.0</budget>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>2.0</size>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>2</address>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfFloors>50</numberOfFloors>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <useOfBuilding>MALL</useOfBuilding>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>60</timeline>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+>>>>>>> Stashed changes
         <type>COMMERCIAL</type>
     </Project>
+<<<<<<< Updated upstream
 
     <Project>
         <ID>456789</ID>
@@ -52,6 +179,174 @@
         <isNewBuilding>true</isNewBuilding>
         <timeline>14</timeline>
         <type>RESIDENTIAL</type>
+=======
+                                            
+    
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                        
+        
+        
+        
+        
+        
+        <ID>456678</ID>
+                                                        
+        
+        
+        
+        
+        
+        <title>TESTROAD</title>
+                                                        
+        
+        
+        
+        
+        
+        <budget>6.0</budget>
+                                                        
+        
+        
+        
+        
+        
+        <size>0.0</size>
+                                                        
+        
+        
+        
+        
+        
+        <address>6</address>
+                                                        
+        
+        
+        
+        
+        
+        <hasBridges>true</hasBridges>
+                                                        
+        
+        
+        
+        
+        
+        <timeline>1000</timeline>
+                                                        
+        
+        
+        
+        
+        
+        <hasTunnels>false</hasTunnels>
+                                                        
+        
+        
+        
+        
+        
+        <hasChallenges>false</hasChallenges>
+                                                        
+        
+        
+        
+        
+        
+        <length>6.0</length>
+                                                        
+        
+        
+        
+        
+        
+        <width>6.0</width>
+                                                        
+        
+        
+        
+        
+        
+        <type>ROADCONSTRUCTION</type>
+                                                    
+    
+    
+    
+    
+    
+    </Project>
+                        
+    
+
+
+    
+    
+    
+    <Project>
+                                
+        
+        
+        <ID>432233</ID>
+                                
+        
+        
+        <title>543</title>
+                                
+        
+        
+        <budget>3.0</budget>
+                                
+        
+        
+        <size>3.0</size>
+                                
+        
+        
+        <address>3</address>
+                                
+        
+        
+        <typeOfFacility/>
+                                
+        
+        
+        <timeline>100</timeline>
+                                
+        
+        
+        <type>INDUSTRIAL</type>
+                            
+    
+    
+    </Project>
+            
+    
+
+
+    <Project>
+        <ID>444444</ID>
+        <title>gtrfs</title>
+        <budget>4.0</budget>
+        <size>0.0</size>
+        <address>4</address>
+        <hasBridges>true</hasBridges>
+        <timeline>500</timeline>
+        <hasTunnels>false</hasTunnels>
+        <hasChallenges>false</hasChallenges>
+        <length>4.0</length>
+        <width>4.0</width>
+        <type>ROADCONSTRUCTION</type>
+>>>>>>> Stashed changes
     </Project>
 
     <Project>
