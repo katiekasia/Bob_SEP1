@@ -133,7 +133,7 @@ public class ViewEditGeneralController
 
 
   private void initializeTypeFilter() {
-    typeChoiceBox.getItems().addAll("Commercial", "Residential", "Industrial", "Road Construction");
+    typeChoiceBox.getItems().addAll("Commercial", "Residential", "Industrial", "RoadConstruction");
 
     // Listen for changes in the type choice box
     typeChoiceBox.getSelectionModel().selectedItemProperty().addListener(

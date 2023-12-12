@@ -59,7 +59,7 @@ public class XMLreader {
         Element projectElement = (Element) projectList.item(i);
         int id = Integer.parseInt(projectElement.getElementsByTagName("ID").item(0).getTextContent());
         String title = projectElement.getElementsByTagName("title").item(0).getTextContent();
-        double size = Double.parseDouble(projectElement.getElementsByTagName("size").item(0).getTextContent());
+        double size = Double.parseDouble(projectElement.getElementsByTagName("size")  .item(0).getTextContent());
         double budget = Double.parseDouble(projectElement.getElementsByTagName("budget").item(0).getTextContent());
         String address = projectElement.getElementsByTagName("address").item(0).getTextContent();
 
