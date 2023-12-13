@@ -11,7 +11,13 @@ import javafx.scene.layout.Region;
 import model.*;
 import model.RoadConstruction;
 
-
+/**
+ * A class representing the controller for managing the window
+ * that creates the Road Construction project
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu
+ * @version 3.0- December 2023
+ **/
 public class createRoadConstructionViewController
 {
   private ViewHandler viewHandler;

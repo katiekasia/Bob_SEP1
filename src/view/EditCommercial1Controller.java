@@ -10,7 +10,13 @@ import javafx.scene.layout.Region;
 import model.*;
 
 import java.util.ArrayList;
-
+/**
+ * A class representing the controller for managing the window
+ * that  the Commercial project
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class EditCommercial1Controller
 {
   @FXML
