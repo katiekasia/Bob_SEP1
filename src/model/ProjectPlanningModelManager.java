@@ -25,24 +25,4 @@ public class ProjectPlanningModelManager implements ProjectPlanningModel
     return null;
   }
 
-  @Override public ArrayList<Project> getProjectsByBudgetRange()
-  {
-    return null;
-  }
-
-  @Override public ArrayList<Project> getProjectsByType(
-      ProjectType projectTypeGiven)
-  {
-    return null;
-  }
-
-  @Override public ArrayList<Project> getProjectsByTitle(String title)
-  {
-    return null;
-  }
-
-  @Override public ArrayList<Project> getProjectsBySize()
-  {
-    return null;
-  }
 }

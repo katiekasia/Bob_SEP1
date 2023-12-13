@@ -1,5 +1,7 @@
 package view;
 
+import dataPersistence.XMLreader;
+import dataPersistence.XMLwriter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -192,7 +194,7 @@ public class ViewEditGeneralController
 
       if (project instanceof Commercial)
       {
-        projectTimeline = ((Commercial) project).getTimeline(); // Access timeline from Commercial class
+        projectTimeline = ((Commercial) project).getTimeline();
       }
       else if (project instanceof Residential)
       {
@@ -200,11 +202,11 @@ public class ViewEditGeneralController
       }
       else if (project instanceof Industrial)
       {
-        projectTimeline = ((Industrial) project).getTimeline(); // Fallback to Project class for other types
+        projectTimeline = ((Industrial) project).getTimeline();
       }
         else if (project instanceof RoadConstruction)
       {
-      projectTimeline = ((RoadConstruction) project).getTimeline(); // Fallback to Project class for other types
+      projectTimeline = ((RoadConstruction) project).getTimeline();
       }
       if (projectTimeline >= minMonths && projectTimeline <= maxMonths) {
         filteredProjects.add(project);

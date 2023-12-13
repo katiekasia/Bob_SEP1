@@ -1,5 +1,7 @@
 package view;
 
+import dataPersistence.XMLreader;
+import dataPersistence.XMLwriter;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
