@@ -1,13 +1,14 @@
+/**
+ * Enum class representing project types.
+ *
+ * Author: Katarzyna, Catalina, Sandut, Samo, Sebastian
+ * Version: 2.0 – December 2023
+ */
 package model;
-
-
-//this is an enum class, basically we make these  final variables for the project type
-//we migt use this for our drop down menus
-  public enum ProjectType
-  {
-    RESIDENTIAL,
-    COMMERCIAL,
-    ROADCONSTRUCTION,
-    INDUSTRIAL
-  }
-
+// Enum class representing project types
+public enum ProjectType {
+  RESIDENTIAL,
+  COMMERCIAL,
+  ROADCONSTRUCTION,
+  INDUSTRIAL
+}

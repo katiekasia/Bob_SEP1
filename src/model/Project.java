@@ -1,96 +1,132 @@
+/**
+ * Abstract class representing a project.
+ * Note: The project type is obtained from the ProjectType enum class.
+ *
+ * Author: Katarzyna, Catalina, Sandut, Samo, Sebastian
+ * Version: 2.0 – December 2023
+ */
 package model;
+// abstract class representing A project
+public abstract class Project {
+  // instance variables for a project
+  private int ID; // Project ID
+  private String title; // Project title
+  private double budget; // Project budget
+  private double size; // Project size
+  private String address; // Project address
 
-//this is our project class being abstract , and the project type gets the type from the enum class
-public abstract class Project
-{
-  private int ID;
-  private String title;
-  private double budget;
-  private double size;
-  private String address;
+  private ProjectType type; // Project type, obtained from the ProjectType enum class
 
-  private ProjectType type;
-
-public Project(int ID, String title,double budget, double size, String address, ProjectType type)
-{
-  this.ID= ID;
-  this.title = title;
-  this.budget = budget;
-  this.size = size;
-  this.address = address;
-  this.type = type;
-}
-
-
-  public int getID()
-  {
-    return ID;
-  }
-
-  public void setID(int ID)
-  {
+  /**
+   * Constructor for creating project objects.
+   *
+   * @param ID
+   * Project ID.
+   * @param title
+   * Project title.
+   * @param budget
+   * Project budget.
+   * @param size
+   * Project size.
+   * @param address
+   * Project address.
+   * @param type
+   * Project type obtained from the ProjectType enum class.
+   */
+  public Project(int ID, String title, double budget, double size, String address, ProjectType type) {
+    // initialize instance variables with provided values
     this.ID = ID;
-  }
-
-  public String getTitle()
-  {
-    return title;
-  }
-
-  public void setTitle(String title)
-  {
     this.title = title;
-  }
-
-  public double getBudget()
-  {
-    return budget;
-  }
-
-  public void setBudget(double budget)
-  {
     this.budget = budget;
-  }
-
-  public double getSize()
-  {
-    return size;
-  }
-
-  public void setSize(double size)
-  {
     this.size = size;
-  }
-
-  public String getAddress()
-  {
-    return address;
-  }
-
-  public void setAddress(String address)
-  {
     this.address = address;
-  }
-
-  public ProjectType getType()
-  {
-    return type;
-  }
-
-  public void setType(ProjectType type)
-  {
     this.type = type;
   }
 
-  public boolean equals (Object obj)
-  {
-    if (obj == null || getClass() != obj.getClass())
-    {
-      return false;
-    }
-    Project other = (Project) obj;
-     return ID == other.ID && title.equals(other.title) && budget==other.budget && size == other.size && address.equals(other.address);
+  /** Getter method for project ID */
+  public int getID() {
+    return ID;
   }
 
+  /** Setter method for project ID */
+  public void setID(int ID) {
+    this.ID = ID;
+  }
+
+  /** Getter method for project title */
+  public String getTitle() {
+    return title;
+  }
+
+  /** Setter method for project title */
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  /** Getter method for project budget */
+  public double getBudget() {
+    return budget;
+  }
+
+  /** Setter method for project budget */
+  public void setBudget(double budget) {
+    this.budget = budget;
+  }
+
+  /** Getter method for project size */
+  public double getSize() {
+    return size;
+  }
+
+  /** Setter method for project size */
+  public void setSize(double size) {
+    this.size = size;
+  }
+
+  /** Getter method for project address */
+  public String getAddress() {
+    return address;
+  }
+
+  /** Setter method for project address */
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  /** Getter method for project type */
+  public ProjectType getType() {
+    return type;
+  }
+
+  /** Setter method for project type */
+  public void setType(ProjectType type) {
+    this.type = type;
+  }
+
+  /**
+   * Equals method to compare projects for equality.
+   *
+   * @param obj Object to compare.
+   * @return True if the projects are equal, false if they're not.
+   */
+  public boolean equals(Object obj) {
+    // Check if the object is null or of a different class
+    if (obj == null || getClass() != obj.getClass()) {
+      return false;
+    }
+
+    // makes a copy
+    Project other = (Project) obj;
+
+    // compare instance variables for equality
+    return ID == other.ID && title.equals(other.title) && budget == other.budget && size == other.size
+        && address.equals(other.address);
+  }
+
+  /**
+   * Abstract method to be implemented by subclasses, it gives a string representation of the project.
+   *
+   * @return A string representation of the project.
+   */
   public abstract String toString();
 }

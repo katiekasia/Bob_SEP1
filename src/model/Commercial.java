@@ -1,20 +1,44 @@
-package model; // a comment describing the package or its purpose, currently commented out.
+/**
+ * Class representing a commercial project, extending the Project class.
+ * Commercial projects have their own unique specific attributes: number of floors, timeline, and use of the building.
+ *
+ * @author Katarzyna, Catalina, Sandut, Samo, Sebastian
+ * @version 2.0 – December 2023
+ */
+package model;
+// Class representing a commercial project, extending the Project class
+public class Commercial extends Project {
+  private int numberOfFloors;
+  private int timeline;
+  private String useOfBuilding;
 
-// class representing a commercial project, extending the Project class
-public class Commercial extends Project
-{
-  // private instance variables for commercial projects
-  private int numberOfFloors; // number of floors in the building
-  private int timeline; // project timeline in days
-  private String useOfBuilding; // purpose or use of the building, e.g., office, retail, etc.
-
-  // constructor for creating commercial objects
-  // parameters: ID - project ID, title - project title, budget - project budget, size - project size,
-  // address - project address, type - project type, numberOfFloors - number of floors in the building,
-  // timeline - project timeline, useOfBuilding - purpose or use of the building
+  /**
+   * Nine-argument constructor for Commercial projects.
+   * There are four different types of projects, each with its own special attributes. However, six of them are shared between all project types (superclass).
+   *
+   * @param ID
+   * The unique identification number of the project (6 digits).
+   * @param title
+   * The name of the project.
+   * @param budget
+   * The monetary allowances towards the project.
+   * @param size
+   * The scale of the project.
+   * @param address
+   * The physical place where the project resides.
+   * @param type
+   * One of four different options, ProjectType.
+   *
+   * The special ones for commercial project type are the following ones.
+   * @param numberOfFloors
+   * The amount of floors of the building.
+   * @param timeline
+   * How long the project is planned to take during its realization phase.
+   * @param useOfBuilding
+   * The purpose of the building.
+   */
   public Commercial(int ID, String title, double budget, double size, String address, ProjectType type,
-      int numberOfFloors, int timeline, String useOfBuilding)
-  {
+      int numberOfFloors, int timeline, String useOfBuilding) {
     // call the constructor of the superclass (Project) with specified parameters
     super(ID, title, budget, size, address, type);
 
@@ -31,45 +55,42 @@ public class Commercial extends Project
     this.useOfBuilding = useOfBuilding;
   }
 
-  // getter method for numberOfFloors
-  public int getNumberOfFloors()
-  {
+  /** Getter method for numberOfFloors */
+  public int getNumberOfFloors() {
     return numberOfFloors;
   }
 
-  // setter method for numberOfFloors
-  public void setNumberOfFloors(int numberOfFloors)
-  {
+  /** Setter method for numberOfFloors */
+  public void setNumberOfFloors(int numberOfFloors) {
     this.numberOfFloors = numberOfFloors;
   }
 
-  // getter method for timeline
-  public int getTimeline()
-  {
+  /** Getter method for timeline */
+  public int getTimeline() {
     return timeline;
   }
 
-  // setter method for timeline
-  public void setTimeline(int timeline)
-  {
+  /** Setter method for timeline */
+  public void setTimeline(int timeline) {
     this.timeline = timeline;
   }
 
-  // getter method for useOfBuilding
-  public String getUseOfBuilding()
-  {
+  /** Getter method for useOfBuilding */
+  public String getUseOfBuilding() {
     return useOfBuilding;
   }
 
-  // setter method for useOfBuilding
-  public void setUseOfBuilding(String useOfBuilding)
-  {
+  /** Setter method for useOfBuilding */
+  public void setUseOfBuilding(String useOfBuilding) {
     this.useOfBuilding = useOfBuilding;
   }
 
-  // override toString method to provide a human-readable string representation of the commercial object
+  /**
+   * ToString method to provide a readable string of the project information.
+   *
+   * @return A formatted string of the project information.
+   */
   public String toString() {
-    // return a formatted string with details about the commercial object
     return "Commercial{" +
         "ID=" + getID() +
         ", title='" + getTitle() + '\'' +
