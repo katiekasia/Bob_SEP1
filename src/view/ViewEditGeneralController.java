@@ -144,7 +144,7 @@ public class ViewEditGeneralController
           handleBudgetFilter(newValue);
 
         });
-    // Add options to the timeline choice box94 options)
+    // Add options to the timeline choice box (4 options)
     timelineChoiceBox.getItems().addAll("0-12 months", "12-24 months", "24-36 months", "36 --> max");
     timelineChoiceBox.getSelectionModel().selectedItemProperty().addListener(
         (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
