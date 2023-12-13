@@ -76,7 +76,8 @@ public class ViewEditGeneralController
     this.root = root;
   }
 
-  public void initialize() {
+  public void initialize()
+  {
 
     initializeTypeFilter(); //
 
@@ -91,25 +92,21 @@ public class ViewEditGeneralController
     // Populate TableView with project details from ProjectStorage
 
     updateTable();
-    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
-    ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML(
+        "projects.xml");
+    ObservableList<Project> projectData = FXCollections.observableArrayList(
+        allProjects);
     ProjectTable.setItems(projectData);
 
 
-
-    idTextField.textProperty().addListener(new ChangeListener<String>() {
-
-
-      @Override
-      public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-        // Handle the filtering logic here
-        handleSearchByID();
-      }
+    idTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+      handleSearchByID();
     });
 
     titleTextField.textProperty().addListener((observable, oldValue, newValue) -> {
       handleSearchByTitle();
     });
+
     allRadioButton.setOnAction(event -> clearFieldsAndShowAll());
 
     budgetChoiceBox.getItems().addAll("0-500000", "500001-2000000", "2000001-5000000","5000000 --> max");
