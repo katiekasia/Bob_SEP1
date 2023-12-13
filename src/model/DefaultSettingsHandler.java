@@ -10,7 +10,12 @@ package model;
 import java.io.*;
 import java.util.Properties;
 
-// handling of the default settings for all project types
+/**
+ * Class handling of the default settings for all project types
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class DefaultSettingsHandler {
   // static variable of the filename for configuration
   private static String FILENAME = "projects.xml";

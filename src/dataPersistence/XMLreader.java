@@ -9,8 +9,18 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
-
-public class XMLreader {
+/**
+ * Handles reading project data from XML files and extracting project details.
+ *  @author Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko, Samo Susa
+ *  @version 3.0 - December 2023
+ */
+public class XMLreader
+{
+  /**
+   * Retrieves the number of projects stored in the XML file.
+   * @param filePath The file path for the XML document.
+   * @return The count of projects in the XML file; returns 0 if the file doesn't exist or an error occurs.
+   */
 
   // method used for displaying number of projects, if there are no projects to view it will return 0
   // otherwise , its gets all elements with the tag project, counts them and gets the length of it
@@ -37,7 +47,11 @@ public class XMLreader {
     return 0; // Return 0 in case of an error
   }
 
-
+  /**
+   * Reads project information from the XML file and constructs a list of Project objects.
+   * @param filePath The file path for the XML document.
+   * @return An ArrayList of Project objects populated with data from the XML file; returns an empty list if the file doesn't exist or an error occurs.
+   */
   public static ArrayList<Project> readProjectsFromXML(String filePath) {
     ArrayList<Project> projects = new ArrayList<>();
 

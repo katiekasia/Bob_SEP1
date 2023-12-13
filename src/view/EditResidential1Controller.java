@@ -10,7 +10,17 @@ import javafx.scene.layout.Region;
 import model.*;
 
 import java.util.ArrayList;
-
+/**
+ * This class represents the controller for managing the window
+ * for editing a selected project of Residential type
+ *
+ * It has the next functions:initializes the view for editProject window, sets project details,
+ * updates the project data.
+ *  Works in coordination with the XML reader and writer.
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class EditResidential1Controller
 {
 
@@ -49,40 +59,29 @@ public class EditResidential1Controller
  private TextField isNewBuildingTextField;
 
   @FXML
-  private Button backButton;
-  @FXML
-  private Button saveButton;
-  @FXML
-  private Button cancelButton;
-  @FXML
-  private Label errorLabelTitle;
-  @FXML
-  private Label errorLabelId;
-  @FXML
-  private Label errorLabelTimeline;
-  @FXML
-  private Label errorLabelSize;
-  @FXML
-  private Label errorLabelAddress;
-  @FXML
-  private Label errorLabelBudget;
-  @FXML
-  private Label errorLabelNrOfKitchens;
-  @FXML
-  private Label errorLabelNrOfBathrooms;
-  @FXML
-  private Label errorLabelNrOfRooms;
-  @FXML
   private Label errorLabelGeneralError;
 
   private Object[] defaultSettings;
 
 
+  /**
+   * Gets the root node of the UI.
+   *
+   * @return The root node of the UI.
+   */
   public Region getRoot()
   {
     return root;
   }
-
+  /**
+   * Three-argument constructor.
+   * Initializes the controller with necessary dependencies(viewhandler,root, project model)
+   * Default settings specific to Residential Project are retrieved from "DefaultSettingHandler".
+   *
+   * @param viewHandler Manages view tranzitions
+   * @param model       Contains the project planning model data
+   * @param root        Represents the root node of the UI.
+   */
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
@@ -90,6 +89,11 @@ public class EditResidential1Controller
 
     defaultSettings = DefaultSettingsHandler.loadResidentialDefaultSettings();
   }
+  /**
+   * Sets project details in the text fields.
+   *
+   * @param selectedProject Residential projects details will be displayed.
+   */
     public void setProjectDetailsResidential(Project selectedProject) {
     // Populate the TextFields with selectedProject details
     idTextField.setText(String.valueOf(selectedProject.getID()));
@@ -98,11 +102,14 @@ public class EditResidential1Controller
     addressTextField.setText(selectedProject.getAddress());
     sizeTextField.setText(String.valueOf(selectedProject.getSize()));
     Residential projectResidential = (Residential)selectedProject;
+
+    //defaults for residential project
     timelineTextField.setText(String.valueOf(projectResidential.getTimeline()));
     numberOfBathroomsTextField.setText(String.valueOf(projectResidential.getNumberOfBathrooms()));
     numberOfKitchensTextField.setText(String.valueOf(projectResidential.getNumberOfKitchens()));
     numberOfOtherRoomsTextField.setText(String.valueOf(projectResidential.getNumberOfOtherRooms()));
     isNewBuildingTextField.setText(String.valueOf(projectResidential.getIsNewBuilding()));
+
 
       if (selectedProject == null) {
         numberOfKitchensTextField.setText(String.valueOf(defaultSettings[0]));
@@ -112,16 +119,25 @@ public class EditResidential1Controller
         // Assuming the defaultSettings array has the correct order
       }
   }
+  /**
+   * Resets the controller
+   */
   public void reset()
   {
     // Reset logic
     init(viewHandler, model, root);
   }
+  /**
+   * Handles the action when the cancel button is clicked,by going back to the viewProject
+   */
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("viewProject", null);
   }
-
+  /**
+   * Handles the action when the "Save" button is clicked.
+   * Updates project information in ProjectStorage and XML file.
+   */
   @FXML
   private void saveButtonClicked() {
     try {
@@ -136,11 +152,11 @@ public class EditResidential1Controller
       int timeline = Integer.parseInt(timelineTextField.getText());
       boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
 
-
+      //reads the projects details using the class XMLreader
       ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
-
       Residential oldResidential=null;
 
+      // Find the existing project by ID
       for(int i=0; i<allProjects.size(); i++)
       {
         if(allProjects.get(i).getID()==id)
@@ -153,8 +169,8 @@ public class EditResidential1Controller
       // Remove the old project from XML
       XMLwriter.removeProjectFromXML(oldResidential, "projects.xml");
 
-      // Add the updated project to XML
-      ProjectStorage.removeProject(oldResidential); // Remove the old project
+      // remove old project from project storage
+      ProjectStorage.removeProject(oldResidential);
 
       if (newResidential != null) {
         // Update the existing project object with new values
@@ -168,8 +184,8 @@ public class EditResidential1Controller
         newResidential.setNumberOfKitchens(numberOfKitchens);
         newResidential.setNumberOfOtherRooms(numberOfOtherRooms);
 
-
-        ProjectStorage.addProject(newResidential); // Add the updated project
+        // Add the updated project
+        ProjectStorage.addProject(newResidential);
 
         // Write the updated projects to XML
         allProjects = ProjectStorage.getAllProjects();
@@ -187,12 +203,7 @@ public class EditResidential1Controller
       errorLabelGeneralError.setText("Check inputs");
     }
   }
-  private boolean validateInput()
-  {
-    // Implement input validation logic here
-    // Return true if input is correct, false otherwise
-    return true; // Placeholder - add validation checks
-  }
+
 
 
 

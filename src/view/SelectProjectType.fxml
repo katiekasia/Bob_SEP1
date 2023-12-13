@@ -6,7 +6,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<!-- This FXML file defines the layout for the selectProjectType view of the application.
+    It allows users to select different types of projects.(Residential,Commercial,Industrial,Road-construction.
+    has a back button ,when pressed users is redirectioned to the mainMenu page
 
+-->
 <VBox alignment="CENTER" prefHeight="324.0" prefWidth="389.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SelectProjectTypeViewController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="163.0" text="Select project Type" textAlignment="CENTER">

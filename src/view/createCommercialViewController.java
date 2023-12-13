@@ -68,11 +68,15 @@ public class createCommercialViewController
   private int defaultTimeline;
 
   /**
-   * Three-argument constructor. 
-   * Initializes the controller with necessary dependencies.
-
-   * @param viewHandler Manages view transitions.
-   * @param model       Contains the project planning model.
+   * Three-argument constructor.
+        * Initializes the controller with necessary dependencies(viewhandler,root, project model)
+        * Default settings specific to CommercialProject are retrieved from "DefaultSettingHandler"
+        * + defaultNumbersOfFloors is set to 1 and defaulTimeline is set to 9
+        * sets the default values for numberOfFloorsField and timelineField
+        * by converting the default values to strings and assigning them as the text content of the fields
+        *  Initializes "projects" as an instance of projectStorage class(handles the storage of the projects)
+   * @param viewHandler Manages view tranzitions
+   * @param model       Contains the project planning model data
    * @param root        Represents the root node of the UI.
    */
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
@@ -88,14 +92,24 @@ public class createCommercialViewController
     numberOfFloorsField.setText(String.valueOf(defaultNumberOfFloors));
     timelineField.setText(String.valueOf(defaultTimeline));
   }
+  /**
+   * Handles the action when the cancel button is clicked,by going back to the projects view when pressed.
+   */
   @FXML
   private void cancelButtonClicked() {
     viewHandler.openView("projects", null);
   }
-
+  /**
+   * Handles the save button when clicked action .
+   * Gets the information from input fields, validates the data(throws errors if the input is incorrect),
+   * creates a new Commercial object, adds it to the project storage,
+   * writes the updated list of projects to an XML file, and updates the view accordingly.
+   *@throws  NumberFormatException
+   */
   @FXML
   private void saveButtonClicked() {
     try{
+      //gets the information inserted in the fields
     int id = Integer.parseInt(idField.getText());
     String title = titleField.getText();
     double budget = Double.parseDouble(budgetField.getText());
@@ -105,9 +119,11 @@ public class createCommercialViewController
     int timeline = Integer.parseInt(timelineField.getText());
     String useOfBuilding = useOfBuildingField.getText();
 
+    //updates default values for nroffloors and timeline
     defaultNumberOfFloors = numberOfFloors;
     defaultTimeline= timeline;
 
+    //clearing the error labels
     errorLabelTitle.setText("");
     errorLabelId.setText("");
     errorLabelBudget.setText("");
@@ -118,6 +134,8 @@ public class createCommercialViewController
     errorLabelTimeline.setText("");
     errorLabelGeneralError.setText("");
 
+   //validating input
+      //ensure title doesn't have numbers
     if (!title.matches("^[a-zA-Z0-9_ ]*$"))
     {
       errorLabelTitle.setText("Invalid elements ");
@@ -129,18 +147,19 @@ public class createCommercialViewController
       errorLabelTitle.setText("Title empty");
       return;
     }
-
+   //ensured id has 6 digits
     if (String.valueOf(id).length() != 6)
     {
       errorLabelId.setText("ID should be 6 digits");
       return;
     }
-
+  //ensured id is not negative
     if (id <= 0)
     {
       errorLabelId.setText("Negative ID");
       return;
     }
+    //checks whether the ID entered for the new project matches the ID of any existing project
     for(int i=0; i<ProjectStorage.getAllProjects().size();i++)
     {
       if(ProjectStorage.getAllProjects().get(i).getID()==id)
@@ -155,7 +174,7 @@ public class createCommercialViewController
       errorLabelId.setText("Id cannot be empty");
       return;
     }
-
+   // excludes negative values for budget and empty field for budget
     if (budget <0 )
     {
       errorLabelBudget.setText("Negative budget");
@@ -167,7 +186,7 @@ public class createCommercialViewController
       errorLabelBudget.setText("Empty Budget");
       return;
     }
-
+      // excludes negative values for size and empty field for size
     if (size <0 )
     {
       errorLabelSize.setText("Negative size");
@@ -179,7 +198,7 @@ public class createCommercialViewController
       errorLabelSize.setText("Empty size");
       return;
     }
-
+   // // excludes negative values for timeline
     if (timeline <0 )
     {
       errorLabelTimeline.setText("Negative timeline");
@@ -191,7 +210,7 @@ public class createCommercialViewController
       errorLabelTimeline.setText("Empty timeline");
       return;
     }
-
+   //checks for illegal characters
     if (!address.matches("^[a-zA-Z0-9_ ]*$"))
     {
       errorLabelAddress.setText("Invalid elements ");
@@ -203,7 +222,7 @@ public class createCommercialViewController
       errorLabelAddress.setText("Address is empty");
       return;
     }
-
+      // excludes negative values
     if (numberOfFloors <0 )
     {
       errorLabelNrOfFloors.setText("Negative number of kitchens");
@@ -215,27 +234,34 @@ public class createCommercialViewController
       errorLabelNrOfFloors.setText("Empty number of kitchens");
       return;
     }
-
+      // Creating a new Commercial object
     Commercial newCommercial = new Commercial(
         id, title, budget, size, address,
         ProjectType.COMMERCIAL,numberOfFloors,timeline, useOfBuilding);
 
+    // // Adding the new Commercial object to the project storage
     ProjectStorage.addProject(newCommercial);
 
     ProjectStorage.printProjects();
-      // Write projects to XML
+      // Writing the updated project list to an XML file
       ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
-      String filePath = "projects.xml"; // Set your desired file path
-      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
+      String filePath = "projects.xml";
+      XMLwriter.appendProjectsToXML(allProjects, filePath);
+
+      // Updating the view after changes
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject", null);
   }
 
   catch (NumberFormatException e) {
+    // Handling input conversion errors
   errorLabelGeneralError.setText("Check inputs");
 }
 }
-
+  /**
+   * Handles the action when the back button is clicked, clearing the
+   * fields and going  back to the select type view.
+   */
   @FXML
   private void backButtonClicked() {
     titleField.clear();
@@ -248,7 +274,9 @@ public class createCommercialViewController
     viewHandler.openView("selectType", null);
   }
 
-
+  /**
+   * Clears input fields and navigates back to the select type view.
+   */
   public void reset()
   {
     titleField.clear();
@@ -260,7 +288,11 @@ public class createCommercialViewController
     errorLabelGeneralError.setText("");
     viewHandler.openView("selectType", null);
   }
-
+  /**
+   * Provides access to the root node of the UI.
+   *
+   * @return The root node of the UI.
+   */
   public Region getRoot()
   {
     return root;

@@ -7,7 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
+<!-- This FXML file defines the layout for editing the  Residential project selected.
+     Error labels are included to display validation messages.
+     Each child HBox contains labels and text fields for specific project details
+     such as title, ID, budget, size, timeline, address, number of floors, and building usage.
 
+     Action buttons like save and cancel are also defined here.
+     Error labels are placed to display validation error messages for input fields.
+-->
 <AnchorPane prefHeight="546.0" prefWidth="564.0" userData="createResidential" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditResidential1Controller">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" text="Residential project" textAlignment="CENTER">

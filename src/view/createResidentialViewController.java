@@ -11,7 +11,7 @@ import javafx.scene.layout.Region;
 import model.*;
 /**
  * A class representing the controller for managing the window
- * that creates the Industrial project
+ * that creates the Residential project
  *
  * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu
  * @version 3.0- December 2023
@@ -23,8 +23,7 @@ public class createResidentialViewController {
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectStorage projects;  // Declare as a field
-
+  private ProjectStorage projects;
 
 
 
@@ -58,12 +57,7 @@ public class createResidentialViewController {
   @FXML
   private TextField isNewBuildingTextField;
 
-  @FXML
-  private Button backButton;
-  @FXML
-  private Button saveButton;
-  @FXML
-  private Button cancelButton;
+
   @FXML
   private Label errorLabelTitle;
   @FXML
@@ -92,11 +86,17 @@ public class createResidentialViewController {
   private boolean defaultIsNewBuilding;
 
 
-
-  @FXML
-  private void cancelButtonClicked() {
-    viewHandler.openView("projects", null);
-  }
+  /**
+   * Three-argument constructor.
+   * Initializes the controller with necessary dependencies(viewhandler,root, project model)
+   * Default settings specific to Residential Project are retrieved from "DefaultSettingHandler"
+   * +  defaultNumberOfKitchens is set to 1, defaultNumberOfBathrooms to 1,  defaultNumberOfOtherRooms to 1, defaulTimeline is set to 9, defaultUseOfBuilding to true.
+   * Sets the default value for timelineField(and all other fields for default values) by converting the default values to strings and assigning them as the text content of the fields.
+   *  Initializes "projects" as an instance of projectStorage class(handles the storage of the projects)
+   * @param viewHandler Manages view tranzitions
+   * @param model       Contains the project planning model data
+   * @param root        Represents the root node of the UI.
+   */
 
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root)
   {
@@ -113,19 +113,33 @@ public class createResidentialViewController {
     defaultTimeline = 9;
     defaultIsNewBuilding = true;
 
-    // Inject the textfields with initiated defaults settings
+
     numberOfKitchensTextField.setText(String.valueOf(defaultNumberOfKitchens));
     numberOfBathroomsTextField.setText(String.valueOf(defaultNumberOfBathrooms));
     numberOfOtherRoomsTextField.setText(String.valueOf(defaultNumberOfOtherRooms));
     isNewBuildingTextField.setText(String.valueOf(defaultIsNewBuilding));
     timelineTextField.setText(String.valueOf(defaultTimeline));
   }
+  /**
+   * Handles the action when the cancel button is clicked,by going back to the projects view when pressed.
+   */
+  @FXML
+  private void cancelButtonClicked() {
+    viewHandler.openView("projects", null);
+  }
 
+  /**
+   * Handles the save button when clicked action .
+   * Gets the information from input fields, validates the data(throws errors if the input is incorrect).
+   * Creates a new Residential object, adds it to the project storage.
+   * Writes the updated list of projects to an XML file, and updates the view accordingly.
+   *@throws  NumberFormatException
+   */
   @FXML
   private void saveButtonClicked() {
     try
     {
-      // Retrieve the inserted data
+      //gets the information inserted in the fields
       int id = Integer.parseInt(idTextField.getText());
       String title = titleTextField.getText();
       double budget = Double.parseDouble(budgetTextField.getText());
@@ -137,6 +151,7 @@ public class createResidentialViewController {
       boolean isNewBuilding = Boolean.parseBoolean(isNewBuildingTextField.getText());
       int timeline = Integer.parseInt(timelineTextField.getText());
 
+      //updates default values
       defaultNumberOfKitchens = numberOfKitchens;
       defaultNumberOfBathrooms = numberOfBathrooms;
       defaultNumberOfOtherRooms = numberOfOtherRooms;
@@ -144,7 +159,7 @@ public class createResidentialViewController {
       defaultIsNewBuilding = isNewBuilding;
 
 
-      // Every Time you press save it will reset the label basically !
+      //clearing the error labels
       errorLabelTitle.setText("");
       errorLabelId.setText("");
       errorLabelBudget.setText("");
@@ -156,18 +171,9 @@ public class createResidentialViewController {
       errorLabelNrOfBathrooms.setText("");
       errorLabelGeneralError.setText("");
 
-      // Perform additional input validation checks for the following ones :
-      // title cannot be empty and have elemtnts !@#$%^&*()_+ ( DONE )
-      // ID cannot be negative and more then 6 digits and empty ( DONE )
-      // Budget cannot be empty and negative ( DONE )
-      //Size cannot be empty and negative ( DONE )
-      // timeline cannot be empty and negative (DONE)
-      //Address cannot contain elemtns !@#$%^&*()_+ and be empty ( DONE )
-      //Nr of kitchen cannot be negative and empty ( DONE )
-      //Nr of bathrooms cannot be negative and empty (DONE)
-      //Nr of  other rooms cannot be negative and empty ( DONE )
 
-      //Title doesn't contain special characters
+      //validating input
+      //ensure title doesn't have numbers
       if (!title.matches("^[a-zA-Z0-9_ ]*$"))
       {
         errorLabelTitle.setText("Invalid elements ");
@@ -291,34 +297,40 @@ public class createResidentialViewController {
       }
 
 
-      // Create a Residential object if input is valid
+      // Creating a new residential object
       Residential newResidential = new Residential(
           id, title, budget, size, address,
           ProjectType.RESIDENTIAL,
           numberOfKitchens, numberOfBathrooms, numberOfOtherRooms,
           isNewBuilding, timeline);
 
+      // Adding the new Industrial object to the project storage
       ProjectStorage.addProject(newResidential);
-
       ProjectStorage.printProjects();
-      // Write projects to XML
-      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
-      String filePath = "projects.xml"; // Set your desired file path
-      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
+      // Writing the updated project list to an XML file
+      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+      String filePath = "projects.xml";
+      XMLwriter.appendProjectsToXML(allProjects, filePath);
+
+      // Updating the view after changes
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject", null);
 
 
     }
     catch (NumberFormatException e) {
+      // Handling input conversion errors
       errorLabelGeneralError.setText("Check inputs");
     }
   }
 
+  /**
+   * Handles the action when the back button is clicked, clearing the
+   * fields and going  back to the select type view.
+   */
   @FXML
   private void backButtonClicked() {
-    //    WHEN YOU PRESS BACK , EVERYTHING BASICALLY SETS BACK lol
     titleTextField.clear();
     idTextField.clear();
     budgetTextField.clear();
@@ -330,14 +342,14 @@ public class createResidentialViewController {
     isNewBuildingTextField.clear();
     errorLabelGeneralError.setText("");
 
-
     viewHandler.openView("selectType", null);
   }
 
-
+  /**
+   * Clears input fields and navigates back to the select type view.
+   */
   public void reset()
   {
-    //    same as for back, by pressing it everything resets
     titleTextField.clear();
     idTextField.clear();
     budgetTextField.clear();
@@ -350,7 +362,11 @@ public class createResidentialViewController {
     errorLabelGeneralError.setText("");
     init(viewHandler, model, root);
   }
-
+  /**
+   * Provides access to the root node of the UI.
+   *
+   * @return The root node of the UI.
+   */
   public Region getRoot()
   {
     return root;

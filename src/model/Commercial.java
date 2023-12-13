@@ -6,7 +6,12 @@
  * @version 2.0 – December 2023
  */
 package model;
-// Class representing a commercial project, extending the Project class
+/**
+ * Class representing a commercial project, extending the Project class
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class Commercial extends Project {
   private int numberOfFloors;
   private int timeline;
@@ -55,32 +60,38 @@ public class Commercial extends Project {
     this.useOfBuilding = useOfBuilding;
   }
 
-  /** Getter method for numberOfFloors */
+  /** Getter method for numberOfFloors
+   * @return The number of floors in the commercial project.*/
   public int getNumberOfFloors() {
     return numberOfFloors;
   }
 
-  /** Setter method for numberOfFloors */
+  /** Setter method for numberOfFloors
+   *  @param numberOfFloors */
   public void setNumberOfFloors(int numberOfFloors) {
     this.numberOfFloors = numberOfFloors;
   }
 
-  /** Getter method for timeline */
+  /** Getter method for timeline
+   * @return The timeline in the commercial project.*/
   public int getTimeline() {
     return timeline;
   }
 
-  /** Setter method for timeline */
+  /** Setter method for timeline
+   *  @param timeline */
   public void setTimeline(int timeline) {
     this.timeline = timeline;
   }
 
-  /** Getter method for useOfBuilding */
+  /** Getter method for useOfBuilding
+   * @return The useOfBuilding in the commercial project.*/
   public String getUseOfBuilding() {
     return useOfBuilding;
   }
 
-  /** Setter method for useOfBuilding */
+  /** Setter method for useOfBuilding
+   *  @param useOfBuilding */
   public void setUseOfBuilding(String useOfBuilding) {
     this.useOfBuilding = useOfBuilding;
   }

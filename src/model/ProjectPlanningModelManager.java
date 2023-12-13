@@ -7,7 +7,13 @@
 package model;
 import java.util.ArrayList;
 
-// Class implementing the ProjectPlanningModel interface, managing projects
+
+/**
+ * Class implementing the ProjectPlanningModel interface, managing projects
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class ProjectPlanningModelManager implements ProjectPlanningModel {
   /**
    * Method to retrieve all projects in the model.

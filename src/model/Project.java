@@ -6,7 +6,14 @@
  * Version: 2.0 – December 2023
  */
 package model;
-// abstract class representing A project
+
+
+/**
+ * abstract class representing A project
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public abstract class Project {
   // instance variables for a project
   private int ID; // Project ID
@@ -43,62 +50,75 @@ public abstract class Project {
     this.type = type;
   }
 
-  /** Getter method for project ID */
+  /** Getter method for project ID
+   * @return ID
+   */
   public int getID() {
     return ID;
   }
 
-  /** Setter method for project ID */
+  /** Setter method for project ID
+   * @param ID */
   public void setID(int ID) {
     this.ID = ID;
   }
 
-  /** Getter method for project title */
+  /** Getter method for project title
+   * @return title */
   public String getTitle() {
     return title;
   }
 
-  /** Setter method for project title */
+  /** Setter method for project title
+   * @param title*/
   public void setTitle(String title) {
     this.title = title;
   }
 
-  /** Getter method for project budget */
+  /** Getter method for project budget
+   * @return budget */
   public double getBudget() {
     return budget;
   }
 
-  /** Setter method for project budget */
+  /** Setter method for project budget
+   * @param budget*/
   public void setBudget(double budget) {
     this.budget = budget;
   }
 
-  /** Getter method for project size */
+  /** Getter method for project size
+   * @return size */
   public double getSize() {
     return size;
   }
 
-  /** Setter method for project size */
+  /** Setter method for project size
+   * @param size */
   public void setSize(double size) {
     this.size = size;
   }
 
-  /** Getter method for project address */
+  /** Getter method for project address
+   * @return address */
   public String getAddress() {
     return address;
   }
 
-  /** Setter method for project address */
+  /** Setter method for project address
+   * @param address*/
   public void setAddress(String address) {
     this.address = address;
   }
 
-  /** Getter method for project type */
+  /** Getter method for project type
+   * @return type */
   public ProjectType getType() {
     return type;
   }
 
-  /** Setter method for project type */
+  /** Setter method for project type
+   * @param type*/
   public void setType(ProjectType type) {
     this.type = type;
   }

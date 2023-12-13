@@ -6,7 +6,12 @@
  * @version 2.0 – December 2023
  */
 package model;
-// Class representing an industrial project, extending the Project class
+/**
+ * Class representing an industrial project, extending the Project class
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class Industrial extends Project {
   private String typeOfFacility;
   private int timeline;
@@ -48,22 +53,28 @@ public class Industrial extends Project {
     this.timeline = (timeline != 0) ? timeline : (int) defaultIndustrial[0];
   }
 
-  /** Getter method for typeOfFacility */
+  /** Getter method for typeOfFacility
+   * @return The typeOfFacility in the industrial project.
+   * */
   public String getTypeOfFacility() {
     return typeOfFacility;
   }
 
-  /** Setter method for typeOfFacility */
+  /** Setter method for typeOfFacility
+   *  @param typeOfFacility */
   public void setTypeOfFacility(String typeOfFacility) {
     this.typeOfFacility = typeOfFacility;
   }
 
-  /** Getter method for timeline */
+  /** Getter method for timeline
+   * @return The timeline in the industrial project.
+   */
   public int getTimeline() {
     return timeline;
   }
 
-  /** Setter method for timeline */
+  /** Setter method for timeline
+   *  @param timeline */
   public void setTimeline(int timeline) {
     this.timeline = timeline;
   }

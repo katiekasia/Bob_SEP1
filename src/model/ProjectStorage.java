@@ -7,7 +7,13 @@
 package model;
 import java.util.ArrayList;
 
-// Class representing a storage mechanism for projects
+
+/**
+ * Class representing a storage list for projects
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public class ProjectStorage {
   // Static ArrayList to store all projects
   private static ArrayList<Project> allProjects = new ArrayList<>();
@@ -57,6 +63,7 @@ public class ProjectStorage {
 
   /**
    * Method to print all projects in the storage.
+
    */
   public static void printProjects() {
     System.out.println("Projects List:");

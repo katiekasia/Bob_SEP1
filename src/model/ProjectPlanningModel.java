@@ -7,7 +7,13 @@
 package model;
 import java.util.ArrayList;
 
-// Interface representing a project planning model
+
+/**
+ *Interface representing a project planning model
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+ * @version 3.0- December 2023
+ **/
 public interface ProjectPlanningModel {
   /**
    * Method to retrieve all projects in the model.

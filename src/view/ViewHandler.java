@@ -5,17 +5,18 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import model.Project;
 import model.ProjectPlanningModel;
-import javafx.collections.FXCollections;
-import javafx.scene.control.TableView.*;
-import javafx.collections.ObservableList;
-
+  /**
+   * The ViewHandler class manages the switching and loading of the view windows in the project planning management application..
+   * It controls the primary stage and scene, initializes all the controllers and loads associated FXML files for each view.
+   * @author Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko
+   * @version 3.0 - December 2023
+   */
   public class ViewHandler extends Application
   {
 
@@ -23,8 +24,7 @@ import javafx.collections.ObservableList;
     private Stage primaryStage;
     private MainMenuViewController mainMenuController;
     private SelectProjectTypeViewController selectProjectTypeViewController;
-    private createCommercialViewController commercialViewController;
-    private SelectProjectTypeViewController selectProjectController;
+
     private ViewEditGeneralController editGeneralController;
     private createResidentialViewController createResidentialController;
     private createCommercialViewController createCommercialController;
@@ -38,24 +38,44 @@ import javafx.collections.ObservableList;
           private EditRoadConstructionController editRoadContructionController;
 
     private ProjectPlanningModel model;
-
+    /**
+     * One-argument Constructor for ViewHandler class.
+     * Initializes the ViewHandler with the provided ProjectPlanningModel(in the model package).
+     *
+     * @param model The ProjectPlanningModel used by the ViewHandler.
+     */
     public ViewHandler(ProjectPlanningModel model)
     {
       this.model = model;
       this.currentScene = new Scene(new Region());
     }
-
+    /**
+     * Initiates the primary stage of the application and opens the 'projects' view by default.
+     *
+     * @param primaryStage The main stage of the application.
+     */
     public void start(Stage primaryStage)
     {
       this.primaryStage = primaryStage;
       openView("projects", null);
     }
+    /**
+     * Updates the view of the projectTable (ViewEdit) if the editGeneralController is instantiated.
+     */
     public void updateViewEditGeneralTable() {
       if (editGeneralController != null) {
         editGeneralController.updateTable();
       }
     }
-
+    /**
+     * Loads the Main Menu view window by initializing the FXMLLoader to load the required FXML file.
+     * Initializes the mainMenuController with ViewHandler, ProjectPlanningModel, and root node.
+     * Returns the root node of the Main Menu view.
+     * If the mainMenuController is already instantiated, resets and returns the root node.
+     *
+     * @param fxmlFile The file path to the FXML file of the Main Menu view.
+     * @return The root node of the Main Menu view.
+     */
     private Region loadMainMenu(String fxmlFile)
     {
       Region root = null;
@@ -63,10 +83,11 @@ import javafx.collections.ObservableList;
       {
         try
         {
+          //loading the FXML file for main page
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource(fxmlFile));
           root = loader.load();
-
+          // Initializing the mainMenuController with references to ViewHandler, ProjectPlanningModel, and root node
           mainMenuController = loader.getController();
           mainMenuController.init(this, model, root);
         }
@@ -76,17 +97,31 @@ import javafx.collections.ObservableList;
         }
       }
       else
+        // If mainMenuController is already instantiated, reset the controller
         mainMenuController.reset();
+      // Returns the root node of the Main Menu view
       return mainMenuController.getRoot();
     }
 
+    /**
+     * Loads the Select Project Type view by loading the associated FXML file.
+     * Initializes the selectProjectTypeViewController with ViewHandler, ProjectPlanningModel, and root node.
+     * Returns the root node of the Select Project Type view.
+     * If the selectProjectTypeViewController is not instantiated, it initializes the controller and returns the root node.
+     * If the selectProjectTypeViewController is already instantiated, it resets the controller and returns the root node.
+     *
+     * @param fxmlFile The file path to the FXML file of the Select Project Type view.
+     * @return The root node of the Select Project Type view.
+     */
     private Region loadSelectProjectTypeViewController(String fxmlFile)
     {
       Region root = null;
+      // If selectProjectTypeViewController is not instantiated or initialized for the first time
       if (selectProjectTypeViewController == null)
       {
         try
         {
+          // Loads the FXML file and initializes the selectProjectTypeViewController
           FXMLLoader loader = new FXMLLoader();
           loader.setLocation(getClass().getResource(fxmlFile));
           root = loader.load();
@@ -100,10 +135,20 @@ import javafx.collections.ObservableList;
         }
       }
       else
+        // If selectProjectTypeViewController is already instantiated, reset the controller
         selectProjectTypeViewController.reset();
+      // Returns the root node of the Select Project Type view
       return selectProjectTypeViewController.getRoot();
     }
 
+    /**
+     * Loads the View Edit General view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the editGeneralController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the View Edit General view.
+     */
     private Region loadViewEditGeneralController(String fxmlFile)
     {
       Region root = null;
@@ -127,7 +172,14 @@ import javafx.collections.ObservableList;
         editGeneralController.reset();
       return editGeneralController.getRoot();
     }
-
+    /**
+     * Loads the Create Commercial View Controller(fxml file), initializes its controller, and returns its root node.
+     * Checks if the createCommercialController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the CreateCommercialViewController view.
+     */
     private Region loadCreateCommercialViewController(String fxmlFile)
     {
       Region root = null;
@@ -151,7 +203,14 @@ import javafx.collections.ObservableList;
         createCommercialController.reset();
       return createCommercialController.getRoot();
     }
-
+    /**
+     * Loads the CreateRoadContructionViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateRoadContructionViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create RoadContruction ViewController view.
+     */
     private Region loadCreateRoadConstructionViewController(String fxmlFile)
     {
       Region root = null;
@@ -175,6 +234,14 @@ import javafx.collections.ObservableList;
         createRoadContructionController.reset();
       return createRoadContructionController.getRoot();
     }
+    /**
+     * Loads the CreateIndustrialViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateIndustrialViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create Industrial ViewController view.
+     */
     private Region loadCreateIndustrialViewController(String fxmlFile)
     {
       Region root = null;
@@ -198,6 +265,14 @@ import javafx.collections.ObservableList;
         createIndustrialController.reset();
       return createIndustrialController.getRoot();
     }
+    /**
+     * Loads the CreateResidentialViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateResidentialViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create Residential ViewController view.
+     */
     private Region loadCreateResidentialViewController(String fxmlFile)
     {
       Region root = null;
@@ -224,6 +299,14 @@ import javafx.collections.ObservableList;
     /*
     --------------------- LOADING PAGES FOR ALL THE EDIT PAGES -----------------------------------
      */
+    /**
+     * Loads the CreateEditCommercialViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateEditCommercialViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create EditCommercial ViewController view.
+     */
     private Region loadEditCommercialViewController(String fxmlFile)
     {
       Region root = null;
@@ -249,7 +332,14 @@ import javafx.collections.ObservableList;
       return editCommercialController.getRoot();
     }
 
-
+    /**
+     * Loads the CreateEditResidentialViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateEditResidentialViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create EditResidential ViewController view.
+     */
     private Region loadEditResidentialViewController(String fxmlFile)
     {
       Region root = null;
@@ -273,6 +363,14 @@ import javafx.collections.ObservableList;
         editResidentialController.reset();
       return editResidentialController.getRoot();
     }
+    /**
+     * Loads the CreateEditIndustrialViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateEditIndustrialViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create EditIndustrial ViewController view.
+     */
     private Region loadEditIndustrialViewController(String fxmlFile)
     {
       Region root = null;
@@ -296,6 +394,14 @@ import javafx.collections.ObservableList;
         editIndustrialController.reset();
       return editIndustrialController.getRoot();
     }
+    /**
+     * Loads the CreateEditRoadConstructionViewController view(fxml file), initializes its controller, and returns its root node.
+     * Checks if the CreateEditRoadConstructionViewController is instantiated; if not, initializes and returns the root node.
+     * If the controller exists, resets it and returns the root node.
+     *
+     * @param fxmlFile The path to the FXML file for the View Edit General view.
+     * @return The root node of the Create EditRoadConstruction ViewController view.
+     */
     private Region loadEditRoadConstructionViewController(String fxmlFile)
     {
       Region root = null;
@@ -320,10 +426,19 @@ import javafx.collections.ObservableList;
       return editRoadContructionController.getRoot();
     }
 
+    /**
+     * Switches and loads different views based on the provided ID and selectedProject.
+     * Loads FXML files for different views, sets the root node, title, scene, dimensions,
+     * and shows the primary stage.
+     *
+     * @param id              The identifier used to determine which view to open.
+     * @param selectedProject The project selected for editing, if applicable (can be null).
+     */
     public void openView(String id, Project selectedProject)
     {
       Region root = null;
-
+      // Switch case to load different views based on ID
+      // Each case loads the corresponding FXML file and sets necessary details for the view
       switch (id)
       {
         case "projects":
@@ -396,13 +511,14 @@ import javafx.collections.ObservableList;
           break;
         }
       }
+      // Sets the loaded view as the root for the current scene
         currentScene.setRoot(root);
         String title = "";
         if (root.getUserData() != null)
         {
           title += root.getUserData();
         }
-
+      // Sets title, scene, dimensions, and shows the primary stage
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 
@@ -422,10 +538,7 @@ import javafx.collections.ObservableList;
 
 
     }
-    public void closeView()
-    {
-      primaryStage.close();
-    }
+
 
   }
 

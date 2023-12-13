@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.*;
 /**
- * A class representing a controller for managing the window
+ * A class representing the controller for managing the window
  * that creates the Industrial project
  *
  * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu
@@ -22,8 +22,8 @@ public class createIndustrialViewController
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectStorage projects;  // Declare as a field
-
+  private ProjectStorage projects;
+  private int defaultTimeline;
 
   @FXML
   private TextField idField;
@@ -60,22 +60,18 @@ public class createIndustrialViewController
   private Label errorLabelGeneralError;
   @FXML
   private Label errorLabelTypeOfFacility;
-  @FXML
-  private Button backButton;
-  @FXML
-  private Button saveButton;
-  @FXML
-  private Button cancelButton;
 
-  private int defaultTimeline;
-
-
-  @FXML
-  private void cancelButtonClicked() {
-    viewHandler.openView("projects", null);
-  }
-
-
+  /**
+   * Three-argument constructor.
+   * Initializes the controller with necessary dependencies(viewhandler,root, project model)
+   * Default settings specific to Industrial Project are retrieved from "DefaultSettingHandler"
+   * + defaulTimeline is set to 30
+   * sets the default value for timelineField by converting the default value to string and assigning it as the text content of the fields
+   *  Initializes "projects" as an instance of projectStorage class(handles the storage of the projects)
+   * @param viewHandler Manages view tranzitions
+   * @param model       Contains the project planning model data
+   * @param root        Represents the root node of the UI.
+   */
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
@@ -88,12 +84,18 @@ public class createIndustrialViewController
 
     timelineField.setText(String.valueOf(defaultTimeline));
   }
-
+  /**
+   * Handles the save button when clicked action .
+   * Gets the information from input fields, validates the data(throws errors if the input is incorrect).
+   * Creates a new Industrial object, adds it to the project storage.
+   * Writes the updated list of projects to an XML file, and updates the view accordingly.
+   *@throws  NumberFormatException
+   */
   @FXML
   private void saveButtonClicked() {
     try
     {
-      // Retrieve the inserted data
+      //gets the information inserted in the fields
       int id = Integer.parseInt(idField.getText());
       String title = titleField.getText();
       double budget = Double.parseDouble(budgetField.getText());
@@ -102,9 +104,10 @@ public class createIndustrialViewController
       int timeline = Integer.parseInt(timelineField.getText());
       String typeOfFacility = typeOfFacilityField.getText();
 
-
+      //updates default value timeline
       defaultTimeline= timeline;
 
+      //clearing the error labels
       errorLabelTitle.setText("");
       errorLabelId.setText("");
       errorLabelBudget.setText("");
@@ -114,6 +117,8 @@ public class createIndustrialViewController
       errorLabelTypeOfFacility.setText("");
       errorLabelGeneralError.setText("");
 
+      //validating input
+      //ensure title doesn't have numbers
       if (!title.matches("^[a-zA-Z0-9_ ]*$"))
       {
         errorLabelTitle.setText("Invalid elements ");
@@ -125,18 +130,19 @@ public class createIndustrialViewController
         errorLabelTitle.setText("Title empty");
         return;
       }
-
+      //ensured id has 6 digits
       if (String.valueOf(id).length() != 6)
       {
         errorLabelId.setText("ID should be 6 digits");
         return;
       }
-
+      //ensured id input  is not negative
       if (id <= 0)
       {
         errorLabelId.setText("Negative ID");
         return;
       }
+      //checks whether the ID entered for the new project matches the ID of any existing project
       for(int i=0; i<ProjectStorage.getAllProjects().size();i++)
       {
         if(ProjectStorage.getAllProjects().get(i).getID()==id)
@@ -151,7 +157,7 @@ public class createIndustrialViewController
         errorLabelId.setText("Id cannot be empty");
         return;
       }
-
+      // excludes negative values for budget and empty field for budget
       if (budget <0 )
       {
         errorLabelBudget.setText("Negative budget");
@@ -163,7 +169,7 @@ public class createIndustrialViewController
         errorLabelBudget.setText("Empty Budget");
         return;
       }
-
+      // excludes negative values for size and empty field for size
       if (size <0 )
       {
         errorLabelSize.setText("Negative size");
@@ -175,7 +181,7 @@ public class createIndustrialViewController
         errorLabelSize.setText("Empty size");
         return;
       }
-
+      //  excludes negative values for timeline
       if (timeline <0 )
       {
         errorLabelTimeline.setText("Negative timeline");
@@ -187,7 +193,7 @@ public class createIndustrialViewController
         errorLabelTimeline.setText("Empty timeline");
         return;
       }
-
+      //checks for illegal characters
       if (!address.matches("^[a-zA-Z0-9_ ]*$"))
       {
         errorLabelAddress.setText("Invalid elements ");
@@ -199,43 +205,56 @@ public class createIndustrialViewController
         errorLabelAddress.setText("Address is empty");
         return;
       }
-
+      //checks for illegal characters
       if (!typeOfFacility.matches("^[a-zA-Z0-9_ ]*$"))
       {
         errorLabelTypeOfFacility.setText("Invalid elements ");
         return;
       }
-
+      //Ensure type of facility field is not empty
       if (typeOfFacility.isEmpty())
       {
         errorLabelTypeOfFacility.setText("Type of facility is empty");
         return;
       }
 
-      // Create a Residential object if input is valid
+      // Creating a new Industrial object
       Industrial newIndustrial = new Industrial(
           id, title, budget, size, address,
           ProjectType.INDUSTRIAL,
           typeOfFacility, timeline);
 
+      // Adding the new Industrial object to the project storage
       ProjectStorage.addProject(newIndustrial);
-
       ProjectStorage.printProjects();
-      // Write projects to XML
-      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
-      String filePath = "projects.xml"; // Set your desired file path
-      XMLwriter.appendProjectsToXML(allProjects, filePath); // Call the XMLwriter method
 
+      // Writing the updated project list to an XML file
+      ArrayList<Project> allProjects = ProjectStorage.getAllProjects();
+      String filePath = "projects.xml";
+      XMLwriter.appendProjectsToXML(allProjects, filePath);
+
+      // Updating the view after changes
       viewHandler.updateViewEditGeneralTable();
       viewHandler.openView("viewProject", null);
     }
 
     catch (NumberFormatException e) {
+      // Handling input conversion errors
       errorLabelGeneralError.setText("Check inputs");
     }
   }
+  /**
+   * Handles the action when the cancel button is clicked,by going back to the projects view when pressed.
+   */
+  @FXML
+  private void cancelButtonClicked() {
+    viewHandler.openView("projects", null);
+  }
 
-
+  /**
+   * Handles the action when the back button is clicked, clearing the
+   * fields and going  back to the select type view.
+   */
   @FXML
   private void backButtonClicked() {
     titleField.clear();
@@ -248,7 +267,9 @@ public class createIndustrialViewController
     viewHandler.openView("selectType", null);
   }
 
-
+  /**
+   * Clears input fields and navigates back to the select type view.
+   */
   public void reset()
   {
     titleField.clear();
@@ -261,7 +282,11 @@ public class createIndustrialViewController
     viewHandler.openView("selectType", null);
   }
 
-
+  /**
+   * Provides access to the root node of the UI.
+   *
+   * @return The root node of the UI.
+   */
   public Region getRoot()
   {
     return root;
