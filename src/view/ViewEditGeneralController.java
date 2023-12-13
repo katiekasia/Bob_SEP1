@@ -359,7 +359,6 @@ public class ViewEditGeneralController
     ProjectTable.setItems(projectData);
   }
 
-  // ... (other existing code)
 
 
   @FXML
