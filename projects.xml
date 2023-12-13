@@ -1,1273 +1,151 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <Project>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <ID>111444</ID>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <title>Metropolis Tower</title>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <budget>2500000.0</budget>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <size>8.0</size>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <address>123 Urban Ave</address>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfKitchens>5</numberOfKitchens>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfBathrooms>6</numberOfBathrooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfOtherRooms>8</numberOfOtherRooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <isNewBuilding>true</isNewBuilding>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <timeline>9</timeline>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <type>RESIDENTIAL</type>
-                                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </Project>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <Project>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <ID>777222</ID>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <title>Harmony Residences</title>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <budget>1800000.0</budget>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <size>6.5</size>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <address>456 Harmony St</address>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfKitchens>2</numberOfKitchens>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfBathrooms>3</numberOfBathrooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <numberOfOtherRooms>4</numberOfOtherRooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <isNewBuilding>true</isNewBuilding>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <timeline>62</timeline>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <type>RESIDENTIAL</type>
-                                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </Project>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <Project>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <ID>888999</ID>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <title>Elite Living Towers</title>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <budget>3200000.0</budget>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <size>9.0</size>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <address>101 Skyline Dr</address>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfKitchens>4</numberOfKitchens>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfBathrooms>29</numberOfBathrooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfOtherRooms>16</numberOfOtherRooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <isNewBuilding>true</isNewBuilding>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timeline>9</timeline>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <type>RESIDENTIAL</type>
-                                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </Project>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Project>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <ID>456789</ID>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <title>GreenScape Residences</title>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <budget>2200000.0</budget>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <size>7.0</size>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <address>567 Nature Lane</address>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfKitchens>3</numberOfKitchens>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfBathrooms>2</numberOfBathrooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfOtherRooms>6</numberOfOtherRooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <isNewBuilding>true</isNewBuilding>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timeline>9</timeline>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <type>RESIDENTIAL</type>
-                                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </Project>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Project>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <ID>654321</ID>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <title>Serenity Towers</title>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <budget>2800000.0</budget>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <size>9.0</size>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <address>101 Tranquil Street</address>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfKitchens>5</numberOfKitchens>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfBathrooms>12</numberOfBathrooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <numberOfOtherRooms>16</numberOfOtherRooms>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <isNewBuilding>true</isNewBuilding>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <timeline>50</timeline>
-                                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <type>RESIDENTIAL</type>
-                                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </Project>
-                                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                                            
-    
-    
-    
-    
-    
-    
-                        
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Project>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <ID>987654</ID>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <title>FutureTech Innovation Hub</title>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <budget>66.0</budget>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <ID>333555</ID>
+        <title>Quantum Tech Labs</title>
+        <budget>4000000.0</budget>
         <size>0.0</size>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <address>789 Innovation Way</address>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <address>789 Silicon Blvd</address>
         <hasBridges>true</hasBridges>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <timeline>53</timeline>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <hasTunnels>false</hasTunnels>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <hasChallenges>true</hasChallenges>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <length>42.0</length>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <width>7.0</width>
-                                                                                                        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <length>8.0</length>
+        <width>6.0</width>
         <type>ROADCONSTRUCTION</type>
-                                                                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </Project>
-                                                
-    
-
-
-    
-
-
-
-
-
-
-
-
-    
     <Project>
-                
+        <ID>888999</ID>
+        <title>Elite Living Towers</title>
+        <budget>3200000.0</budget>
+        <size>9.0</size>
+        <address>101 Skyline Dr</address>
+        <numberOfKitchens>4</numberOfKitchens>
+        <numberOfBathrooms>29</numberOfBathrooms>
+        <numberOfOtherRooms>16</numberOfOtherRooms>
+        <isNewBuilding>true</isNewBuilding>
+        <timeline>9</timeline>
+        <type>RESIDENTIAL</type>
+    </Project>
+    <Project>
+        <ID>555888</ID>
+        <title>Quantum Furnishings Hub</title>
+        <budget>2800000.0</budget>
+        <size>8.5</size>
+        <address>202 Wood St</address>
+        <typeOfFacility>Furniture Factory</typeOfFacility>
+        <timeline>30</timeline>
+        <type>INDUSTRIAL</type>
+    </Project>
+    <Project>
+        <ID>456789</ID>
+        <title>GreenScape Residences</title>
+        <budget>2200000.0</budget>
+        <size>7.0</size>
+        <address>567 Nature Lane</address>
+        <numberOfKitchens>3</numberOfKitchens>
+        <numberOfBathrooms>2</numberOfBathrooms>
+        <numberOfOtherRooms>6</numberOfOtherRooms>
+        <isNewBuilding>true</isNewBuilding>
+        <timeline>9</timeline>
+        <type>RESIDENTIAL</type>
+    </Project>
+    <Project>
+        <ID>987654</ID>
+        <title>FutureTech Innovation Hub</title>
+        <budget>3800000.0</budget>
+        <size>0.0</size>
+        <address>789 Innovation Way</address>
+        <hasBridges>true</hasBridges>
+        <timeline>53</timeline>
+        <hasTunnels>false</hasTunnels>
+        <hasChallenges>true</hasChallenges>
+        <length>42.0</length>
+        <width>7.0</width>
+        <type>ROADCONSTRUCTION</type>
+    </Project>
+    <Project>
+        <ID>654321</ID>
+        <title>Serenity Towers</title>
+        <budget>2800000.0</budget>
+        <size>9.0</size>
+        <address>101 Tranquil Street</address>
+        <numberOfKitchens>5</numberOfKitchens>
+        <numberOfBathrooms>12</numberOfBathrooms>
+        <numberOfOtherRooms>16</numberOfOtherRooms>
+        <isNewBuilding>true</isNewBuilding>
+        <timeline>50</timeline>
+        <type>RESIDENTIAL</type>
+    </Project>
+    <Project>
+        <ID>111000</ID>
+        <title>Quantum Cybernetics Center</title>
+        <budget>3200000.0</budget>
+        <size>500.0</size>
+        <address>505 Tech Street</address>
+        <numberOfFloors>27</numberOfFloors>
+        <useOfBuilding>Office Area</useOfBuilding>
+        <timeline>25</timeline>
+        <type>COMMERCIAL</type>
+    </Project>
+    <Project>
         <ID>222555</ID>
-                
-        <title>Cigan Oasis</title>
-                
+        <title>Student Oasis</title>
         <budget>1900000.0</budget>
-                
         <size>6.0</size>
-                
         <address>606 Campus Lane</address>
-                
         <numberOfKitchens>2</numberOfKitchens>
-                
         <numberOfBathrooms>3</numberOfBathrooms>
-                
         <numberOfOtherRooms>4</numberOfOtherRooms>
-                
         <isNewBuilding>true</isNewBuilding>
-                
         <timeline>9</timeline>
-                
         <type>RESIDENTIAL</type>
-            
     </Project>
-    
     <Project>
-        <ID>123123</ID>
-        <title>daw</title>
-        <budget>123.0</budget>
-        <size>213.0</size>
-        <address>321</address>
-        <numberOfKitchens>1</numberOfKitchens>
-        <numberOfBathrooms>1</numberOfBathrooms>
-        <numberOfOtherRooms>1</numberOfOtherRooms>
-        <isNewBuilding>true</isNewBuilding>
-        <timeline>9</timeline>
-        <type>RESIDENTIAL</type>
+        <ID>333777</ID>
+        <title>Quantum Data Processing Hub</title>
+        <budget>4200000.0</budget>
+        <size>19.0</size>
+        <address>789 Data Drive</address>
+        <numberOfFloors>27</numberOfFloors>
+        <useOfBuilding>Big mall</useOfBuilding>
+        <timeline>25</timeline>
+        <type>COMMERCIAL</type>
+    </Project>
+    <Project>
+        <ID>987000</ID>
+        <title>Nordic Terea Design Studios</title>
+        <budget>1.0E7</budget>
+        <size>350.0</size>
+        <address>155 Radical Avenue, block 32A</address>
+        <typeOfFacility>3d Printing Design Studio</typeOfFacility>
+        <timeline>55</timeline>
+        <type>INDUSTRIAL</type>
     </Project>
 </Projects>
