@@ -9,15 +9,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.*;
-
+/**
+ * A class representing the controller for managing the window
+ * that creates the Commercial project
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu
+ * @version 3.0- December 2023
+ **/
 public class createCommercialViewController
 {
   private ViewHandler viewHandler;
   private ProjectPlanningModel model;
   private Region root;
 
-  private ProjectStorage projects;  // Declare as a field
-
+  private ProjectStorage projects;
 
   @FXML
   private TextField idField;
@@ -43,15 +48,6 @@ public class createCommercialViewController
   private TextField useOfBuildingField;
 
   @FXML
-  private Button cancelButton;
-
-  @FXML
-  private Button saveButton;
-
-  @FXML
-  private Button backButton;
-
-  @FXML
   private Label errorLabelTitle;
   @FXML
   private Label errorLabelId;
@@ -71,6 +67,14 @@ public class createCommercialViewController
   private int defaultNumberOfFloors;
   private int defaultTimeline;
 
+  /**
+   * Three-argument constructor. 
+   * Initializes the controller with necessary dependencies.
+
+   * @param viewHandler Manages view transitions.
+   * @param model       Contains the project planning model.
+   * @param root        Represents the root node of the UI.
+   */
   public void init(ViewHandler viewHandler, ProjectPlanningModel model, Region root) {
     this.viewHandler = viewHandler;
     this.model = model;
@@ -78,7 +82,6 @@ public class createCommercialViewController
     projects = new ProjectStorage();
 
     Object[] defaultSettings = DefaultSettingsHandler.loadCommercialDefaultSettings();
-
     defaultNumberOfFloors = 1;
     defaultTimeline = 9;
 

@@ -35,8 +35,6 @@ public class ViewEditGeneralController
   @FXML
   private ChoiceBox<String> typeChoiceBox;
 
-  @FXML
-  private ChoiceBox<String> sizeChoiceBox;
 
   @FXML
   private ChoiceBox<String> timelineChoiceBox;
@@ -78,7 +76,8 @@ public class ViewEditGeneralController
     this.root = root;
   }
 
-  public void initialize() {
+  public void initialize()
+  {
 
     initializeTypeFilter(); //
 
@@ -93,10 +92,11 @@ public class ViewEditGeneralController
     // Populate TableView with project details from ProjectStorage
 
     updateTable();
-    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
-    ObservableList<Project> projectData = FXCollections.observableArrayList(allProjects);
+    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML(
+        "projects.xml");
+    ObservableList<Project> projectData = FXCollections.observableArrayList(
+        allProjects);
     ProjectTable.setItems(projectData);
-
 
 
     idTextField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -114,6 +114,7 @@ public class ViewEditGeneralController
     budgetChoiceBox.getSelectionModel().selectedItemProperty().addListener(
         (ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
           handleBudgetFilter(newValue);
+
         });
     // Timeline choice box options
     timelineChoiceBox.getItems().addAll("0-12 months", "12-24 months", "24-36 months", "36 --> max");
@@ -340,8 +341,6 @@ public class ViewEditGeneralController
 
 
 
-
-
   @FXML
   private void backButtonClicked() {
     typeChoiceBox.getSelectionModel().clearSelection();
@@ -353,30 +352,6 @@ public class ViewEditGeneralController
     viewHandler.openView("projects", null);
 
 
-  }
-  @FXML
-  private void handleIDTextFieldAction() {
-    String enteredID = idTextField.getText();
-    if (enteredID.length() == 6 && enteredID.matches("\\d+")) {
-      int idToFilter = Integer.parseInt(enteredID);
-      ArrayList<Project> filteredProjects = filterProjectsByID(idToFilter);
-      updateTableWithFilteredProjects(filteredProjects);
-    } else {
-      // Handle invalid input (e.g., show an error message)
-    }
-  }
-
-  private ArrayList<Project> filterProjectsByID(int id) {
-    ArrayList<Project> allProjects = XMLreader.readProjectsFromXML("projects.xml");
-    ArrayList<Project> filteredProjects = new ArrayList<>();
-
-    for (Project project : allProjects) {
-      if (project.getID() == id) {
-        filteredProjects.add(project);
-      }
-    }
-
-    return filteredProjects;
   }
 
   private void updateTableWithFilteredProjects(ArrayList<Project> projects) {
