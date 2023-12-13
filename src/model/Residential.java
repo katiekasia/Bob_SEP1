@@ -18,7 +18,7 @@ public class Residential extends Project
     this.numberOfBathrooms = (numberOfBathrooms != 0) ? numberOfBathrooms : (int) defaultResidential[1];
     this.numberOfOtherRooms = (numberOfOtherRooms != 0) ? numberOfOtherRooms : (int) defaultResidential[2];
     this.timeline = (timeline != 0) ? timeline : (int) defaultResidential[3];
-    this.isNewBuilding = (isNewBuilding) ? isNewBuilding : (boolean) defaultResidential[4];
+    this.isNewBuilding = isNewBuilding;
 
   }
   public int getNumberOfKitchens()
