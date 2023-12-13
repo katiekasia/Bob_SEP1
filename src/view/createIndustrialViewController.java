@@ -9,7 +9,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import model.*;
-
+/**
+ * A class representing a controller for managing the window
+ * that creates the Industrial project
+ *
+ * @author  Kasia Olejarczyk, Sandut Chilat, Catalina Tonu
+ * @version 3.0- December 2023
+ **/
 public class createIndustrialViewController
 {
   private ViewHandler viewHandler;
