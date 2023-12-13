@@ -46,7 +46,6 @@ public class EditIndustrial1Controller
 
   private Object[] defaultSettings;
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Industrial Project are retrieved from "DefaultSettingHandler".
    *

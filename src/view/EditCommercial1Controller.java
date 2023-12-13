@@ -64,7 +64,6 @@ public class EditCommercial1Controller
     return root;
   }
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Commercial Project are retrieved from "DefaultSettingHandler".
    *

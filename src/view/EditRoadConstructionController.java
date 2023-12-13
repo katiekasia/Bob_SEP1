@@ -69,7 +69,6 @@ public class EditRoadConstructionController
     return root;
   }
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Road Construction Project are retrieved from "DefaultSettingHandler".
    *

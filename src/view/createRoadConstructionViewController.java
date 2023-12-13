@@ -85,7 +85,6 @@ public class createRoadConstructionViewController
   }
 
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Residential Project are retrieved from "DefaultSettingHandler"
    * +  defaultHasTunnels is set to "false",  defaultHasChallenges is set to "false",   defaultHasBridges is set to "false", defaulTimeline is set to 18.

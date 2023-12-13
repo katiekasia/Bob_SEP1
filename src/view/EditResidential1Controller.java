@@ -74,7 +74,6 @@ public class EditResidential1Controller
     return root;
   }
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Residential Project are retrieved from "DefaultSettingHandler".
    *

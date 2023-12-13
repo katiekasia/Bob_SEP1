@@ -87,7 +87,6 @@ public class createResidentialViewController {
 
 
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Residential Project are retrieved from "DefaultSettingHandler"
    * +  defaultNumberOfKitchens is set to 1, defaultNumberOfBathrooms to 1,  defaultNumberOfOtherRooms to 1, defaulTimeline is set to 9, defaultUseOfBuilding to true.

@@ -68,7 +68,6 @@ public class createCommercialViewController
   private int defaultTimeline;
 
   /**
-   * Three-argument constructor.
         * Initializes the controller with necessary dependencies(viewhandler,root, project model)
         * Default settings specific to CommercialProject are retrieved from "DefaultSettingHandler"
         * + defaultNumbersOfFloors is set to 1 and defaulTimeline is set to 9

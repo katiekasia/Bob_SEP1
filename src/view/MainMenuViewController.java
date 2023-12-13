@@ -33,8 +33,8 @@ public class MainMenuViewController implements Initializable
   @FXML private ImageView imageView;
 
   private ProjectPlanningModel model;
-  private Region root;/**
-   * three-argument Constructor
+  private Region root;
+  /**
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    *
    * @param viewHandler The ViewHandler instance managing view transitions

@@ -62,7 +62,6 @@ public class createIndustrialViewController
   private Label errorLabelTypeOfFacility;
 
   /**
-   * Three-argument constructor.
    * Initializes the controller with necessary dependencies(viewhandler,root, project model)
    * Default settings specific to Industrial Project are retrieved from "DefaultSettingHandler"
    * + defaulTimeline is set to 30

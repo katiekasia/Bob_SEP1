@@ -12,7 +12,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
+<!--
+This FXML displays a window view that shows and manages the list of projects form xml files
+and allows the user to manage the project details with the help of filtering options.
+It allows the serach by :ID,Title ,Timeline,Type,Budget(has choiceBoxes with 4 options for each)
+-->
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="776.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ViewEditGeneralController">
    <children>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="772.0" prefWidth="1119.0">
