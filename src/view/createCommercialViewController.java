@@ -298,7 +298,3 @@ public class createCommercialViewController
   }
 
 }
-
-
-
-

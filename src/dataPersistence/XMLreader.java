@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.ArrayList;
 /**
  * Handles reading project data from XML files and extracting project details.
- *  @author Kasia Olejarczyk, Sandut Chilat, Catalina Tonu, Sebastian Bartko, Samo Susa
+ *  @author Kasia Olejarczyk, Sandut Chilat, Catalina Tonu,Sebastian Bartko
  *  @version 3.0 - December 2023
  */
 public class XMLreader
