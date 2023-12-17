@@ -288,11 +288,11 @@ public class ViewEditGeneralController
         case "500001-2000000":
           filteredProjects = filterProjectsByBudgetRange(500001, 2000000);
           break;
-        case "2000000-10000000":
-          filteredProjects = filterProjectsByBudgetRange(2000000, 10000000);
+        case "2000001-5000000":
+          filteredProjects = filterProjectsByBudgetRange(2000001, 5000000);
           break;
-        case "5000000 --> max":
-          filteredProjects = filterProjectsByBudgetRange(5000000, 2147483647);
+        case "5000001 --> max":
+          filteredProjects = filterProjectsByBudgetRange(5000001, 90000000);
           break;
       }
       // Update the tableView  with the filtered projects based on the budget range chosen

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Projects>
+<<<<<<< HEAD
                                                                     
     
     
     
     
     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -17,12 +21,16 @@
     
     
     <Project>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -34,12 +42,16 @@
         
         
         <ID>111444</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -51,12 +63,16 @@
         
         
         <title>Metropolis Tower</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -68,12 +84,16 @@
         
         
         <budget>2500000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -85,12 +105,16 @@
         
         
         <size>8.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -102,12 +126,16 @@
         
         
         <address>123 Urban Ave</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -119,12 +147,16 @@
         
         
         <numberOfKitchens>5</numberOfKitchens>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -136,12 +168,16 @@
         
         
         <numberOfBathrooms>6</numberOfBathrooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -153,12 +189,16 @@
         
         
         <numberOfOtherRooms>8</numberOfOtherRooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -170,12 +210,16 @@
         
         
         <isNewBuilding>true</isNewBuilding>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -187,12 +231,16 @@
         
         
         <timeline>9</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -204,12 +252,16 @@
         
         
         <type>RESIDENTIAL</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -221,7 +273,11 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
             
@@ -235,6 +291,7 @@
     
     
     
+<<<<<<< HEAD
     
     
     
@@ -247,6 +304,10 @@
         
         
         
+=======
+    <Project>
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -258,12 +319,16 @@
         
         
         <ID>333555</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -275,12 +340,16 @@
         
         
         <title>Quantum Tech Labs</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -292,12 +361,16 @@
         
         
         <budget>4000000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -309,12 +382,16 @@
         
         
         <size>0.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -326,12 +403,16 @@
         
         
         <address>789 Silicon Blvd</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -343,12 +424,16 @@
         
         
         <hasBridges>true</hasBridges>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -360,12 +445,16 @@
         
         
         <timeline>53</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -377,12 +466,16 @@
         
         
         <hasTunnels>false</hasTunnels>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -394,12 +487,16 @@
         
         
         <hasChallenges>true</hasChallenges>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -411,12 +508,16 @@
         
         
         <length>8.0</length>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -428,12 +529,16 @@
         
         
         <width>6.0</width>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -445,12 +550,16 @@
         
         
         <type>ROADCONSTRUCTION</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -462,12 +571,16 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
     
     
     
     
     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -479,12 +592,16 @@
     
     
     <Project>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -496,12 +613,16 @@
         
         
         <ID>888999</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -513,12 +634,16 @@
         
         
         <title>Elite Living Towers</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -530,12 +655,16 @@
         
         
         <budget>3200000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -547,12 +676,16 @@
         
         
         <size>9.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -564,12 +697,16 @@
         
         
         <address>101 Skyline Dr</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -581,12 +718,16 @@
         
         
         <numberOfKitchens>4</numberOfKitchens>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -598,12 +739,16 @@
         
         
         <numberOfBathrooms>29</numberOfBathrooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -615,12 +760,16 @@
         
         
         <numberOfOtherRooms>16</numberOfOtherRooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -632,12 +781,16 @@
         
         
         <isNewBuilding>true</isNewBuilding>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -649,12 +802,16 @@
         
         
         <timeline>9</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -666,12 +823,16 @@
         
         
         <type>RESIDENTIAL</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -683,6 +844,7 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
     
     
@@ -704,6 +866,9 @@
     
     
     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -715,7 +880,13 @@
     
     
     <Project>
+<<<<<<< HEAD
                                                                                                                                         
+=======
+                                                                                                
+        
+        
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -724,6 +895,122 @@
         
         
         
+<<<<<<< HEAD
+=======
+        <ID>555888</ID>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>Quantum Furnishings Hub</title>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>2800000.0</budget>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>8.5</size>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>202 Wood St</address>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <typeOfFacility>Furniture Factory</typeOfFacility>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>30</timeline>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <type>INDUSTRIAL</type>
+                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </Project>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project>
+                                                                                                
+        
+        
+        
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -732,12 +1019,16 @@
         
         
         <ID>456789</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -749,12 +1040,16 @@
         
         
         <title>GreenScape Residences</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -766,12 +1061,16 @@
         
         
         <budget>2200000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -783,12 +1082,16 @@
         
         
         <size>7.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -800,12 +1103,16 @@
         
         
         <address>567 Nature Lane</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -817,12 +1124,16 @@
         
         
         <numberOfKitchens>3</numberOfKitchens>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -834,12 +1145,16 @@
         
         
         <numberOfBathrooms>2</numberOfBathrooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -851,12 +1166,16 @@
         
         
         <numberOfOtherRooms>6</numberOfOtherRooms>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -868,12 +1187,16 @@
         
         
         <isNewBuilding>true</isNewBuilding>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -885,12 +1208,16 @@
         
         
         <timeline>9</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -902,12 +1229,16 @@
         
         
         <type>RESIDENTIAL</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -919,12 +1250,16 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
     
     
     
     
     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -936,12 +1271,16 @@
     
     
     <Project>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -953,12 +1292,16 @@
         
         
         <ID>987654</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -970,12 +1313,16 @@
         
         
         <title>FutureTech Innovation Hub</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -987,12 +1334,16 @@
         
         
         <budget>3800000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1004,12 +1355,16 @@
         
         
         <size>0.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1021,12 +1376,16 @@
         
         
         <address>789 Innovation Way</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1038,12 +1397,16 @@
         
         
         <hasBridges>true</hasBridges>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1055,12 +1418,16 @@
         
         
         <timeline>53</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1072,12 +1439,16 @@
         
         
         <hasTunnels>false</hasTunnels>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1089,12 +1460,16 @@
         
         
         <hasChallenges>true</hasChallenges>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1106,12 +1481,16 @@
         
         
         <length>42.0</length>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1123,12 +1502,16 @@
         
         
         <width>7.0</width>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1140,12 +1523,16 @@
         
         
         <type>ROADCONSTRUCTION</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1157,7 +1544,13 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
+=======
+                                                
+    
+    
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1167,12 +1560,135 @@
     
     
     
+<<<<<<< HEAD
+=======
+    <Project>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <ID>111000</ID>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <title>Quantum Cybernetics Center</title>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <budget>3200000.0</budget>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <size>500.0</size>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <address>505 Tech Street</address>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <numberOfFloors>27</numberOfFloors>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <useOfBuilding>Office Area</useOfBuilding>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <timeline>25</timeline>
+                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <type>COMMERCIAL</type>
+                                                                                            
+    
+    
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
     
     
+<<<<<<< HEAD
                                                         
+=======
+    
+    
+    
+    </Project>
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1187,6 +1703,7 @@
     
     
     
+<<<<<<< HEAD
     
     
     
@@ -1199,6 +1716,10 @@
         
         
         
+=======
+    <Project>
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1210,12 +1731,16 @@
         
         
         <ID>333777</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1227,12 +1752,16 @@
         
         
         <title>Quantum Data Processing Hub</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1244,12 +1773,16 @@
         
         
         <budget>4200000.0</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1261,12 +1794,16 @@
         
         
         <size>19.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1278,12 +1815,16 @@
         
         
         <address>789 Data Drive</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1295,12 +1836,16 @@
         
         
         <numberOfFloors>27</numberOfFloors>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1312,12 +1857,16 @@
         
         
         <useOfBuilding>Big mall</useOfBuilding>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1329,12 +1878,16 @@
         
         
         <timeline>25</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1346,12 +1899,16 @@
         
         
         <type>COMMERCIAL</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1363,12 +1920,16 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                     
     
     
     
     
     
+=======
+                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1380,12 +1941,16 @@
     
     
     <Project>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1397,12 +1962,16 @@
         
         
         <ID>987000</ID>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1414,12 +1983,16 @@
         
         
         <title>Nordic Terea Design Studios</title>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1431,12 +2004,16 @@
         
         
         <budget>1.0E7</budget>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1448,12 +2025,16 @@
         
         
         <size>350.0</size>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1465,12 +2046,16 @@
         
         
         <address>155 Radical Avenue, block 32A</address>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1482,12 +2067,16 @@
         
         
         <typeOfFacility>3d Printing Design Studio</typeOfFacility>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1499,12 +2088,16 @@
         
         
         <timeline>55</timeline>
+<<<<<<< HEAD
                                                                                                                                         
         
         
         
         
         
+=======
+                                                                                                
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
         
         
         
@@ -1516,12 +2109,16 @@
         
         
         <type>INDUSTRIAL</type>
+<<<<<<< HEAD
                                                                                                                                     
     
     
     
     
     
+=======
+                                                                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1533,7 +2130,11 @@
     
     
     </Project>
+<<<<<<< HEAD
                                                                 
+=======
+                                            
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
 
     
     
@@ -1548,6 +2149,92 @@
     
     
     
+<<<<<<< HEAD
+=======
+    
+    
+    <Project>
+                                                        
+        
+        
+        
+        
+        
+        <ID>222555</ID>
+                                                        
+        
+        
+        
+        
+        
+        <title>Student Oasis</title>
+                                                        
+        
+        
+        
+        
+        
+        <budget>3.8663633E7</budget>
+                                                        
+        
+        
+        
+        
+        
+        <size>6.0</size>
+                                                        
+        
+        
+        
+        
+        
+        <address>606 Campus Lane</address>
+                                                        
+        
+        
+        
+        
+        
+        <numberOfKitchens>2</numberOfKitchens>
+                                                        
+        
+        
+        
+        
+        
+        <numberOfBathrooms>3</numberOfBathrooms>
+                                                        
+        
+        
+        
+        
+        
+        <numberOfOtherRooms>4</numberOfOtherRooms>
+                                                        
+        
+        
+        
+        
+        
+        <isNewBuilding>false</isNewBuilding>
+                                                        
+        
+        
+        
+        
+        
+        <timeline>8</timeline>
+                                                        
+        
+        
+        
+        
+        
+        <type>RESIDENTIAL</type>
+                                                    
+    
+    
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     
     
     
@@ -1693,7 +2380,7 @@
     
     
     </Project>
-                
+                        
     
     
     <Project>
@@ -1748,7 +2435,10 @@
             
 
 
+    
+    
     <Project>
+<<<<<<< HEAD
         <ID>555888</ID>
         <title>Quantum Furnishings Hub</title>
         <budget>2800000.0</budget>
@@ -1757,5 +2447,77 @@
         <typeOfFacility/>
         <timeline>69</timeline>
         <type>INDUSTRIAL</type>
+=======
+                        
+        
+        <ID>223322</ID>
+                        
+        
+        <title>for real</title>
+                        
+        
+        <budget>45678.0</budget>
+                        
+        
+        <size>34.0</size>
+                        
+        
+        <address>somewhere</address>
+                        
+        
+        <numberOfFloors>2</numberOfFloors>
+                        
+        
+        <useOfBuilding>forsmth</useOfBuilding>
+                        
+        
+        <timeline>7</timeline>
+                        
+        
+        <type>COMMERCIAL</type>
+                    
+    
+    </Project>
+        
+    
+    <Project>
+                
+        <ID>555777</ID>
+                
+        <title>MAED</title>
+                
+        <budget>3000000.0</budget>
+                
+        <size>654.0</size>
+                
+        <address>5</address>
+                
+        <numberOfKitchens>1</numberOfKitchens>
+                
+        <numberOfBathrooms>1</numberOfBathrooms>
+                
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+                
+        <isNewBuilding>true</isNewBuilding>
+                
+        <timeline>9</timeline>
+                
+        <type>RESIDENTIAL</type>
+            
+    </Project>
+    
+    <Project>
+        <ID>600000</ID>
+        <title>Project</title>
+        <budget>6.0E7</budget>
+        <size>543.0</size>
+        <address>4</address>
+        <numberOfKitchens>1</numberOfKitchens>
+        <numberOfBathrooms>1</numberOfBathrooms>
+        <numberOfOtherRooms>1</numberOfOtherRooms>
+        <isNewBuilding>true</isNewBuilding>
+        <timeline>9</timeline>
+        <type>RESIDENTIAL</type>
+>>>>>>> f6c0194601ac7b349193ce9cccf535a097f0a1c8
     </Project>
 </Projects>
